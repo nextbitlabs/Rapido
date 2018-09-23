@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>The main content</h1>
+        <p></p>
+        <figure>
+            <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link href="dokyo.css" rel="stylesheet" type="text/css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      ...
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></code>
+          </figure>
+      </section>
+
+      <section>
+        <h1>Add a section</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <figure>
+          <code><pre>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;</pre></code>
+        </figure>
+      </section>
+
+      <section>
+        <h1>Images and videos</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <figure>
+          <img src="../image.jpg">
+          <figcaption>
+            <h1>Dean Shim</h1>
+            <p>Photographer. Traveling the world in a self built camper van.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <code><pre>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;img src="image.jpg"&gt;
+    &lt;figcaption&gt;
+      &lt;h1&gt;...&lt;/h1&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/section&gt;</pre></code>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <figure>
+          <video controls muted src="../video.mp4"></video>
+          <figcaption>
+            <h1>Import an input file</h1>
+            <p>Input files can be imported directly from the file system. There is no prescribed restriction on the maximum size, it depends on the computational power of the machine where the application is running.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <code><pre>&lt;section&gt;
+  &lt;figure&gt;
+    &lt;video controls muted src="video.mp4"&gt;
+    &lt;figcaption&gt;
+      &lt;h1&gt;...&lt;/h1&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/section&gt;</pre></code>
+        </figure>
+      </section>
+
+      <section>
+        <h1>Tables</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <figure>
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>nodeId</th>
+                <th>nodeLabel</th>
+                <th>start</th>
+                <th>end</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>fgsf56dfd65</td>
+                <td>144</td>
+                <td>sblocco</td>
+                <td>2017-01-20 9:32:49</td>
+                <td>2017-01-20 22:26:41</td>
+              </tr>
+              <tr>
+                <td>fgsf56dfd65</td>
+                <td>410</td>
+                <td>cancellazione</td>
+                <td>2017-01-20 22:26:41</td>
+                <td>2017-01-21 19:03:00</td>
+              </tr>
+              <tr>
+                <td>fghfdw56dgd</td>
+                <td>65</td>
+                <td>revoca</td>
+                <td>2017-01-16 11:32:06</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption>
+            <h1>Figure title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>nodeId</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>fgsf56dfd65</td>
+                <td>144</td>
+              </tr>
+              <tr>
+                <td>fgsf56dfd65</td>
+                <td>410</td>
+              </tr>
+              <tr>
+                <td>fghfdw56dgd</td>
+                <td>65</td>
+              </tr>
+            </tbody>
+          </table>
+          <figcaption>
+            <h1>Figure title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <code><pre>&lt;figure&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;id&lt;/th&gt;
+        &lt;th&gt;nodeId&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;fgsf56dfd65&lt;/td&gt;
+        &lt;td&gt;144&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;fgsf56dfd65&lt;/td&gt;
+        &lt;td&gt;410&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;fghfdw56dgd&lt;/td&gt;
+        &lt;td&gt;65&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</pre></code>
+        </figure>
+      </section>
+
+      <section>
+        <h1>Lists</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul>
+          <li>
+            <span>1.</span>
+            <p>Identification code for the entity being processed.</p>
+          </li>
+          <li>
+            <span>2.</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </li>
+          <li>
+            <span>3.</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </li>
+        </ul>
+        <figure>
+          <code><pre>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;span&gt;1.&lt;/span&gt;
+    &lt;p&gt;Identification code for the entity being processed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span&gt;2.&lt;/span&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span&gt;3.&lt;/span&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre></code>
+        </figure>
+        <h2>A second example</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul>
+          <li>
+            <var>id</var>
+            <span>Required</span>
+            <p>Identification code for the entity being processed.</p>
+          </li>
+          <li>
+            <var>nodeId</var>
+            <span>Required</span>
+            <p>Identification code of a node, i.e. a process state. The value of <code>nodeId</code> cannot contain symbols <code>@</code> and <code>-</code>, for example permitted values for <code>nodeId</code> are <code>345</code> or <code>xyz</code>, values like <code>@345</code>, <code>x@yz</code> or <code>x-y</code> are not allowed.</p>
+          </li>
+          <li>
+            <var>nodeLabel</var>
+            <span>Required</span>
+            <p>Label of a node, a human readable string.</p>
+          </li>
+          <li>
+            <var>start</var>
+            <span>Required</span>
+            <p>Timestamp of the time when the entity enter the node, the timestamp must be in format <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+          </li>
+          <li>
+            <var>end</var>
+            <span>Optional</span>
+            <p>Timestamp of the time when the entity exit the node, the timestamp must be in format <code>yyyy-mm-dd hh:mm:ss</code>. If not present, the application assumes the entity is still in the indicated node.</p>
+          </li>
+        </ul>
+        <figure>
+          <code><pre>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;var&gt;id&lt;/var&gt;
+    &lt;span&gt;Required&lt;/span&gt;
+    &lt;p&gt;Identification code for the entity being processed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;var&gt;nodeId&lt;/var&gt;
+    &lt;span&gt;Required&lt;/span&gt;
+    &lt;p&gt;Identification code for the entity being processed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;var&gt;nodeLabel&lt;/var&gt;
+    &lt;span&gt;Required&lt;/span&gt;
+    &lt;p&gt;Label of a node, a human readable string.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre></code>
+        </figure>
+      </section>
+
+      <section>
+        <h1>Code</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <figure>
+          <code>
+            <pre>const f = x => x ? x * f(x - 1) : 1;</pre>
+          </code>
+        </figure>
+        <figure>
+          <code><pre>&lt;figure&gt;
+  &lt;code&gt;
+    &lt;pre&gt;const f = x => x ? x * f(x - 1) : 1;&lt;/pre&gt;
+  &lt;/code&gt;
+&lt;/figure&gt;</pre></code>
+        </figure>
+        <figure>
+          <code><pre>&amp;lt;figure&amp;gt;
+  &amp;lt;code&amp;gt;
+    &amp;lt;pre&amp;gt;const f = x => x ? x * f(x - 1) : 1;&amp;lt;/pre&amp;gt;
+  &amp;lt;/code&amp;gt;
+&amp;lt;/figure&amp;gt;</pre></code>
+        </figure>
+      </section>
+
+    </main>
+  </body>
+</html>

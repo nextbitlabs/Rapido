@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dokyo</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<a href="/">Back</a>
+		</header>
+		<main>
+			<article>
+				<h1><strong>Prock</strong> Documentation</h1>
+				<section>
+					<p>
+						The input file is a comma-separated values delimited text file (CSV) with the comma <code>,</code> as separator. Each line of the file describes the arrival of an entity to a node, from the whole information it is then possible to derive the histories of the process entities.
+					</p>
+				</section>
+				<section>
+					<h1>Input file</h1>
+					<p>
+						The input file is a comma-separated values delimited text file (CSV) with the comma <code>,</code> as separator. Each line of the file describes the arrival of an entity to a node, from the whole information it is then possible to derive the histories of the process entities.
+					</p>
+					<p>The following table shows an example of the expected columns:</p>
+					<figure>
+						<table>
+							<thead>
+								<tr>
+									<th>id</th>
+									<th>nodeId</th>
+									<th>nodeLabel</th>
+									<th>start</th>
+									<th>end</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>fgsf56dfd65</td>
+									<td>144</td>
+									<td>sblocco</td>
+									<td>2017-01-20 9:32:49</td>
+									<td>2017-01-20 22:26:41</td>
+								</tr>
+								<tr>
+									<td>fgsf56dfd65</td>
+									<td>410</td>
+									<td>cancellazione</td>
+									<td>2017-01-20 22:26:41</td>
+									<td>2017-01-21 19:03:00</td>
+								</tr>
+								<tr>
+									<td>fghfdw56dgd</td>
+									<td>65</td>
+									<td>revoca</td>
+									<td>2017-01-16 11:32:06</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<figcaption>
+							<h1>Input file</h1>
+							<p>CSV file containing process data. Columns and rows ordering has no meaning, histories are reconstructed from timestamps.</p>
+						</figcaption>
+					</figure>
+					<p>
+						The expected fields are the following:
+						<ul>
+							<li>
+								<var>id</var>
+								<span>Required</span>
+								<p>Identification code for the entity being processed.</p>
+							</li>
+							<li>
+								<var>nodeId</var>
+								<span>Required</span>
+								<p>Identification code of a node, i.e. a process state. The value of <code>nodeId</code> cannot contain symbols <code>@</code> and <code>-</code>, for example permitted values for <code>nodeId</code> are <code>345</code> or <code>xyz</code>, values like <code>@345</code>, <code>x@yz</code> or <code>x-y</code> are not allowed.</p>
+							</li>
+							<li>
+								<var>nodeLabel</var>
+								<span>Required</span>
+								<p>Label of a node, a human readable string.</p>
+							</li>
+							<li>
+								<var>start</var>
+								<span>Required</span>
+								<p>Timestamp of the time when the entity enter the node, the timestamp must be in format <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+							</li>
+							<li>
+								<var>end</var>
+								<span>Optional</span>
+								<p>Timestamp of the time when the entity exit the node, the timestamp must be in format <code>yyyy-mm-dd hh:mm:ss</code>. If not present, the application assumes the entity is still in the indicated node.</p>
+							</li>
+						</ul>
+					</p>
+					<p>Users can import an input file from the header bar at the top left of section <a href="/">Routes</a>, as showed in the next video.</p>
+					<figure>
+						<video controls muted src="../../../static/docs/video/input-file.mp4"></video>
+						<figcaption>
+							<h1>Import an input file</h1>
+							<p>Input files can be imported directly from the file system. There is no prescribed restriction on the maximum size, it depends on the computational power of the machine where the application is running.</p>
+						</figcaption>
+					</figure>
+					<p>
+						It is recommended that the first node of each history is a meaningfull initial node for the process being analysed, i.e. a node where any entity can actually start from. For example, let say that <code>A</code>, <code>B</code> and <code>C</code> are the nodes of a process and that only node <code>A</code> is a starting node. Therefore, it is racommended having only routes starting with <code>A</code>, route <code>[A, B]</code> for example, avoiding head-cutted routes like <code>[B, C]</code>. Have a look at the next section for the definition of "route". 
+					</p>
+				</section>
+				<section>
+					<h1>Routes</h1>
+					<p>Users can explore the dataset in section <a href="/">Routes</a>. This section is divided in an interactive visualisation (Routes chart) and a list fo routes (Routes list).</p>
+					<p>A <em>route</em> is a list of one or more nodes, <code>[A, B, C, D]</code> is an example of route. A route represents a serie of nodes followed at least by one entity during its history. The <em>history</em> describes the dynamics of the entity, i.e. it contains the information related the time, the history can be defined as a list of pairs <code>(node, time of arrival)</code>, an example of history is <code>[(A, t<sub>1</sub>), (B, t<sub>2</sub>), (C, t<sub>3</sub>), (D, t<sub>4</sub>)]</code>. Each entity has its own history and different entities may show the same route. The first and last node of a route are the initial and final nodes of the history, in this sense a route is different from a <em>segment</em>, which can be any portion of a route (see below).</p>
+					<h2>Routes chart</h2>
+					<p>The routes chart is an interactive visualisation that shows the routes observed in the dataset. On the x axix there are the position indexes in the route, for example the indexes <code>0, 1, 2</code> for the route <code>[A, B, C]</code>. On the y axis there are the nodes, alphabetically sorted. The user may filter out some routes via interaction, as shown in the image below all the routes passing by node <code>SBLOCCO</code> at index <code>1</code> have been selected.</p>
+					<figure>
+						<img src="../../../static/docs/images/i4.png">
+						<figcaption>
+							<h1>Routes chart</h1>
+							<p>It shows the routes observed in the dataset. Users can select the routes that pass by a given node at a given index with a click in the related gray circle. Clear the selection with another click.</p>
+						</figcaption>
+					</figure>
+					<p>Users have the possibility to focus on a route of interest by selecting multiple nodes untill only the interesting route is selected. This procedure helps the user to explore the details of the route, like the entities that have followed the route an the duration times.</p>
+					<figure>
+						<img src="../../../static/docs/images/i5.png">
+						<figcaption>
+							<p>Users can further select the routes by selecting multiple nodes at different indexes.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="../../../static/docs/images/i6.png">
+						<figcaption>
+							<p>It is possible to ask for all the routes that pass at least one time by a given node. This is accomplished by clicking in the gray circle at the right of the node label.</p>
+						</figcaption>
+					</figure>
+					<p>Moreover, all the routes that pass by a given node cab be selected. For example, in the image above the route starting at node <code>(TEMP) REQUISITI OPERATIVI</code> passes by <code>BLOCCO DA GESTIONE MOROSITA'</code> (the selected node) at index <code>2</code>.</p>
+					<p>The route chart may change its sizes at each node selection, this happens in order to facilitate the user in the exploration of interesting information. In the y axix, only the nodes that appear on the selected routes are shown. Moreover, routes that are too long to be displayed withing the screen width can be visualised going forward and backward on the x axis.</p>
+					<figure>
+						<video controls muted src="../../../static/docs/video/arrows.mp4"></video>
+						<figcaption>
+							<h1>Backward/Forward arrows</h1>
+							<p>Routes may be of any length, from only one node to saveral ones. Therefore, some routes can be too long to be displayed in the screen. In such cases the user can use the left and right arrows at the bottom right of the application to move forward and backward on the route.</p>
+						</figcaption>
+					</figure>
+					<p>In the control panel, at the bottom of the application window, the user has the possibility to clear the route selection and toggle ON/OFF the visibility of the <em>valid routes</em>, i.e. the routes explicitely marked as valid by the user (see more below).</p>
+					<figure>
+						<img src="../../../static/docs/images/i7.png">
+						<figcaption>
+							<h1>Control panel</h1>
+							<p>Clear selected routes, hide/show valid routes, moving arrows.</p>
+						</figcaption>
+					</figure>
+					<p>The actions available in the control panel are related to the open section. The actions mentioned above are a present only in the Routes section.</p>
+					<h2>Routes list</h2>
+					<p>Above the chart, users can see all the selected routes, one by one, and visualise the details of each. By default the listed routes are sorted by amount of entities, in decreasing order, but they can be sorted also by route length.</p>
+					<figure>
+						<img src="../../../static/docs/images/i8.png">
+						<figcaption>
+							<h1>Routes list</h1>
+							<p>A selection of four routes. The first route in the list is the most populated and it has been followed by 73 entities, i.e. in the dataset are present 73 entities with a history of two nodes: <code>BLOCCO PER TEMTATIVI CVC2 ESAURITI</code> as first node, and <code>SBLOCCO</code> as second node. The other routes show an amount of entities of 2, 1 and 1 respectively. Among all there is one route that shows an anomalous segment of 3 nodes (see below).</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="../../../static/docs/images/i9.png">
+						<figcaption>
+							<h1>Times distribution</h1>
+							<p>The distribution of the times the entities spent in each node is visualise below the node. Go over with the mouse to see the extremes of the distribution.</p>
+						</figcaption>
+					</figure>
+					<p>Users can explore each route in details. Of a given route, the user can visualise the entities and the time spent by each entity on each node. Generally speaking, having each route many entities, it is possible to derive, for each node, the distribution of the times spent by entities in that node. The distribution extremes are visible on mouse over, the user can easily check if the difference of time between the extremes is reasonable or not and further explore the duration times if needed.</p>
+					<figure>
+						<video controls muted src="../../../static/docs/video/entities.mp4"></video>
+						<figcaption>
+							<h1>Histories</h1>
+							<p>Click on the entities button <img height="20px" src="../../../static/docs/images/i16.png"> to see the entities following a certain route. A new view appears showing the history of each entity, i.e. the time spent in each node of the route. If the entities are more that 10, the user can load more entities.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="../../../static/docs/images/i10.png">
+						<figcaption>
+							<h1>Export histories</h1>
+							<p>Export all the histories having a certain route with the button <img height="20px" src="../../../static/docs/images/i11.png">. Use instead button <img height="20px" src="../../../static/docs/images/i12.png"> to export a single history.</p>
+						</figcaption>
+					</figure>
+					<p>Users can export all the histories, or the history of a single entity, in a CSV file. The exported file has the same format as the input file and it can be imported in the application.</p>
+				</section>
+				<section>
+					<h1>Valid routes</h1>
+					<p>A route can be marked as valid, valid routes are routes that are allowed in the process being analysed. In order to focus on other routes, the user may decide to hide valid routes. The user sets, or unsets, a route as valid in the routes list. Valid routes are registered in the project file together with the anomalous segments (see below).</p>
+					<figure>
+						<video controls muted src="../../../static/docs/video/valid-routes.mp4"></video>
+						<figcaption>
+							<h1>Valid routes</h1>
+							<p>The first route in the list is marked as valid. Button <img height="20px" src="../../../static/docs/images/i13.png"> tells that valid routes are visible (ON), a click on it hides the valid routes (OFF). More valid routes are collected, higher is the number of hidden routes from the whole set. Later in the video, valid routes have been set visible again and the previously route set as valid has been unset.</p>
+						</figcaption>
+					</figure>
+					<p>Note that users are free to set an anomalous segment in a valid route, therefore it is possible to have an anomalous valid route.</p>
+				</section>
+				<section>
+					<h1>Anomalous segments</h1>
+					<p>A segment is a list of nodes, for example <code>[A, B, C]</code> is a segment. Routes <code>[A, B, C, D]</code>, <code>[Z, A, B, C]</code> and <code>[Z, A, B, C, D]</code> all include the segment <code>[A, B, C]</code>. The user can qualify a segment as <em>anomalous</em>. Anomalous segments are listed in section <a href="/rules">Anomalies</a>, and the affected routes are visible for each anomalous segment.</p>
+					<figure>
+						<img src="../../../static/docs/images/i1.png">
+						<figcaption>
+							<h1>Anomalies</h1>
+							<p>Anomalous segments are highligthed in the <a href="/">Routes</a> section with a reddish color, no matter is the position of the segment along the route. When the user set a segment of a route as anomalous, the same segment in other routes is also highligthed.</p>
+						</figcaption>
+					</figure>
+					<p>Segments can be qualified as anomalous via interaction with the chart in the <a href="/">Routes</a> section, as indicated in the video below.</p>
+					<figure>
+						<video controls muted src="../../../static/docs/video/add-anomaly.mp4"></video>
+						<figcaption>
+							<h1>Set an anomalous segment</h1>
+							<p>Users can mark a segment as anomalous via interaction with the routes chart. Select two or more consecutive nodes and click on the yellow selection. Anomalous segments may have two or more nodes, portions of a segment are not considered anomalous. For example, an anomalous segment of three nodes <code>[A, B, C]</code> indicates an anomaly in the serie of nodes A, B, C, portions <code>[A, B]</code> and <code>[B, C]</code> are not considered anomalous.</p>
+						</figcaption>
+					</figure>
+					<p>A route that includes an anomalous segment is an anomalous route. Different routes may contain the same anomalous segment in different positions along the route. Moreover, a same route may include a given segment several times.</p>
+				</section>
+				<section>
+					<h1>Project file</h1>
+					<p>
+						The project file stores information about anomalous segments and valid routes, it can be exported by an application instance and imported in another. Users can share anomalous segments and valid routes with colleagues by means of project files.
+					</p>
+					<p>
+						In order to properly use project files, a few observations are needed:
+						<ul>
+							<li><span>1.</span><p>Project files do not store information regarding the input files they work with. Project files only store node ids, the corresponding node labels are stored in input files, if present. Therefore the user is asked to autonomously register which input files are linked to which project files, the relation can be many to many.</p></li>
+							<li><span>2.</span><p>In order to properly use a project file, the user should import both a input file and a project file, which is imported first is not relevant.</p></li>
+							<li><span>3.</span><p>When imported, the information contained in the project file overwrites application information. In other words, previously registered segments and routes are overwritten by the anomalous segments and valid routes contained in the project file. In future application releases will be possible to join the new information with the previous one.</p></li>
+							<li><span>4.</span><p>At the moment, in order to add new information to a project file, the user shoud import the file first, register new valid routes or anomalous segments and, eventually, export a new enriched project file.</p></li>
+						</ul>
+					</p>
+					<p> Project files are formatted in JavaScript Object Notation (JSON) and they are not intedend to be directly edited by the user. The code below shows an example of such file.</p>
+					<figure>
+						<code><pre>{
+		"validRoutes": [
+			{
+				"route": [
+					"223",
+					"310"
+				]
+			},
+			{
+				"route": [
+					"310",
+					"230",
+					"261",
+					"999",
+					"410",
+					"114",
+					"0",
+					"410",
+					"310",
+					"223",
+					"114",
+					"410"
+				]
+			}
+		],
+		"anomalousSegments": [
+			{
+				"segment": [
+					"999",
+					"410"
+				]
+			},
+			{
+				"segment": [
+					"101",
+					"999"
+				]
+			}
+		]
+	}</pre></code>
+						<figcaption>
+							<h1>Project file</h1>
+							<p>The JSON file is structured with two main keys, <code>anomalousSegments</code> and <code>validRoutes</code>. Both the keys have an array of objects as value, and each object has a key, <code>route</code> or <code>segment</code> depending on the parent, with a list of node ids as value.</p>
+						</figcaption>
+					</figure>
+					<p>Project files can be imported and exported in section <a href="/rules">Anomalies</a>. All the anomalous segments listed in the section, with the valid routes visible in section Routes, are stored in the project file. The videos below show how to import and export project files.</p>
+					<figure>
+						<video controls muted src="../../../static/docs/video/import-project-file.mp4"></video>
+						<figcaption>
+							<h1>Import a project file</h1>
+							<p>Users can import a file with button <img height="20px" src="../../../static/docs/images/i14.png"> present at the top left of the application window in section <a href="/rules">Anomalies</a>. The new imported anomalous segments and valid routes will overwrite previously registered segments and routes.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<video controls muted src="../../../static/docs/video/export-project-file.mp4"></video>
+						<figcaption>
+							<h1>Export a project file</h1>
+							<p>Users can export a file with button <img height="20px" src="../../../static/docs/images/i15.png"> present at the bottom right of the application window in section <a href="/rules">Anomalies</a>. After a file has been imported, new anomalous segments or valid routes can be set and the exported file will contain both the previously contained information and the newly added.</p>
+						</figcaption>
+					</figure>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<p>Prock Documentation | Version 1.0.1</p>
+		</footer>
+	</body>
+</html>
