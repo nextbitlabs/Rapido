@@ -1,23 +1,23 @@
-* {
+.rapido * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
-body {
+body.rapido {
 	font-family: Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #353839;
 }
 
-main {
+.rapido main {
 	max-width: 980px;
 	padding-left: 100px;
 	margin: 50px 0 0 0;
 }
 
-footer {
+.rapido footer {
 	background: #ededed;
 	padding: 0 100px;
 	margin: 0;
@@ -27,68 +27,68 @@ footer {
 	font-size: 13px;
 }
 
-footer > p {
+.rapido footer > p {
 	padding: 0;
 	margin: 0;
 }
 
-a {
+.rapido a {
 	color: #2243b6;
 }
 
-section {
+.rapido section {
 	width: 100%;
 	padding: 10px 0;
 }
 
-section > h1 {
+.rapido section > h1 {
 	font-size: 30px;
 	font-weight: 700;
 	margin: 0 0 30px 0;
 }
 
-section > h2 {
+.rapido section > h2 {
 	font-size: 20px;
 	font-weight: 700;
 	margin: 0 0 20px 0;
 }
 
-section > h1::before {
+.rapido section > h1::before {
 	content: '/';
 	padding-right: 10px;
 	margin-left: -25px;
 }
 
-p,
-section p {
+.rapido p,
+.rapido section p {
 	max-width: 640px;
 	margin: 0 0 20px 0;
 }
 
-p {
+.rapido p {
 	font-size: 17px;
 	line-height: 27px;
 }
 
-header {
+.rapido header {
 	max-width: 640px;
 	margin: 50px 0 0 0;
 	padding: 0;
 }
 
-header > address {
+.rapido header > address {
 	font-style: normal;
 	margin-bottom: 20px;
 }
 
-header > address::before {
+.rapido header > address::before {
 	content: "AUTHORS: ";
 	font-style: normal;
 	font-size: 12px;
 	opacity: 0.7;
 }
 
-blockquote {
+.rapido blockquote {
 	width: 640px;
 	border-top: 2px solid #353839;
 	border-bottom: 2px solid #353839;
@@ -96,12 +96,12 @@ blockquote {
 	margin: 0 0 20px 0;
 }
 
-blockquote > p {
+.rapido blockquote > p {
 	font-size: 30px;
 	line-height: 45px;
 }
 
-blockquote > cite {
+.rapido blockquote > cite {
 	display: block;
 	text-align: right;
 	font-size: 17px;
@@ -109,49 +109,49 @@ blockquote > cite {
 	font-style: italic;
 }
 
-blockquote > cite::before {
+.rapido blockquote > cite::before {
 	content: "– "
 }
 
-header > h1 {
+.rapido header > h1 {
 	font-size: 100px;
 	line-height: 115px;
 	font-weight: bold;
 	margin: 0 0 50px 0;
 }
 
-header > p {
+.rapido header > p {
 	font-size: 20px;
 	line-height: 35px;
 }
 
-figure {
+.rapido figure {
 	margin: 20px 0 20px 0;
 	display: flex;
 	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
-figcaption {
+.rapido figcaption {
 	width: 220px;
 	margin-left: 20px;
 }
 
 @media (max-width: 1079px) {
-	figcaption {
+	.rapido figcaption {
 		width: 640px;
 		margin: 5px 0 0 0;
 	}
 }
 
-figure > div {
+.rapido figure > div {
 	width: 640px;
 	overflow: scroll;
 	background-color: #ededed;
 }
 
-figure > img,
-figure > video {
+.rapido figure > img,
+.rapido figure > video {
 	display: block;
 	flex: 0 0 auto;
 	width: 640px;
@@ -161,11 +161,11 @@ figure > video {
 	border-radius: 5px;
 }
 
-figure > p {
+.rapido figure > p {
 	width: 640px; 
 }
 
-figcaption > h1 {
+.rapido figcaption > h1 {
 	display: inline;
 	font-size: 14px;
 	font-weight: 700;
@@ -174,11 +174,11 @@ figcaption > h1 {
 	padding: 0 5px 0 0;
 }
 
-figcaption > h1::after {
+.rapido figcaption > h1::after {
 	content: '.';
 }
 
-figcaption > p {
+.rapido figcaption > p {
 	display: inline;
 	font-size: 14px;
 	line-height: 21px;
@@ -186,7 +186,7 @@ figcaption > p {
 	padding: 0;
 }
 
-table {
+.rapido table {
 	margin: 0;
 	padding: 10px 10px;
 	text-align: left;
@@ -196,34 +196,34 @@ table {
 	background-color: #ededed;
 }
 
-tr {
+.rapido tr {
 	padding: 0;
 	margin: 0;
 }
 
-td,
-th {
+.rapido td,
+.rapido th {
 	padding: 5px 10px 5px 10px;
 	margin: 0;
 	vertical-align: top;
 }
 
-ul,
-ol {
+.rapido ul,
+.rapido ol {
 	width: 640px;
 	margin: 20px 0 20px 0;
 	padding: 0;
 	list-style: none;
 }
 
-li {
+.rapido li {
 	padding: 10px 0 10px 5px;
 	border-bottom: 1px solid #ededed;
 	font-size: 14px;
 	display: flex;
 }
 
-li > var {
+.rapido li > var {
 	font-family: monospace;
 	font-style: normal;
 	font-weight: 700;
@@ -232,7 +232,7 @@ li > var {
 	display: inline-block;
 }
 
-li > p {
+.rapido li > p {
 	flex: 0 0 auto;
 	width: 110px;
 	text-overflow: ellipsis;
@@ -240,30 +240,30 @@ li > p {
 	overflow: hidden;
 }
 
-li > p:last-child {
+.rapido li > p:last-child {
 	flex: 1 1 auto;
 	width: auto;
 }
 
-li > span {
+.rapido li > span {
 	flex: 0 0 auto;
 	width: 30px;
 }
 
-li > p,
-li > span,
-li > var {
+.rapido li > p,
+.rapido li > span,
+.rapido li > var {
 	font-size: 14px;
 	line-height: 21px;
 	margin: 0;
 	padding: 0;
 }
 
-li > span:first-letter {
+.rapido li > span:first-letter {
 	text-transform: capitalize;
 }
 
-code {
+.rapido code {
 	font-family: monospace;
 	font-size: inherit;
 	/* background: #ededed; */
@@ -271,22 +271,22 @@ code {
 	color: #0a7e8c;
 }
 
-strong {
+.rapido strong {
 	font-style: normal;
 	font-weight: 700;
 }
 
-q,
-em {
+.rapido q,
+.rapido em {
 	font-style: italic;
 	font-weight: normal;
 }
 
-p > img {
+.rapido p > img {
 	vertical-align: middle;
 }
 
-pre {
+.rapido pre {
 	background: #ededed;
 	font-family: monospace;
 	font-size: 14px;
@@ -297,12 +297,12 @@ pre {
 	border-radius: 2px;
 }
 
-aside {
+.rapido aside {
 	width: 220px;
 	float: right;
 }
 
-aside > p {
+.rapido aside > p {
 	font-size: 14px;
 	line-height: 21px;
 	margin: 0;

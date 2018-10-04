@@ -40,7 +40,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
     <link href="./index.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
+  <body class="rapido">
     <main>
       <article>
         <header>
@@ -59,7 +59,7 @@
       &lt;meta charset="utf-8"&gt;
       &lt;link href="Rapido.css" rel="stylesheet" type="text/css"&gt;
     &lt;/head&gt;
-    &lt;body&gt;
+    &lt;body class="rapido"&gt;
       &lt;main&gt;
         &lt;article&gt;
           ...
@@ -71,7 +71,14 @@
               <p>This the first example of an html snippet. Rapido is just that: copy and paste the html snippets and fill the gaps <code>...</code> with your own content.</p>
             </figcaption>
           </figure>
-          <p>Note the presence of the css stylesheet <code>Rapido.css</code>, you can download it at <strong>TODO</strong>.</p>
+          <p>Note that Rapido can be used in a web document created from scratch or withing an existing document, the CSS class <code>class="rapido"</code> makes Rapido not invasive with respect existing CSS code. Generally speacking, you will want to assign the class <code>rapido</code> to the HTML container of your document, for example in
+            <figure>
+              <pre><code>&lt;article class="rapido"&gt;
+  ...
+&lt;article&gt;</code></pre>
+            </figure>
+          </p>
+          <p>The css stylesheet <code>Rapido.css</code>, you can download it at <strong>TODO</strong>.</p>
           <p>The next sections describe how to replace the ellipsis <code>...</code> with content of interest, like paragraph, figures, tables and so on.</p>
         </section>
 
