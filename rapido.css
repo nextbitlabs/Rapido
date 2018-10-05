@@ -62,13 +62,11 @@ body.rapido {
 
 .rapido p,
 .rapido section p {
-	max-width: 640px;
-	margin: 0 0 20px 0;
-}
-
-.rapido p {
 	font-size: 17px;
 	line-height: 27px;
+	max-width: 640px;
+	margin: 0 0 20px 0;
+	position: relative;
 }
 
 .rapido article > header {
@@ -311,22 +309,31 @@ body.rapido {
 	border-radius: 2px;
 }
 
-.rapido aside {
+.rapido small {
+	font-size: 14px;
+	line-height: 21px;
 	width: 220px;
 	float: right;
 	padding: 3px 0 0 0;
+	position: absolute;
+	right: -240px;
+	top: 0;
 }
 
 @media (max-width: 979px) {
-	.rapido aside {
+	.rapido small {
 		width: 100%;
 		float: none;
 		padding: 0;
-		margin-bottom: 20px;
+		margin: 20px 0;
+		position: relative;
+		right: unset;
+		top: unset;
+		display: block;
 	}
 }
 
-.rapido aside > p {
+.rapido small > p {
 	font-size: 14px;
 	line-height: 21px;
 }

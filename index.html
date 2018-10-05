@@ -128,23 +128,19 @@
         </section>
 
         <section>
-          <h1>Aside notes</h1>
-          <p>This section describes how to add an <strong>aside note</strong>. Aside notes typically show content of less importance or considered not necessary in the main flow.</p>
-          <aside>
-            <p>Hello, I am an aside note. I am quite good in telling anecdotes or cool details. I usually present content indirectly related to the section, read me if you want, you don't have to.</p>
-          </aside>
-          <p>An aside note should be inserted withing the paragraphs of a section. It appears at the right of the paragraph just next the closing <code>&lt;/aside&gt;</code> tag, vertically aligned with it. Aside notes do not have heading but they may containg more than one paragraph. Note that images, videos and code snippets are contained in <code>&lt;figure&gt;...&lt;/figure&gt;</code> tags (see below), which have captions, so do not use aside notes with figure elements.</p>
+          <h1>Side comments</h1>
+          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Hello, I am a side comment. I am quite good in telling anecdotes or cool details, read me if you want, you don't have to.</small></p>
+          <p>A side comment should be inserted withing the paragraph of a section, it will appear at the right of the paragraph and vertically aligned with it, or just below the paragraph on smaller screens.</p>
           <figure>
             <pre><code>&lt;section&gt;
   &lt;h1&gt;...&lt;/h1&gt;
-  &lt;p&gt;...&lt;/p&gt;
-  &lt;aside&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/aside&gt;
-  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;
+    ...
+    &lt;small&gt;...&lt;/small&gt;
+  &lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>Code snippet of an aside note. The note is verticaly aligned with the second <code>&lt;p&gt;</code> tag, the one just after tag <code>&lt;/aside&gt;</code>.</p>
+              <p>Code snippet of a side comment. The side comment is related to the paragraph, therefore it usually appears below the text of the paragraph.</p>
             </figcaption>
           </figure>
         </section>
@@ -322,12 +318,10 @@
               <p>Code snippet for a list of items, use tag <code>&lt;ol&gt;</code> for ordered lists and tag <code>&lt;ul&gt;</code> for unordered lists.</p>
             </figcaption>
           </figure>
-          <aside><p>Hey, we have a sub-heading here, get it with tag <code>&lt;h2&gt;</code> in a section.</p></aside>
+          <p><small>Hey, we have a sub-heading here, get it with tag <code>&lt;h2&gt;</code> in a section.</small></p>
           <h2>A second example</h2>
           <p>As second example we show a list where each item has a couple of fixed width <code>&lt;p&gt;</code> elements and a single growing width <code>&lt;p&gt;</code> element.</p>
-          <aside>
-            <p>We take the opportunity of this example to describe the semantic meaning of elements <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> and <code>&lt;mark&gt;</code>.</p>
-          </aside>
+          <p><small>We take the opportunity of this example to describe the semantic meaning of elements <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> and <code>&lt;mark&gt;</code>.</small></p>
           <div>
             <ol>
               <li>
@@ -433,10 +427,7 @@
               <p>New line formula.</p>
             </figcaption>
           </figure>
-          <aside>
-            <p>Einstein field equations, expressed for the first time 8 years later the <q cite="Albert Einstein">the happiest thought of my life</q>.</p>
-          </aside>
-          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$</p>
+          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations, expressed for the first time 8 years later the <q cite="Albert Einstein">the happiest thought of my life</q>.</small></p>
           <p>Multiline math can be obtained with TeX syntax, <a href="https://katex.org/docs/supported.html">KaTeX supports</a> a wide list of TeX functions. For example, for the representation of the following system of equations we make use of the <code>\begin{array}</code> environment.</p>
           <figure>
             <p>
