@@ -9,27 +9,22 @@ body.rapido {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #353839;
-}
-
-.rapido main {
-	max-width: 980px;
-	padding-left: 100px;
-	margin: 50px 0 0 0;
-}
-
-.rapido footer {
-	background: #ededed;
-	padding: 0 100px;
 	margin: 0;
-	min-height: 50px;
-	display: flex;
-	align-items: center;
-	font-size: 13px;
-}
-
-.rapido footer > p {
 	padding: 0;
-	margin: 0;
+}
+
+.rapido article {
+	width: 980px;
+	max-width: 100%;
+	margin: auto;
+	padding: 0 50px;
+}
+
+@media (max-width: 979px) {
+	.rapido article {
+		width: 640px;
+		padding: 0 20px 0 20px;
+	}
 }
 
 .rapido a {
@@ -56,7 +51,13 @@ body.rapido {
 .rapido section > h1::before {
 	content: '/';
 	padding-right: 10px;
-	margin-left: -25px;
+	margin-left: -20px;
+}
+
+@media (max-width: 979px) {
+	.rapido section > h1::before {
+		display: none;
+	}
 }
 
 .rapido p,
@@ -70,18 +71,42 @@ body.rapido {
 	line-height: 27px;
 }
 
-.rapido header {
+.rapido article > header {
 	max-width: 640px;
-	margin: 50px 0 0 0;
-	padding: 0;
 }
 
-.rapido header > address {
+.rapido article > header > h1 {
+	font-size: 60px;
+	line-height: 80px;
+	font-weight: bold;
+	margin: 20px 0 50px 0;
+}
+
+@media (max-width: 979px) {
+	.rapido article > header > h1 {
+		font-size: 40px;
+		line-height: 55px;
+	}
+}
+
+@media (max-width: 499px) {
+	.rapido article > header > h1 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+
+.rapido article > header > p {
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.rapido article > header > address {
 	font-style: normal;
 	margin-bottom: 20px;
 }
 
-.rapido header > address::before {
+.rapido article > header > address::before {
 	content: "AUTHORS: ";
 	font-style: normal;
 	font-size: 12px;
@@ -89,7 +114,8 @@ body.rapido {
 }
 
 .rapido blockquote {
-	width: 640px;
+	max-width: 640px;
+	width: 100%;
 	border-top: 2px solid #353839;
 	border-bottom: 2px solid #353839;
 	padding-top: 20px;
@@ -113,18 +139,6 @@ body.rapido {
 	content: "– "
 }
 
-.rapido header > h1 {
-	font-size: 100px;
-	line-height: 115px;
-	font-weight: bold;
-	margin: 0 0 50px 0;
-}
-
-.rapido header > p {
-	font-size: 20px;
-	line-height: 35px;
-}
-
 .rapido figure {
 	margin: 20px 0 20px 0;
 	display: flex;
@@ -137,7 +151,7 @@ body.rapido {
 	margin-left: 20px;
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 979px) {
 	.rapido figcaption {
 		width: 640px;
 		margin: 5px 0 0 0;
@@ -146,8 +160,22 @@ body.rapido {
 
 .rapido figure > div {
 	width: 640px;
+	max-width: 100%;
 	overflow: scroll;
 	background-color: #ededed;
+}
+
+.rapido div {
+	width: 100%;
+	max-width: 640px;
+	overflow: scroll;
+}
+
+@media (max-width: 380px) {
+	.rapido div > ol,
+	.rapido div > ul {
+		min-width: 380px;
+	}
 }
 
 .rapido figure > img,
@@ -156,9 +184,9 @@ body.rapido {
 	flex: 0 0 auto;
 	width: 640px;
 	height: auto;
-	/* border: 1px solid #ededed; */
 	box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.23);
 	border-radius: 5px;
+	max-width: 100%;
 }
 
 .rapido figure > p {
@@ -170,7 +198,6 @@ body.rapido {
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 21px;
-	margin: 0;
 	padding: 0 5px 0 0;
 }
 
@@ -182,37 +209,28 @@ body.rapido {
 	display: inline;
 	font-size: 14px;
 	line-height: 21px;
-	margin: 0;
-	padding: 0;
 }
 
 .rapido table {
-	margin: 0;
-	padding: 10px 10px;
+	min-width: 640px;
+	padding: 10px;
 	text-align: left;
-	/* font-family: monospace; */
 	font-family: inherit;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 21px;
 	background-color: #ededed;
-}
-
-.rapido tr {
-	padding: 0;
-	margin: 0;
 }
 
 .rapido td,
 .rapido th {
-	padding: 5px 10px 5px 10px;
-	margin: 0;
+	padding: 5px 10px;
 	vertical-align: top;
 }
 
 .rapido ul,
 .rapido ol {
-	width: 640px;
-	margin: 20px 0 20px 0;
-	padding: 0;
+	max-width: 640px;
+	width: 100%;
 	list-style: none;
 }
 
@@ -238,6 +256,7 @@ body.rapido {
 	text-overflow: ellipsis;
 	white-space: wrap;
 	overflow: hidden;
+	margin: 0;
 }
 
 .rapido li > p:last-child {
@@ -255,8 +274,6 @@ body.rapido {
 .rapido li > var {
 	font-size: 14px;
 	line-height: 21px;
-	margin: 0;
-	padding: 0;
 }
 
 .rapido li > span:first-letter {
@@ -266,8 +283,6 @@ body.rapido {
 .rapido code {
 	font-family: monospace;
 	font-size: inherit;
-	/* background: #ededed; */
-	padding: 0;
 	color: #0a7e8c;
 }
 
@@ -292,7 +307,6 @@ body.rapido {
 	font-size: 14px;
 	width: 640px;
 	padding: 10px;
-	margin: 0;
 	overflow: scroll;
 	border-radius: 2px;
 }
@@ -300,11 +314,19 @@ body.rapido {
 .rapido aside {
 	width: 220px;
 	float: right;
+	padding: 3px 0 0 0;
+}
+
+@media (max-width: 979px) {
+	.rapido aside {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin-bottom: 20px;
+	}
 }
 
 .rapido aside > p {
 	font-size: 14px;
 	line-height: 21px;
-	margin: 0;
-	padding: 0;
 }

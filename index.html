@@ -282,7 +282,7 @@
   &lt;/div&gt;
 &lt;/figure&gt;</code></pre>
             <figcaption>
-              <p>Code snippet of a table of two columns, with a heading and two rows. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> tag wrapping the <code>&lt;table&gt;</code> tag.</p>
+              <p>Code snippet of a table of two columns, with a heading and two rows. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> container wrapping the <code>&lt;table&gt;</code> element.</p>
             </figcaption>
           </figure>
         </section>
@@ -290,27 +290,31 @@
         <section>
           <h1>Lists</h1>
           <p>As usual, lists are created with tags <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>, whereas <code>&lt;li&gt;</code> element is used to represent an item in a list. Each item may containg a <code>&lt;span&gt;</code> element and one or more <code>&lt;p&gt;</code> elements. The width of the two elements follow different rules:</p>
-          <ul>
-            <li>
-              <span>•</span>
-              <p>Element <code>&lt;span&gt;</code> has a fixed width, use it for adding numbers (<code>&lt;span&gt;1.&lt;/span&gt;</code>) or bulletts (<code>&lt;span&gt;•&lt;/span&gt;</code>) in front of each item. Element <code>&lt;span&gt;</code> is optional.</p>
-            </li>
-            <li>
-              <span>•</span>
-              <p>Elements <code>&lt;p&gt;</code> also have a fixed width, with the exception of the last child which grows in width untill the remaining space is filled. Use at least one <code>&lt;p&gt;</code> element.</p>
-            </li>
-          </ul>
+          <div>
+            <ul>
+              <li>
+                <span>●</span>
+                <p>Element <code>&lt;span&gt;</code> has a fixed width, use it for adding numbers (<code>&lt;span&gt;1.&lt;/span&gt;</code>) or bulletts (<code>&lt;span&gt;●&lt;/span&gt;</code>) in front of each item. Element <code>&lt;span&gt;</code> is optional.</p>
+              </li>
+              <li>
+                <span>●</span>
+                <p>Elements <code>&lt;p&gt;</code> also have a fixed width, with the exception of the last child which grows in width untill the remaining space is filled. Use at least one <code>&lt;p&gt;</code> element.</p>
+              </li>
+            </ul>
+          </div>
           <figure>
-            <pre><code>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;span&gt;•&lt;/span&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;span&gt;•&lt;/span&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+            <pre><code>&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;span&gt;●&lt;/span&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span&gt;●&lt;/span&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
             <figcaption>
               <p>Code snippet for a list of items, use tag <code>&lt;ol&gt;</code> for ordered lists and tag <code>&lt;ul&gt;</code> for unordered lists.</p>
             </figcaption>
@@ -321,41 +325,45 @@
           <aside>
             <p>We take the opportunity of this example to describe the semantic meaning of elements <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> and <code>&lt;mark&gt;</code>.</p>
           </aside>
-          <ol>
-            <li>
-              <p><code>&lt;em&gt;</code></p>
-              <p><strong>emphasis</strong></p>
-              <p>Use it for adding <em>emphasis</em> to a word, compared to surrounding text. Example: "Is this the <em>queen</em> of the questions?"</p>
-            </li>
-            <li>
-              <p><code>&lt;strong&gt;</code></p>
-              <p><strong>importance</strong></p>
-              <p>Use it to mark text that has greater <em>importance</em> than surrounding text. Example: "Do a small walk <strong>every hour</strong>."</p>
-            </li>
-            <li>
-              <p><code>&lt;mark&gt;</code></p>
-              <p><strong>relevance</strong></p>
-              <p>Use it to denote content which has a degree of <em>relevance</em>. Example: "Words that match a search operation will be <mark>highlighted</mark>".</p>
-            </li>
-          </ol>
+          <div>
+            <ol>
+              <li>
+                <p><code>&lt;em&gt;</code></p>
+                <p><strong>emphasis</strong></p>
+                <p>Use it for adding <em>emphasis</em> to a word, compared to surrounding text. Example: "Is this the <em>queen</em> of the questions?"</p>
+              </li>
+              <li>
+                <p><code>&lt;strong&gt;</code></p>
+                <p><strong>importance</strong></p>
+                <p>Use it to mark text that has greater <em>importance</em> than surrounding text. Example: "Do a small walk <strong>every hour</strong>."</p>
+              </li>
+              <li>
+                <p><code>&lt;mark&gt;</code></p>
+                <p><strong>relevance</strong></p>
+                <p>Use it to denote content which has a degree of <em>relevance</em>. Example: "Words that match a search operation will be <mark>highlighted</mark>".</p>
+              </li>
+            </ol>
+          </div>
           <figure>
-            <pre><code>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+            <pre><code>&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
             <figcaption>
               <p>Note that only the last <code>&lt;p&gt;</code> element grows in width, whereas the first two <code>&lt;p&gt;</code> elements have a fixed width.</p>
             </figcaption>
