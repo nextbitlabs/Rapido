@@ -5,7 +5,7 @@
 }
 
 body.rapido {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #353839;
@@ -51,7 +51,7 @@ body.rapido {
 .rapido section > h1::before {
 	content: '/';
 	padding-right: 10px;
-	margin-left: -20px;
+	margin-left: -22px;
 }
 
 @media (max-width: 979px) {
