@@ -102,13 +102,23 @@ body.rapido {
 .rapido article > header > address {
 	font-style: normal;
 	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
-.rapido article > header > address::before {
-	content: "AUTHORS: ";
-	font-style: normal;
-	font-size: 12px;
-	opacity: 0.7;
+.rapido article > header > address > a {
+	margin: 5px 15px 5px 0;
+	flex: 0 0 auto;
+	width: unset;
+}
+
+.rapido article > header > address > a > img {
+	vertical-align: middle;
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	margin: 0 10px 0 0;
 }
 
 .rapido blockquote {
