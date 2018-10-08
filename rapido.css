@@ -128,7 +128,7 @@ body.rapido {
 	margin: 0 10px 0 0;
 }
 
-.rapido blockquote {
+.rapido section > aside {
 	max-width: 640px;
 	width: 100%;
 	border-top: 2px solid #353839;
@@ -137,20 +137,50 @@ body.rapido {
 	margin: 0 0 20px 0;
 }
 
-.rapido blockquote > p {
+.rapido section > aside > p {
 	font-size: 30px;
 	line-height: 45px;
+	max-width: 640px;
+	margin: 0 0 20px 0;
+	position: relative;
 }
 
-.rapido blockquote > cite {
-	display: block;
-	text-align: right;
+.rapido section > blockquote {
+	max-width: 640px;
+	width: 100%;
+	padding: 20px 40px 0 40px;
+}
+
+@media (max-width: 380px) {
+.rapido section > blockquote {
+		padding: 20px 20px 0 20px;
+	}
+}
+
+.rapido section > blockquote > p {
 	font-size: 18px;
 	line-height: 27px;
-	font-style: italic;
 }
 
-.rapido blockquote > cite::before {
+.rapido section > blockquote > p::before {
+	content: '“';
+}
+
+.rapido section > blockquote > p::after {
+	content: '”';
+}
+
+.rapido section > cite {
+	display: block;
+	text-align: right;
+	font-size: 16px;
+	line-height: 24px;
+	width: 100%;
+	max-width: 640px;
+	margin: 0 0 20px 0;
+}
+
+.rapido section > cite::before {
 	content: "– "
 }
 

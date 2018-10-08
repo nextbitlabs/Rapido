@@ -197,19 +197,37 @@
         <section>
           <h1>Quotations</h1>
           <p>This section shows how to add <strong>quotations</strong> into your document. Element <code>&lt;blockquote&gt;</code> can be inserted in a section within other paragraphs and may contains one or more paragraphs as well.</p>
-          <blockquote>
-            <p><strong>Rapido</strong> is just that: copy and paste the html snippets and fill the gaps.</p>
+          <blockquote cite="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">
+            <p>Content inside a blockquote must be quoted from another source, whose address, if it has one, may be cited in the cite attribute.</p>
           </blockquote>
+          <cite>HTML Living Standard</cite>
           <figure>
             <pre><code>&lt;blockquote cite="..."&gt;
   &lt;p&gt;...&lt;/p&gt;
-  &lt;cite&gt;...&lt;/cite&gt;
-&lt;/blockquote&gt;</code></pre>
+&lt;/blockquote&gt;
+&lt;cite&gt;...&lt;/cite&gt;</code></pre>
             <figcaption>
-              <p>HTML snippet of a quote. Note that element <code>&lt;cite&gt;</code> is optional.</p>
+              <p>HTML snippet of a quotation from another source.</p>
             </figcaption>
           </figure>
-          <p>Quotations highlight pieces of information and they are styled with a font bigger than the surrounding text. If appropriate, use the cite attribute for adding a URL of the quotation source and the <code>&lt;cite&gt;</code> element for the text representation, both of them are optional.</p>
+          <p>If appropriate, use the <code>cite</code> attribute for adding a URL of the quotation source and the <code>&lt;cite&gt;</code> element for the text representation, both of them are optional.</p>
+        </section>
+
+        <section>
+          <h1>Highlights</h1>
+          <p>The repetition of some content from the same source is used for the purposes of enticing readers or highlighting key topics. You can repeat a passage or an entire paragraph using element <code>&lt;aside&gt;</code> inside a section.</p>
+          <aside>
+            <p><strong>Rapido</strong> is just that: copy and paste the html snippets and fill the gaps.</p>
+          </aside>
+          <figure>
+            <pre><code>&lt;aside&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+            <figcaption>
+              <p>HTML snippet of an highlight.</p>
+            </figcaption>
+          </figure>
+          <p>Such kind of quotations highlight pieces of information and therefore they are styled with a font bigger than the surrounding text.</p>
         </section>
 
         <section>
