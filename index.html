@@ -42,15 +42,28 @@
   </head>
   <body class="rapido">
     <main>
+      <header>
+        <button><a href="#">☰</a></button>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="https://github.com/nextbitlabs/Rapido">
+                View on Github
+                <img src="./media/github.svg">
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button><a href="#">close menu</a></button>
+      </header>
       <article>
         <header>
           <h1>Welcome to Rapido</h1>
           <p><strong>Rapido</strong> helps you to write web documents with the only use of HTML snippets, it is designed with a focus on usability and frugality.</p>
-          <p>The present document has been created following Rapido guidelines and nothing more, you can easily get your own documents with the same layout and style. Rapido guidelines are described in the next sections.</p>
+          <p>The present documentation has been created following Rapido guidelines and nothing more, you can easily get your own documents with the same layout and style. Rapido guidelines are described in the next sections.</p>
         </header>
         <section>
-          <a name="getting-started"></a>
-          <h1>Getting started</h1>
+          <h1 id="getting-started">Getting started</h1>
           <p>As starting point, we need an html document. The following code provides a skeleton: create an html file, called for example <code>document.html</code>, and copy/paste the code in the file.</p>
           <figure>
               <pre><code>&lt;!DOCTYPE html&gt;
@@ -106,7 +119,7 @@
         </section>
 
         <section>
-          <h1>Article header</h1>
+          <h1>Title and abstract</h1>
           <p>Element <code>&lt;header&gt;</code> is used for the title and few introductory paragraphs of your document. Generally, it is placed as first element withing the <code>&lt;article&gt;</code> tag.</p>
           <figure>
             <pre><code>&lt;main&gt;
@@ -483,6 +496,46 @@
 &lt;/figure&gt;</code></pre>
             <figcaption>
               <p>Use TeX functions for more sophisticated math typesetting.</p>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h1>Navigation menu</h1>
+          <p>The present section describes how to add a navigation menu at the top of your document. The menu may have one or more links to external resources, like other web pages, or links to sections of the same document as well.</p>
+          <p>As with all the other features, having a menu is optional and it is up to you if the document provides a navigation or not. For the menu we use the element <code>&lt;nav&gt;</code> inside the document header. Note that the document header is created with element <code>&lt;header&gt;</code>, which is positioned in <code>&lt;main&gt;</code> just before the <code>&lt;article&gt;</code> element.</p>
+          <figure>
+            <pre><code>&lt;main&gt;
+  &lt;header&gt;
+    &lt;button&gt;&lt;a href="#"&gt;☰&lt;/a&gt;&lt;/button&gt;
+    &lt;nav class="nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href="..."&gt;
+            ...
+            &lt;img src="..."&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;...&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;button&gt;&lt;a href="#"&gt;close menu&lt;/a&gt;&lt;/button&gt;
+  &lt;/header&gt;
+  &lt;article&gt;
+    ...
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
+            <figcaption>
+              <p>Code snippet for a navigation menu. Each link is created with a <code>&lt;a&gt;</code> element inside a <code>&lt;li&gt;</code>. An image, tipically an icon, may be pulled together the link label inside <code>&lt;a&gt;</code>.</p>
+            </figcaption>
+          </figure>
+          <p>The code above shows the presence of a couple of <code>&lt;button&gt;</code> elements, they are necessary for having a responsive navigation menu on small screens, as shown in the next screenshot.</p>
+          <figure>
+            <img src="./media/responsive.png">
+            <figcaption>
+              <h1>Responsive navigation menu</h1>
+              <p>Screenshot of <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox</a> developer tools.</p>
+              <p>The <code>&lt;button&gt;</code> elements provide a way to open and close the menu on small screens, supporting menu with one or more links.</p>
             </figcaption>
           </figure>
         </section>

@@ -78,13 +78,20 @@ body.rapido {
 .rapido article > header {
 	max-width: 640px;
 	width: 100%;
+	margin: 50px 0;
+}
+
+@media (max-width: 979px) {
+	.rapido article > header {
+		margin: 30px 0;
+	}
 }
 
 .rapido article > header > h1 {
 	font-size: 60px;
 	line-height: 80px;
 	font-weight: bold;
-	margin: 20px 0 50px 0;
+	margin: 0 0 50px 0;
 }
 
 @media (max-width: 979px) {
@@ -272,14 +279,14 @@ body.rapido {
 	vertical-align: top;
 }
 
-.rapido ul,
-.rapido ol {
+.rapido article ul,
+.rapido article ol {
 	max-width: 640px;
 	width: 100%;
 	list-style: none;
 }
 
-.rapido li {
+.rapido article li {
 	padding: 10px 0 10px 5px;
 	border-bottom: 1px solid #ededed;
 	font-size: 14px;
@@ -287,7 +294,7 @@ body.rapido {
 	display: flex;
 }
 
-.rapido li > var {
+.rapido article li > var {
 	font-family: monospace;
 	font-style: normal;
 	font-weight: bold;
@@ -296,7 +303,7 @@ body.rapido {
 	display: inline-block;
 }
 
-.rapido li > p {
+.rapido article li > p {
 	flex: 0 0 auto;
 	width: 110px;
 	text-overflow: ellipsis;
@@ -305,24 +312,24 @@ body.rapido {
 	margin: 0;
 }
 
-.rapido li > p:last-child {
+.rapido article li > p:last-child {
 	flex: 1 1 auto;
 	width: auto;
 }
 
-.rapido li > span {
+.rapido article li > span {
 	flex: 0 0 auto;
 	width: 30px;
 }
 
-.rapido li > p,
-.rapido li > span,
-.rapido li > var {
+.rapido article li > p,
+.rapido article li > span,
+.rapido article li > var {
 	font-size: 14px;
 	line-height: 21px;
 }
 
-.rapido li > span:first-letter {
+.rapido article li > span:first-letter {
 	text-transform: capitalize;
 }
 
@@ -388,6 +395,136 @@ body.rapido {
 	line-height: 21px;
 }
 
+.rapido main > header {
+	width: 100%;
+	min-height: 70px;
+	margin: 0;
+	padding: 0;
+}
+
+.rapido main > header > nav {
+	display: none;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.rapido main > header > nav > ul {
+	display: block;
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	/* min-height: calc(90vh - 180px); */
+}
+
+.rapido main > header > nav > ul > li {
+	border-bottom: 1px solid #ededed;
+	min-height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 20px;
+}
+
+.rapido main > header > nav > ul > li > a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	color: #353839;
+	height: 100%;
+	width: 100%;
+}
+
+.rapido main > header > nav > ul > li > a > img {
+	width: 30px;
+	margin: 0 0 0 10px;
+	vertical-align: middle;
+}
+
+.rapido main > header > nav a,
+.rapido main > header > nav a:hover,
+.rapido main > header > nav a:active,
+.rapido main > header > nav a:visited {
+	display: flex;
+	position: relative;
+}
+
+.rapido main > header > button {
+	display: none;
+	height: 70px;
+	width: 100%;
+	text-align: right;
+	background: #fff;
+	border: 0;
+	min-height: 70px;
+	border-bottom: 1px solid #ededed;
+}
+
+.rapido main > header > button > a {
+	font-size: 30px;
+	text-decoration: none;
+	color: inherit;
+	padding: 0 25px;
+}
+
+.rapido main > header > button:first-child {
+	text-align: right;
+}
+
+.rapido main > header > nav + button {
+	text-align: center;
+	border-bottom: 2px solid #353839;
+}
+
+.rapido main > header > nav + button > a {
+	font-size: 16px;
+	text-decoration: none;
+	color: inherit;
+	opacity: 0.5;
+}
+
+@media only screen and (min-width: 980px) {
+	.rapido main > header {
+		min-height: 90px;
+		border-bottom: 1px solid #ededed;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.rapido main > header > nav {
+		display: block;
+		position: relative;
+		overflow: visible;
+	}
+
+	.rapido main > header > nav > ul {
+		min-height: 0;
+	}
+
+	.rapido main > header > nav > ul > li {
+		display: inline-block;
+		border-bottom: 0;
+		min-height: 0;
+		padding: 0 40px 0 0;
+	}
+}
+
+/* hint from https://github.com/codezero-be/responsive-nav*/ 
+@media only screen and (max-width: 979px) {
+	.rapido main > header > button:first-child {
+		display: block;
+	}
+	.rapido main > header > button:first-child:hover + nav,
+	.rapido main > header > nav:hover,
+	.rapido main > header > button:first-child:hover + nav + button,
+	.rapido main > header > nav:hover + button {
+		display: block;
+	}
+}
 .rapido code > mark {
 	background: #ededed;
 	color: #6f2da8;
