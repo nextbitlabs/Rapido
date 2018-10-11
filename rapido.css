@@ -366,7 +366,7 @@ body.rapido {
 	border-radius: 2px;
 }
 
-.rapido small {
+.rapido article small {
 	font-size: 14px;
 	line-height: 21px;
 	width: 220px;
@@ -378,7 +378,7 @@ body.rapido {
 }
 
 @media (max-width: 979px) {
-	.rapido small {
+	.rapido article small {
 		width: 100%;
 		float: none;
 		padding: 0;
@@ -390,7 +390,7 @@ body.rapido {
 	}
 }
 
-.rapido small > p {
+.rapido article small > p {
 	font-size: 14px;
 	line-height: 21px;
 }
@@ -525,6 +525,27 @@ body.rapido {
 		display: block;
 	}
 }
+
+.rapido main > footer:last-child {
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #ededed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rapido main > footer:last-child p,
+.rapido main > footer:last-child small {
+	width: unset;
+	max-width: unset;
+	font-family: monospace;
+	margin: 0;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+}
+
 .rapido code > mark {
 	background: #ededed;
 	color: #6f2da8;
