@@ -387,3 +387,8 @@ body.rapido {
 	font-size: 14px;
 	line-height: 21px;
 }
+
+.rapido code > mark {
+	background: #ededed;
+	color: #6f2da8;
+}
