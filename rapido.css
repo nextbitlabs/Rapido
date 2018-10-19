@@ -159,7 +159,7 @@ body.rapido {
 }
 
 @media (max-width: 380px) {
-.rapido section > blockquote {
+	.rapido section > blockquote {
 		padding: 20px 20px 0 20px;
 	}
 }
@@ -188,7 +188,7 @@ body.rapido {
 }
 
 .rapido section > cite::before {
-	content: "– "
+	content: "– ";
 }
 
 .rapido figure {
@@ -236,13 +236,13 @@ body.rapido {
 	flex: 0 0 auto;
 	width: 640px;
 	height: auto;
-	box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.23);
+	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
 	border-radius: 5px;
 	max-width: 100%;
 }
 
 .rapido figure > p {
-	width: 640px; 
+	width: 640px;
 }
 
 .rapido figcaption > h1 {
@@ -307,7 +307,7 @@ body.rapido {
 	flex: 0 0 auto;
 	width: 110px;
 	text-overflow: ellipsis;
-	white-space: wrap;
+	white-space: normal;
 	overflow: hidden;
 	margin: 0;
 }
@@ -329,7 +329,7 @@ body.rapido {
 	line-height: 21px;
 }
 
-.rapido article li > span:first-letter {
+.rapido article li > span::first-letter {
 	text-transform: capitalize;
 }
 
@@ -415,7 +415,6 @@ body.rapido {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	/* min-height: calc(90vh - 180px); */
 }
 
 .rapido main > header > nav > ul > li {
@@ -513,11 +512,12 @@ body.rapido {
 	}
 }
 
-/* hint from https://github.com/codezero-be/responsive-nav*/ 
+/* hint from https://github.com/codezero-be/responsive-nav */
 @media only screen and (max-width: 979px) {
 	.rapido main > header > button:first-child {
 		display: block;
 	}
+
 	.rapido main > header > button:first-child:hover + nav,
 	.rapido main > header > nav:hover,
 	.rapido main > header > button:first-child:hover + nav + button,
