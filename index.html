@@ -408,7 +408,7 @@
         <section>
           <h1>Code</h1>
           <p>Code can be inserted in a document within a <code>&lt;figure&gt;</code> node, in the same way as with images and videos. Wrap the <code>&lt;code&gt;</code> element within a <code>&lt;pre&gt;</code> element to add multiple lines of code.</p>
-          <figure>
+          <figure id="listing1">
             <pre><code>const f = n => n ? n * f(n - 1) : 1;</code></pre>
             <figcaption>
               <p>Factorial function in Javascript. </p>
@@ -416,28 +416,40 @@
           </figure>
           <figure>
             <pre><code>&lt;figure&gt;
-  &lt;pre&gt;
-    &lt;code&gt;const f = n => n ? n * f(n - 1) : 1;&lt;/code&gt;
-  &lt;/pre&gt;
+  &lt;pre&gt;&lt;code&gt;const f = n => n ? n * f(n - 1) : 1;&lt;/code&gt;&lt;/pre&gt;
 &lt;/figure&gt;</code></pre>
             <figcaption>
+              <h1>Listing 1</h1>
               <p>Code snippet used for the factorial function above.</p>
             </figcaption>
           </figure>
-          <p>HTML code needs to be escaped, use string <code>&amp;lt;</code> for <code><</code> and string <code>&amp;gt;</code> for <code>></code>.</p>
+          <p>The next example shows how to obtain the expected indentation with more lines of code, as rule of thumb you can paste the code directly within elements <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>.</p>
           <figure>
-            <pre><code>&amp;lt;figure&amp;gt;
-  &amp;lt;pre&amp;gt;
-    &amp;lt;code&amp;gt;const f = n => n ? n * f(n - 1) : 1;&amp;lt;/code&amp;gt;
-  &amp;lt;/pre&amp;gt;
-&amp;lt;/figure&amp;gt;</code></pre>
+            <pre><code>function factorial (n) {
+  return n ? n * factorial(n - 1) : 1;
+}</code></pre>
+          </figure>
+          <figure>
+            <pre><code>&lt;figure&gt;
+  &lt;pre&gt;&lt;code&gt;function factorial (n) {
+  return n ? n * factorial(n - 1) : 1;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;</code></pre>
+          </figure>
+          <p>A special treatment is necessary for HTML code because it needs to be <em>escaped</em>: use string <code>&amp;lt;</code> for <code><</code> and string <code>&amp;gt;</code> for <code>></code>.</p>
+          <figure>
+            <pre><code>&lt;figure&gt;
+  &lt;pre&gt;&lt;code&gt;&amp;lt;figure&amp;gt;
+  &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;const f = n =&gt; n ? n * f(n - 1) : 1;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&amp;lt;/figure&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;</code></pre>
             <figcaption>
-              <p>Code snippet used for representing the previous html snippet.</p>
+              <p>Snippet used for writing the HTML code of <a href="#listing1">listing 1</a>.</p>
             </figcaption>
           </figure>
           <p>Inline code is also possible with the only use of the <code>&lt;code&gt;</code> tag.
           <figure>
-            <pre><code>&lt;p&gt;...&lt;code&gt;some code&lt;/code&gt;...&lt;/p&gt;</code></pre>
+            <pre><code>&lt;p&gt;...&lt;code&gt;...&lt;/code&gt;...&lt;/p&gt;</code></pre>
           </figure>
         </section>
 
