@@ -8,6 +8,7 @@ body.rapido {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 	color: #353839;
 	margin: 0;
 	padding: 0;
