@@ -15,15 +15,15 @@ body.rapido {
 }
 
 .rapido article {
-	width: 980px;
+	width: 1024px;
 	max-width: 100%;
 	margin: auto;
-	padding: 0 50px;
+	padding: 0 40px;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1023px) {
 	.rapido article {
-		width: 640px;
+		width: 600px;
 		padding: 0 20px 0 20px;
 	}
 }
@@ -41,7 +41,7 @@ body.rapido {
 	font-size: 30px;
 	line-height: 45px;
 	width: 100%;
-	max-width: 640px;
+	max-width: 600px;
 	font-weight: bold;
 	margin: 0 0 30px 0;
 }
@@ -57,15 +57,15 @@ body.rapido {
 	line-height: 30px;
 	font-weight: bold;
 	width: 100%;
-	max-width: 640px;
+	max-width: 600px;
 	margin: 0 0 20px 0;
 }
 
 .rapido p,
 .rapido section p {
 	font-size: 18px;
-	line-height: 27px;
-	max-width: 640px;
+	line-height: 30px;
+	max-width: 600px;
 	margin: 0 0 20px 0;
 	position: relative;
 }
@@ -95,7 +95,7 @@ body.rapido {
 
 .rapido div {
 	width: 100%;
-	max-width: 640px;
+	max-width: 600px;
 	overflow: scroll;
 }
 
@@ -108,14 +108,14 @@ body.rapido {
 	font-family: monospace;
 	font-size: 14px;
 	line-height: 21px;
-	width: 640px;
+	width: 600px;
 	padding: 10px;
 	overflow: scroll;
 	border-radius: 2px;
 }
 
 .rapido section > aside {
-	max-width: 640px;
+	max-width: 600px;
 	width: 100%;
 	border-top: 2px solid #353839;
 	border-bottom: 2px solid #353839;
@@ -126,13 +126,13 @@ body.rapido {
 .rapido section > aside > p {
 	font-size: 30px;
 	line-height: 45px;
-	max-width: 640px;
+	max-width: 600px;
 	margin: 0 0 20px 0;
 	position: relative;
 }
 
 .rapido section > blockquote {
-	max-width: 640px;
+	max-width: 600px;
 	width: 100%;
 	padding: 20px 40px 0 40px;
 }
@@ -162,7 +162,7 @@ body.rapido {
 	font-size: 16px;
 	line-height: 24px;
 	width: 100%;
-	max-width: 640px;
+	max-width: 600px;
 	margin: 0 0 20px 0;
 }
 
@@ -178,19 +178,19 @@ body.rapido {
 }
 
 .rapido figcaption {
-	width: 220px;
+	width: 324px;
 	margin-left: 20px;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1023px) {
 	.rapido figcaption {
-		width: 640px;
+		width: 600px;
 		margin: 5px 0 0 0;
 	}
 }
 
 .rapido figure > div {
-	width: 640px;
+	width: 600px;
 	max-width: 100%;
 	overflow: scroll;
 	background-color: #ededed;
@@ -200,7 +200,7 @@ body.rapido {
 .rapido section figure > video {
 	display: block;
 	flex: 0 0 auto;
-	width: 640px;
+	width: 600px;
 	height: auto;
 	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
 	border-radius: 5px;
@@ -208,7 +208,7 @@ body.rapido {
 }
 
 .rapido section figure > p {
-	width: 640px;
+	width: 600px;
 }
 
 .rapido section figcaption > h1 {
@@ -230,7 +230,7 @@ body.rapido {
 }
 
 .rapido table {
-	min-width: 640px;
+	min-width: 600px;
 	padding: 10px;
 	text-align: left;
 	font-family: inherit;
@@ -248,15 +248,15 @@ body.rapido {
 .rapido article small {
 	font-size: 14px;
 	line-height: 21px;
-	width: 220px;
+	width: 324px;
 	float: right;
 	padding: 3px 0 0 0;
 	position: absolute;
-	right: -240px;
+	right: calc(-324px - 20px);
 	top: 0;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1023px) {
 	.rapido article small {
 		width: 100%;
 		float: none;
@@ -275,12 +275,11 @@ body.rapido {
 }
 
 .rapido article > header {
-	max-width: 640px;
 	width: 100%;
 	margin: 50px 0;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1023px) {
 	.rapido article > header {
 		margin: 30px 0;
 	}
@@ -293,7 +292,7 @@ body.rapido {
 	margin: 0 0 50px 0;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1023px) {
 	.rapido article > header > h1 {
 		font-size: 40px;
 		line-height: 60px;
@@ -308,8 +307,9 @@ body.rapido {
 }
 
 .rapido article > header > p {
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 30px;
+	line-height: 45px;
+	max-width: unset;
 }
 
 .rapido article > header > address {
@@ -343,7 +343,7 @@ body.rapido {
 
 .rapido article ul,
 .rapido article ol {
-	max-width: 640px;
+	max-width: 600px;
 	width: 100%;
 	list-style: none;
 }
@@ -482,7 +482,7 @@ body.rapido {
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1024px) {
 	.rapido main > header {
 		min-height: 90px;
 		border-bottom: 1px solid #ededed;
@@ -510,7 +510,7 @@ body.rapido {
 }
 
 /* hint from https://github.com/codezero-be/responsive-nav */
-@media only screen and (max-width: 979px) {
+@media only screen and (max-width: 1023px) {
 	.rapido main > header > button:first-child {
 		display: block;
 	}
