@@ -5,7 +5,7 @@
 }
 
 body.rapido {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
@@ -46,12 +46,6 @@ body.rapido {
 	margin: 0 0 30px 0;
 }
 
-.rapido section > h1::before {
-	content: '/';
-	padding-right: 10px;
-	margin-left: 0;
-}
-
 .rapido section > h2 {
 	font-size: 20px;
 	line-height: 30px;
@@ -71,7 +65,7 @@ body.rapido {
 }
 
 .rapido code {
-	font-family: monospace;
+	font-family: "Consolas", "Courier", monospace;
 	font-size: inherit;
 	line-height: inherit;
 	color: #0a7e8c;
@@ -105,7 +99,7 @@ body.rapido {
 
 .rapido pre {
 	background: #ededed;
-	font-family: monospace;
+	font-family: "Consolas", "Courier", monospace;
 	font-size: 14px;
 	line-height: 21px;
 	width: 600px;
@@ -357,7 +351,7 @@ body.rapido {
 }
 
 .rapido article li > var {
-	font-family: monospace;
+	font-family: "Consolas", "Courier", monospace;
 	font-style: normal;
 	font-weight: bold;
 	flex: 0 0 auto;
@@ -536,7 +530,7 @@ body.rapido {
 .rapido main > footer:last-child small {
 	width: unset;
 	max-width: unset;
-	font-family: monospace;
+	font-family: "Consolas", "Courier", monospace;
 	margin: 0;
 	font-size: 12px;
 	line-height: 18px;
