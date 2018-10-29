@@ -29,7 +29,8 @@ body.rapido {
 }
 
 .rapido a {
-	color: #2243b6;
+	color: inherit;
+	text-decoration: underline;
 }
 
 .rapido section {
@@ -74,12 +75,12 @@ body.rapido {
 	font-family: "Consolas", "Courier", monospace;
 	font-size: inherit;
 	line-height: inherit;
-	color: #0a7e8c;
+	color: blue;
 }
 
-.rapido code > mark {
-	background: #ededed;
-	color: #6f2da8;
+.rapido mark {
+	background: rgba(0, 0, 255, .15);
+	color: inherit;
 }
 
 .rapido strong {
@@ -105,8 +106,8 @@ body.rapido {
 }
 
 .rapido pre {
-	background: #ededed;
 	font-family: "Consolas", "Courier", monospace;
+	background: #f4f4f4;
 	font-size: 14px;
 	line-height: 21px;
 	width: 600px;
@@ -232,7 +233,7 @@ body.rapido {
 }
 
 .rapido table thead {
-	background-color: #ededed;
+	background-color: #f4f4f4;
 }
 
 .rapido table td,
@@ -547,4 +548,8 @@ body.rapido {
 	font-size: 12px;
 	line-height: 18px;
 	text-align: center;
+}
+
+.katex-display {
+	padding: 10px 0 !important;
 }

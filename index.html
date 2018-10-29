@@ -67,20 +67,20 @@
           <p>As starting point, we need an html document. The following code provides a skeleton: create an html file, called for example <code>document.html</code>, and copy/paste the code in the file.</p>
           <figure>
               <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html&gt;
-    &lt;head&gt;
-      &lt;meta charset="utf-8"&gt;
-      &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes"&gt;
-      &lt;link href="rapido.css" rel="stylesheet" type="text/css"&gt;
-    &lt;/head&gt;
-    &lt;body class="rapido"&gt;
-      &lt;main&gt;
-        &lt;article&gt;
-          ...
-        &lt;/article&gt;
-      &lt;/main&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes"&gt;
+    &lt;link href="rapido.css" rel="stylesheet" type="text/css"&gt;
+  &lt;/head&gt;
+  &lt;body class="rapido"&gt;
+    &lt;main&gt;
+      &lt;article&gt;
+        ...
+      &lt;/article&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
             <figcaption>
               <p>This the first example of an html snippet. Rapido is just that: copy and paste the html snippets and fill the gaps <code>...</code> with your own content.</p>
             </figcaption>
@@ -104,12 +104,12 @@
           <p>The previous section shows a gap within the <code>&lt;article&gt;...&lt;/article&gt;</code> tags, you can fill the gap with <strong>section</strong> snippets. Typically, sections have a heading and one or more paragraphs, but not only, as we will see sections may also contain figures, tables and much more.</p>
           <figure>
             <pre><code>&lt;main&gt;
-  &lt;article&gt;
+  &lt;article&gt;<mark>
     &lt;section&gt;
       &lt;h1&gt;...&lt;/h1&gt;
       &lt;p&gt;...&lt;/p&gt;
       &lt;p&gt;...&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;/section&gt;</mark>
   &lt;/article&gt;
 &lt;/main&gt;</code></pre>
             <figcaption>
@@ -124,15 +124,15 @@
           <p>Element <code>&lt;header&gt;</code> is used for the title and few introductory paragraphs of your document. Generally, it is placed as first element withing the <code>&lt;article&gt;</code> tag.</p>
           <figure>
             <pre><code>&lt;main&gt;
-  &lt;article&gt;
+  &lt;article&gt;<mark>
     &lt;header&gt;
       &lt;h1&gt;...&lt;/h1&gt;
       &lt;p&gt;...&lt;/p&gt;
       &lt;p&gt;...&lt;/p&gt;
       &lt;address&gt;
-        &lt;a href="..."&gt;&lt;img src="..."&gt;...&lt;a&gt;
+        ... &lt;a href="..."&gt...&lt;/a&gt;
       &lt;/address&gt;
-    &lt;/header&gt;
+    &lt;/header&gt;</mark>
     ...
   &lt;/article&gt;
 &lt;/main&gt;</code></pre>
@@ -151,8 +151,8 @@
             <pre><code>&lt;section&gt;
   &lt;h1&gt;...&lt;/h1&gt;
   &lt;p&gt;
-    ...
-    &lt;small&gt;...&lt;/small&gt;
+    ...<mark>
+    &lt;small&gt;...&lt;/small&gt;</mark>
   &lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
@@ -173,15 +173,15 @@
           <figure>
             <pre><code>&lt;section&gt;
   &lt;h1&gt;...&lt;/h1&gt;
-  &lt;p&gt;...&lt;/p&gt;
-  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;<mark>
   &lt;figure&gt;
     &lt;img src="image.jpg"&gt;
     &lt;figcaption&gt;
       &lt;h1&gt;...&lt;/h1&gt;
       &lt;p&gt;...&lt;/p&gt;
     &lt;/figcaption&gt;
-  &lt;/figure&gt;
+  &lt;/figure&gt;</mark>
+  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
               <p>Code snippet of an image, with a descriptive caption. For explanatory purpose, tag <code>&lt;figure&gt;</code> has been presented within a section with a heading and two paragraphs.</p>
@@ -196,13 +196,18 @@
             </figcaption>
           </figure>
           <figure>
-            <pre><code>&lt;figure&gt;
-  &lt;video controls muted src="video.mp4"&gt;&lt;/video&gt;
-  &lt;figcaption&gt;
-    &lt;h1&gt;...&lt;/h1&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
+            <pre><code>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;<mark>
+  &lt;figure&gt;
+    &lt;video controls muted src="video.mp4"&gt;&lt;/video&gt;
+    &lt;figcaption&gt;
+      &lt;h1&gt;...&lt;/h1&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;</mark>
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
             <figcaption>
               <p>Code snippet of a video with a caption, the latter having a heading and a paragraph. As with images, videos can be inserted in the article header as well.</p>
             </figcaption>
@@ -217,10 +222,15 @@
           </blockquote>
           <cite>HTML Living Standard</cite>
           <figure>
-            <pre><code>&lt;blockquote cite="..."&gt;
+            <pre><code>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;<mark>
+  &lt;blockquote cite="..."&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;cite&gt;...&lt;/cite&gt;</mark>
   &lt;p&gt;...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;cite&gt;...&lt;/cite&gt;</code></pre>
+&lt;/section&gt;</code></pre>
             <figcaption>
               <p>HTML snippet of a quotation from another source.</p>
             </figcaption>
@@ -235,9 +245,14 @@
             <p><strong>Rapido</strong> is just that: copy and paste the html snippets and fill the gaps.</p>
           </aside>
           <figure>
-            <pre><code>&lt;aside&gt;
+            <pre><code>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;<mark>
+  &lt;aside&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/aside&gt;</mark>
   &lt;p&gt;...&lt;/p&gt;
-&lt;/aside&gt;</code></pre>
+&lt;/section&gt;</code></pre>
             <figcaption>
               <p>HTML snippet of an highlight.</p>
             </figcaption>
@@ -282,28 +297,33 @@
             </figcaption>
           </figure>
           <figure>
-            <pre><code>&lt;figure&gt;
-  &lt;div&gt;
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;...&lt;/th&gt;
-          &lt;th&gt;...&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;...&lt;/td&gt;
-          &lt;td&gt;...&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;...&lt;/td&gt;
-          &lt;td&gt;...&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/div&gt;
-&lt;/figure&gt;</code></pre>
+            <pre><code>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;<mark>
+  &lt;figure&gt;
+    &lt;div&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;...&lt;/th&gt;
+            &lt;th&gt;...&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;...&lt;/td&gt;
+            &lt;td&gt;...&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;...&lt;/td&gt;
+            &lt;td&gt;...&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/figure&gt;</mark>
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
             <figcaption>
               <p>Code snippet of a table of two columns, with a heading and two rows. Use part <code>&lt;thead&gt;</code> for defining the head of the columns of the table, use instead part <code>&lt;tbody&gt;</code> for the body of the table. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> container wrapping the <code>&lt;table&gt;</code> element.</p>
             </figcaption>
@@ -322,14 +342,19 @@
             </li>
           </ul>
           <figure>
-            <pre><code>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;...&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+            <pre><code>&lt;section&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;<mark>
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;</mark>
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
             <figcaption>
               <p>Use <code>&lt;ol&gt;</code> element when the order is meaningful, ordered list are rendered as a numbered list:</p>
               <ol>
@@ -342,7 +367,22 @@
 
         <section>
           <h1>Code</h1>
-          <p>Code can be inserted in a document within a <code>&lt;figure&gt;</code> node, in the same way as with images and videos. Wrap the <code>&lt;code&gt;</code> element within a <code>&lt;pre&gt;</code> element to add multiple lines of code.</p>
+          <p>Code can be inserted inline or within a <code>&lt;figure&gt;</code> node, in the same way as with images and videos.</p>
+          <figure>
+            <pre><code>&lt;p&gt;...<mark>&lt;code&gt;...&lt;/code&gt;</mark>...&lt;/p&gt;</code></pre>
+            <figcaption>
+              <p>Add inline code using tag <code>&lt;code&gt;</code>.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <pre><code>&lt;figure&gt;
+  <mark>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</mark>
+&lt;/figure&gt;</code></pre>
+            <figcaption>
+              <p>Wrap the <code>&lt;code&gt;</code> element within a <code>&lt;pre&gt;</code> element to add multiple lines of code.</p>
+            </figcaption>
+          </figure>
+          <h2>Example 1</h2>
           <figure id="listing1">
             <pre><code>const f = n => n ? n * f(n - 1) : 1;</code></pre>
             <figcaption>
@@ -358,7 +398,8 @@
               <p>Code snippet used for the factorial function above.</p>
             </figcaption>
           </figure>
-          <p>The next example shows how to obtain the expected indentation with more lines of code, as rule of thumb you can paste the code directly within elements <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>.</p>
+          <h2>Example 2</h2>
+          <p>This example shows how to obtain the expected indentation with more lines of code. As rule of thumb, paste the code directly within elements <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>.</p>
           <figure>
             <pre><code>function factorial (n) {
   return n ? n * factorial(n - 1) : 1;
@@ -371,6 +412,7 @@
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/figure&gt;</code></pre>
           </figure>
+          <h2>Example 3</h2>
           <p>A special treatment is necessary for HTML code because it needs to be <em>escaped</em>: use string <code>&amp;lt;</code> for <code><</code> and string <code>&amp;gt;</code> for <code>></code>.</p>
           <figure>
             <pre><code>&lt;figure&gt;
@@ -382,10 +424,6 @@
               <p>Snippet used for writing the HTML code of <a href="#listing1">listing 1</a>.</p>
             </figcaption>
           </figure>
-          <p>Inline code is also possible with the only use of the <code>&lt;code&gt;</code> tag.
-          <figure>
-            <pre><code>&lt;p&gt;...&lt;code&gt;...&lt;/code&gt;...&lt;/p&gt;</code></pre>
-          </figure>
         </section>
 
         <section>
@@ -396,6 +434,7 @@
 &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"&gt;&lt;/script&gt;</code></pre>
           </figure>
+          <h2>Example 1</h2>
           <p>You can insert mathematics inline a paragraph, like the famous equivalence between energy and inertial mass $E = mc^2$, surrounding the mathematical formula with symbols <code>$...$</code>, as presented below.</p>
           <figure>
             <pre><code>&lt;p&gt;... $E = mc^2$ ...&lt;/p&gt;</code></pre>
@@ -403,16 +442,17 @@
               <p>Inline formula.</p>
             </figcaption>
           </figure>
+          <h2>Example 2</h2>
           <p>Having your formula in a new line is easy as well, just use <code>$$...$$</code> instead of <code>$...$</code>.</p>
+          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations, expressed for the first time 8 years later the <q cite="Albert Einstein">the happiest thought of my life</q>.</small></p>
           <figure>
             <pre><code>&lt;p&gt;
+  ...
   $$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$
+  ...
 &lt;/p&gt;</code></pre>
-            <figcaption>
-              <p>New line formula.</p>
-            </figcaption>
           </figure>
-          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations, expressed for the first time 8 years later the <q cite="Albert Einstein">the happiest thought of my life</q>.</small></p>
+          <h2>Example 3</h2>
           <p>Multiline math can be obtained with TeX syntax, <a href="https://katex.org/docs/supported.html">KaTeX supports</a> a wide list of TeX functions. For example, for the representation of the following system of equations we make use of the <code>\begin{array}</code> environment.</p>
           <figure>
             <p>
@@ -425,7 +465,7 @@
             </p>
             <figcaption>
               <h1>Maxwell's equations in vacuum</h1>
-              <p>Both the equations can be reduced to the standard wave equation $$
+              <p>The equations can be reduced to the standard wave equation $$
                 \frac{1}{c^2} \frac{\partial^2 \mathbf{F}}{\partial^2 t} - \nabla^2 \mathbf{F} = 0
               $$ providing the theoretical background for the electromagnetic waves.</p>
             </figcaption>
@@ -452,7 +492,7 @@
           <p>The present section describes how to add a navigation menu at the top of your document. The menu may have one or more links to external resources, like other web pages, or links to sections of the same document as well.</p>
           <p>As with all the other features, having a menu is optional and it is up to you if the document provides a navigation or not. For the menu we use the element <code>&lt;nav&gt;</code> inside the document header. Note that the document header is created with element <code>&lt;header&gt;</code>, which is positioned in <code>&lt;main&gt;</code> just before the <code>&lt;article&gt;</code> element.</p>
           <figure>
-            <pre><code>&lt;main&gt;
+            <pre><code>&lt;main&gt;<mark>
   &lt;header&gt;
     &lt;button&gt;&lt;a href="#"&gt;☰&lt;/a&gt;&lt;/button&gt;
     &lt;nav class="nav"&gt;
@@ -467,7 +507,7 @@
       &lt;/ul&gt;
     &lt;/nav&gt;
     &lt;button&gt;&lt;a href="#"&gt;close menu&lt;/a&gt;&lt;/button&gt;
-  &lt;/header&gt;
+  &lt;/header&gt;</mark>
   &lt;article&gt;
     ...
   &lt;/article&gt;
@@ -490,10 +530,10 @@
           <p>This section describes how place the copyright notice at the bottom of the document. You can add a copyright notice through a paragraph <code>&lt;p&gt;</code> within a <code>&lt;footer&gt;</code> element. Note that <code>&lt;footer&gt;</code> has to be the last child of element <code>&lt;main&gt;</code>.</p>
           <figure>
             <pre><code>&lt;main&gt;
-  ...
+  ...<mark>
   &lt;footer&gt;
     &lt;p&gt;&lt;small&gt;...&lt;/small&gt;&lt;/p&gt;
-  &lt;/footer&gt;
+  &lt;/footer&gt;</mark>
 &lt;/main&gt;</code></pre>
             <figcaption>
               <p>Code snippet for stating content attribution or licensing.</p>
