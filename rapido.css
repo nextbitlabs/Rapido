@@ -260,8 +260,7 @@ body.rapido {
 		padding: 0;
 		margin: 20px 0;
 		position: relative;
-		right: unset;
-		top: unset;
+		right: 0;
 		display: block;
 	}
 }
@@ -306,7 +305,7 @@ body.rapido {
 .rapido article > header > p {
 	font-size: 30px;
 	line-height: 45px;
-	max-width: unset;
+	max-width: 100%;
 }
 
 .rapido article > header > address {
@@ -320,7 +319,6 @@ body.rapido {
 .rapido article > header > address > a {
 	margin: 5px 15px 5px 0;
 	flex: 0 0 auto;
-	width: unset;
 }
 
 .rapido article > header > address > a > img {
@@ -531,8 +529,6 @@ body.rapido {
 
 .rapido main > footer:last-child p,
 .rapido main > footer:last-child small {
-	width: unset;
-	max-width: unset;
 	font-family: "Consolas", "Courier", monospace;
 	margin: 0;
 	font-size: 12px;
