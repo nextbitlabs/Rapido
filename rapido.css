@@ -109,6 +109,7 @@ body.rapido {
 	font-size: 14px;
 	line-height: 21px;
 	width: 600px;
+	max-width: 100%;
 	padding: 10px;
 	overflow: scroll;
 	border-radius: 2px;
@@ -171,21 +172,32 @@ body.rapido {
 }
 
 .rapido figure {
+	position: relative;
+	width: 600px;
+	max-width: 100%;
 	margin: 20px 0 20px 0;
-	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
 }
 
 .rapido figcaption {
+	font-size: 14px;
+	line-height: 21px;
 	width: 324px;
-	margin-left: 20px;
+	float: right;
+	padding: 0;
+	position: absolute;
+	right: calc(-324px - 20px);
+	top: 0;
 }
 
 @media (max-width: 1023px) {
 	.rapido figcaption {
-		width: 600px;
-		margin: 5px 0 0 0;
+		width: 100%;
+		float: none;
+		margin: 5px 0;
+		position: relative;
+		right: unset;
+		top: unset;
+		display: block;
 	}
 }
 
