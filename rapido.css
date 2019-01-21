@@ -196,7 +196,6 @@ body.rapido {
 	max-width: 100%;
 	overflow-y: hidden;
 	overflow-x: auto;
-	background-color: #ededed;
 }
 
 .rapido section figure > img,
@@ -239,13 +238,32 @@ body.rapido {
 	font-family: inherit;
 	font-size: 14px;
 	line-height: 21px;
+	border-collapse: collapse;
+	border-top: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+}
+
+.rapido table thead {
 	background-color: #ededed;
 }
 
-.rapido td,
-.rapido th {
+.rapido table td,
+.rapido table th {
 	padding: 5px 10px;
 	vertical-align: top;
+}
+
+.rapido table tr {
+	border-bottom: 1px solid #ededed;
+}
+
+.rapido table th {
+	border-right: 1px solid #e0e0e0;
+}
+
+.rapido table td,
+.rapido table th:last-child {
+	border-right: 1px solid #ededed;
 }
 
 .rapido article small {
