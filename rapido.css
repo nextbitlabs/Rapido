@@ -64,6 +64,12 @@ body.rapido {
 	position: relative;
 }
 
+.rapido span,
+.rapido var {
+	font-size: inherit;
+	line-height: inherit;
+}
+
 .rapido code {
 	font-family: "Consolas", "Courier", monospace;
 	font-size: inherit;
@@ -329,65 +335,31 @@ body.rapido {
 	margin: 0 10px 0 0;
 }
 
-@media (max-width: 380px) {
-	.rapido div > ol,
-	.rapido div > ul {
-		min-width: 380px;
-	}
-}
-
 .rapido article ul,
 .rapido article ol {
 	max-width: 600px;
 	width: 100%;
-	list-style: none;
+	list-style-position: inside;
+	margin: 0 0 20px 0;
+}
+
+.rapido article ul {
+	list-style-type: disc;
+}
+
+.rapido article ol {
+	list-style-type: decimal;
 }
 
 .rapido article li {
-	padding: 10px 0 10px 5px;
-	border-bottom: 1px solid #ededed;
 	font-size: 14px;
 	line-height: 21px;
-	display: flex;
-}
-
-.rapido article li > var {
-	font-family: "Consolas", "Courier", monospace;
-	font-style: normal;
-	font-weight: bold;
-	flex: 0 0 auto;
-	width: 100px;
-	display: inline-block;
 }
 
 .rapido article li > p {
-	flex: 0 0 auto;
-	width: 110px;
-	text-overflow: ellipsis;
-	white-space: normal;
-	overflow: hidden;
-	margin: 0;
-}
-
-.rapido article li > p,
-.rapido article li > span,
-.rapido article li > var {
 	font-size: 14px;
 	line-height: 21px;
-}
-
-.rapido article li > p:last-child {
-	flex: 1 1 auto;
-	width: auto;
-}
-
-.rapido article li > span {
-	flex: 0 0 auto;
-	width: 30px;
-}
-
-.rapido article li > span::first-letter {
-	text-transform: capitalize;
+	display: inline;
 }
 
 .rapido main > header {
