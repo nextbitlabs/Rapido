@@ -205,24 +205,12 @@ body.rapido {
 	width: 600px;
 	height: auto;
 	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
-	border-radius: 5px;
+	border-radius: 3px;
 	max-width: 100%;
 }
 
 .rapido section figure > p {
 	width: 600px;
-}
-
-.rapido section figcaption > h1 {
-	display: inline;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 21px;
-	padding: 0 5px 0 0;
-}
-
-.rapido section figcaption > h1::after {
-	content: '.';
 }
 
 .rapido section figcaption > p {
@@ -312,6 +300,20 @@ body.rapido {
 	margin: 0 0 50px 0;
 }
 
+.rapido section figcaption > h1,
+.rapido article > header > figure > figcaption > h1 {
+	display: inline;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 21px;
+	padding: 0;
+}
+
+.rapido section figcaption > h1::after,
+.rapido article > header > figure > figcaption > h1::after {
+	content: '.';
+}
+
 @media (max-width: 1023px) {
 	.rapido article > header > h1 {
 		font-size: 40px;
@@ -345,12 +347,32 @@ body.rapido {
 	flex: 0 0 auto;
 }
 
+.rapido article > header > img,
+.rapido article > header > video {
+	margin: 20px 0 20px 0;
+}
+
+.rapido article > header > img,
+.rapido article > header > video,
+.rapido article > header > figure > img,
+.rapido article > header > figure > video {
+	width: 100%;
+	display: block;
+	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
+	border-radius: 3px;
+}
+
 .rapido article > header > address > a > img {
 	vertical-align: middle;
 	border-radius: 15px;
 	width: 30px;
 	height: 30px;
 	margin: 0 10px 0 0;
+}
+
+.rapido article > header > figure > figcaption {
+	width: 100%;
+	margin: 5px 0 0 0;
 }
 
 .rapido article ul,
@@ -374,7 +396,8 @@ body.rapido {
 	line-height: 21px;
 }
 
-.rapido article li > p {
+.rapido article li > p,
+.rapido article > header > figure > figcaption > p {
 	font-size: 14px;
 	line-height: 21px;
 	display: inline;
