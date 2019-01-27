@@ -472,7 +472,7 @@
           </figure>
           <h2>Example 2</h2>
           <p>Having your formula in a new line is easy as well, just use <code>$$...$$</code> instead of <code>$...$</code>.</p>
-          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations, expressed for the first time 8 years later the <q cite="https://isbnsearch.org/isbn/0192806726">the happiest thought of my life</q>.</small></p>
+          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations <cite><a href="#ref-1">[1]</a></cite>, expressed for the first time 8 years later the <q cite="https://isbnsearch.org/isbn/0192806726">the happiest thought of my life</q> <cite><a href="#ref-2">[2]</a></cite>.</small></p>
           <figure>
             <pre><code>&lt;p&gt;
   ...
@@ -492,10 +492,10 @@
               \end{array}$$
             </p>
             <figcaption>
-              <h1>Maxwell's equations in vacuum</h1>
+              <h1>Maxwell's equations in vacuum.</h1>
               <p>The equations can be reduced to the standard wave equation $$
                 \frac{1}{c^2} \frac{\partial^2 \mathbf{F}}{\partial^2 t} - \nabla^2 \mathbf{F} = 0
-              $$ providing the theoretical background for the electromagnetic waves.</p>
+              $$ providing the theoretical background for the electromagnetic waves <cite><a href="#ref-3">[3]</a></cite>.</p>
             </figcaption>
           </figure>
           <figure>
@@ -514,6 +514,50 @@
             </figcaption>
           </figure>
         </section>
+        <footer>
+          <section>
+            <h1>Footnotes</h1>
+            <p>At the end of the article, you may want to add further information, like additional resources, footnotes, acknowledgements, author contribution, references, updates, corrections and so on. Rapido provides style rules for <strong>headings</strong>, <strong>paragraphs</strong>, <strong>lists</strong> and <strong>code snippets</strong> in the article footer.</p>
+            <pre><code>&lt;article&gt;
+  ...</code>
+<mark><code>  &lt;footer&gt;
+    &lt;section&gt;
+      &lt;h1&gt;...&lt;/h1&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+      ...
+    &lt;/section&gt;
+  &lt;/footer&gt;</code></mark>
+<code>&lt;/article&gt;</code></pre>
+            <p>Code listings use the <code>&lt;pre&gt;</code> element and they may be wrapped or not within the <code>&lt;figure&gt;</code> element. Wrap code listings within the <code>&lt;figure&gt;</code> element if you want to add a caption.</p>
+          </section>
+          <section>
+            <h1>References</h1>
+            <ol>
+              <li id="ref-1">
+                <b>Gravitation.</b>
+                Charles W. Misner, Kip S. Thorne, John Archibald Wheeler. October 2017, Princeton University Press. ISBN-13: 9780691177793.
+              </li>
+              <li id="ref-2">
+                <b>Subtle Is the Lord: The Science and the Life of Albert Einstein.</b>
+                Abraham Pais. November 2005, Oxford University Press. ISBN-13: 9780192806727.
+              </li>
+              <li id="ref-3">
+                <b>Classical Electrodynamics.</b>
+                John David Jackson. Third Edition, August 1998, Wiley. ISBN-13: 9780471309321.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h1>Updates and Corrections</h1>
+            <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/nextbitlabs/Rapido/issues">open an issue on GitHub</a>.</p>
+          </section>
+          <section>
+            <h1>Acknowledgements</h1>
+            <p>Rapido is an open source project sponsored by <a href="https://nextbit.it/">Nextbit</a>, we are glad of the support.</p>
+          </section>
+        </footer>
       </article>
     </main>
   </body>
