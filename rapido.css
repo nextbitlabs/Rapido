@@ -348,6 +348,14 @@ body.rapido {
 	flex: 0 0 auto;
 }
 
+.rapido main > header > img {
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	height: 40px;
+	width: auto;
+}
+
 .rapido article > header > img,
 .rapido article > header > video {
 	margin: 20px 0 20px 0;
@@ -498,6 +506,11 @@ body.rapido {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+	}
+
+	.rapido main > header > img {
+		top: unset;
+		left: 40px;
 	}
 
 	.rapido main > header > nav {
