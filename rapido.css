@@ -79,7 +79,7 @@ body.rapido {
 }
 
 .rapido mark {
-	background: rgba(0, 0, 255, .15);
+	background: rgba(0, 0, 255, 0.15);
 	color: inherit;
 }
 
