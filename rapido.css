@@ -337,15 +337,16 @@ body.rapido {
 
 .rapido article > header > address {
 	font-style: normal;
+	font-size: 18px;
+	line-height: 30px;
 	margin-bottom: 20px;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
 	align-items: center;
 }
 
 .rapido article > header > address > a {
 	margin: 5px 15px 5px 0;
-	flex: 0 0 auto;
 }
 
 .rapido main > header > img {
@@ -371,12 +372,12 @@ body.rapido {
 	border-radius: 3px;
 }
 
-.rapido article > header > address > a > img {
+.rapido article > header > address > img {
 	vertical-align: middle;
-	border-radius: 15px;
-	width: 30px;
-	height: 30px;
-	margin: 0 10px 0 0;
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
 }
 
 .rapido article > header > figure > figcaption {
