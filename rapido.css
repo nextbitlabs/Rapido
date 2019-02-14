@@ -283,9 +283,25 @@ body.rapido {
 	line-height: 21px;
 }
 
+.rapido article small > img {
+	padding-top: 5px;
+	max-width: 100%;
+}
+
 .rapido article > header {
 	width: 100%;
 	margin: 50px 0;
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+	.rapido article small {
+		overflow: auto;
+	}
+
+	.rapido article small > img {
+		max-width: 324px;
+		float: right;
+	}
 }
 
 @media (max-width: 1023px) {
