@@ -78,9 +78,26 @@ body.rapido {
 	color: blue;
 }
 
+.rapido pre > code {
+	padding: 0 10px;
+	display: inline-block;
+}
+
 .rapido mark {
-	background: rgba(0, 0, 255, 0.15);
+	background: rgba(0, 0, 255, 0.1);
 	color: inherit;
+}
+
+.rapido pre > mark {
+	background: none;
+}
+
+.rapido pre > mark > code {
+	display: inline-block;
+	padding: 0 8px;
+	min-width: 100%;
+	background: rgba(0, 0, 255, 0.05);
+	border-left: 2px solid blue;
 }
 
 .rapido strong {
@@ -107,11 +124,19 @@ body.rapido {
 
 .rapido pre {
 	font-family: "Consolas", "Courier", monospace;
-	background: #f4f4f4;
+	background:
+		repeating-linear-gradient(
+			-45deg,
+			#f5f5f5,
+			#f5f5f5 3px,
+			#f7f7f7 3px,
+			#f7f7f7 6px
+		);
 	font-size: 14px;
 	line-height: 21px;
 	width: 600px;
-	padding: 10px;
+	max-width: 100%;
+	padding: 5px 0;
 	overflow-y: hidden;
 	overflow-x: auto;
 	border-radius: 2px;
