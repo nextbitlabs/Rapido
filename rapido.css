@@ -14,7 +14,14 @@ body.rapido {
 	padding: 0;
 }
 
+article.rapido,
 .rapido article {
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	color: #353839;
 	width: 1024px;
 	max-width: 100%;
 	margin: auto;
@@ -22,6 +29,7 @@ body.rapido {
 }
 
 @media (max-width: 1023px) {
+	article.rapido,
 	.rapido article {
 		width: 600px;
 		padding: 0 20px 0 20px;
@@ -280,6 +288,7 @@ body.rapido {
 	border-right: 1px solid #ededed;
 }
 
+article.rapido small,
 .rapido article small {
 	font-size: 14px;
 	line-height: 21px;
@@ -292,6 +301,7 @@ body.rapido {
 }
 
 @media (max-width: 1023px) {
+	article.rapido small,
 	.rapido article small {
 		width: 100%;
 		float: none;
@@ -303,26 +313,31 @@ body.rapido {
 	}
 }
 
+article.rapido small > p,
 .rapido article small > p {
 	font-size: 14px;
 	line-height: 21px;
 }
 
+article.rapido small > img,
 .rapido article small > img {
 	padding-top: 5px;
 	max-width: 100%;
 }
 
+article.rapido > header,
 .rapido article > header {
 	width: 100%;
 	margin: 50px 0;
 }
 
 @media (min-width: 601px) and (max-width: 1023px) {
+	article.rapido small,
 	.rapido article small {
 		overflow: auto;
 	}
 
+	article.rapido small > img,
 	.rapido article small > img {
 		max-width: 324px;
 		float: right;
@@ -330,11 +345,13 @@ body.rapido {
 }
 
 @media (max-width: 1023px) {
+	article.rapido > header,
 	.rapido article > header {
 		margin: 30px 0;
 	}
 }
 
+article.rapido > header > h1,
 .rapido article > header > h1 {
 	font-size: 60px;
 	line-height: 80px;
@@ -343,6 +360,7 @@ body.rapido {
 }
 
 .rapido section figcaption > h1,
+article.rapido > header > figure > figcaption > h1,
 .rapido article > header > figure > figcaption > h1 {
 	display: inline;
 	font-size: 14px;
@@ -351,12 +369,8 @@ body.rapido {
 	padding: 0;
 }
 
-.rapido section figcaption > h1::after,
-.rapido article > header > figure > figcaption > h1::after {
-	content: '.';
-}
-
 @media (max-width: 1023px) {
+	article.rapido > header > h1,
 	.rapido article > header > h1 {
 		font-size: 40px;
 		line-height: 60px;
@@ -364,18 +378,21 @@ body.rapido {
 }
 
 @media (max-width: 499px) {
+	article.rapido > header > h1,
 	.rapido article > header > h1 {
 		font-size: 30px;
 		line-height: 45px;
 	}
 }
 
+article.rapido > header > p,
 .rapido article > header > p {
 	font-size: 30px;
 	line-height: 45px;
 	max-width: 100%;
 }
 
+article.rapido > header > address,
 .rapido article > header > address {
 	font-style: normal;
 	font-size: 18px;
@@ -386,6 +403,7 @@ body.rapido {
 	align-items: center;
 }
 
+article.rapido > header > address > a,
 .rapido article > header > address > a {
 	margin: 5px 15px 5px 0;
 }
@@ -398,14 +416,20 @@ body.rapido {
 	width: auto;
 }
 
+article.rapido > header > img,
 .rapido article > header > img,
+article.rapido > header > video,
 .rapido article > header > video {
 	margin: 20px 0 20px 0;
 }
 
+article.rapido > header > img,
 .rapido article > header > img,
+article.rapido > header > video,
 .rapido article > header > video,
+article.rapido > header > figure > img,
 .rapido article > header > figure > img,
+article.rapido > header > figure > video,
 .rapido article > header > figure > video {
 	width: 100%;
 	display: block;
@@ -413,6 +437,7 @@ body.rapido {
 	border-radius: 3px;
 }
 
+article.rapido > header > address > img,
 .rapido article > header > address > img {
 	vertical-align: middle;
 	border-radius: 25px;
@@ -421,12 +446,15 @@ body.rapido {
 	margin-right: 5px;
 }
 
+article.rapido > header > figure > figcaption,
 .rapido article > header > figure > figcaption {
 	width: 100%;
 	margin: 5px 0 0 0;
 }
 
+article.rapido ul,
 .rapido article ul,
+article.rapido ol,
 .rapido article ol {
 	max-width: 600px;
 	width: 100%;
@@ -434,20 +462,25 @@ body.rapido {
 	margin: 0 0 20px 0;
 }
 
+article.rapido ul,
 .rapido article ul {
 	list-style-type: disc;
 }
 
+article.rapido ol,
 .rapido article ol {
 	list-style-type: decimal;
 }
 
+article.rapido li,
 .rapido article li {
 	font-size: 14px;
 	line-height: 21px;
 }
 
+article.rapido li > p,
 .rapido article li > p,
+article.rapido > header > figure > figcaption > p,
 .rapido article > header > figure > figcaption > p {
 	font-size: 14px;
 	line-height: 21px;
@@ -605,6 +638,6 @@ body.rapido {
 	text-align: center;
 }
 
-.katex-display {
+.rapido .katex-display {
 	padding: 10px 0 !important;
 }

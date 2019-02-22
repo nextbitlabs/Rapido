@@ -5,33 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes">
     <title>Rapido</title>
-    <meta name="description" content="Rapido: create web documents with the only use of HTML snippets.">
+    <meta name="description" content="Rapido: semantic HTML elements for your writings.">
     <meta name="robots" content="index,follow">
 
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
-    <!-- <meta property="og:url" content="https://damneat.nextbit.it/index.html"> -->
+    <meta property="og:url" content="https://nextbitlabs.github.io/Rapido/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rapido">
-    <!-- <meta property="og:image" content="https://damneat.nextbit.it/images/intro.png"> -->
-    <meta property="og:description" content="">
+    <!-- <meta property="og:image" content="https://nextbitlabs.github.io/Rapido/images/intro.png"> -->
+    <meta property="og:description" content="Rapido: semantic HTML elements for your writings.">
     <!-- <meta property="og:site_name" content="nextbit.it"> -->
     <meta property="og:locale" content="en_US">
 
-    <meta name="twitter:card" content="">
-    <!-- <meta name="twitter:url" content="https://damneat.nextbit.it/index.html"> -->
+    <meta name="twitter:card" content="Rapido: semantic HTML elements for your writings.">
+    <meta name="twitter:url" content="https://nextbitlabs.github.io/Rapido/">
     <meta name="twitter:title" content="Rapido">
-    <meta name="twitter:description" content="">
-    <!-- <meta name="twitter:image" content="https://damneat.nextbit.it/images/intro.png"> -->
+    <meta name="twitter:description" content="Rapido: semantic HTML elements for your writings.">
+    <!-- <meta name="twitter:image" content="https://nextbitlabs.github.io/Rapido/images/intro.png"> -->
 
     <meta itemprop="name" content="Rapido">
-    <meta itemprop="description" content="">
-    <!-- <meta itemprop="image" content="https://damneat.nextbit.it/images/intro.png"> -->
+    <meta itemprop="description" content="Rapido: semantic HTML elements for your writings.">
+    <!-- <meta itemprop="image" content="https://nextbitlabs.github.io/Rapido/images/intro.png"> -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
+
+    <link href="./normalize.css" rel="stylesheet" type="text/css">
     <link href="./rapido.css" rel="stylesheet" type="text/css">
   </head>
   <body class="rapido">
@@ -51,52 +53,68 @@
         <button><a href="#">close menu</a></button>
         <img src="./media/icon.svg"></img>
       </header>
-      <article>
+      <article class="rapido">
         <header>
-          <h1>Welcome to Rapido</h1>
-          <p><strong>Rapido</strong> helps you to write web documents with the only use of HTML snippets, it is designed with a focus on usability and frugality.</p>
-          <p>The present documentation has been created following Rapido guidelines and nothing more, you can easily get your own documents with the same layout and style. Rapido guidelines are described in the next sections.</p>
+          <h1>Rapido: semantic HTML elements for your writings.</h1>
+          <p>Rapido provides a default style for a set of <strong>semantic HTML</strong> elements that you can use to compose your essays. No CSS or JS is required.</p>
+          <p>The present document has been created using Rapido, you can easily get documents or blog posts with the same layout and style. See how to use Rapido in the next sections.</p>
+          <p>Rapido is open source, view it on <a href="https://github.com/nextbitlabs/Rapido">Github</a>.
+          </p>
         </header>
         <section>
+          <h1>Motivation</h1>
+          <p>Having your own corner on the web where you can freely share thoughts or technical stuff <a href="https://medium.com/@dan_abramov/why-my-new-blog-isnt-on-medium-3b280282fbae">is still cool</a>, and the popularity of tools like <a href="https://jekyllrb.com/">Jekyll</a> or <a href="https://www.gatsbyjs.org/">Gatsby</a> proves that. Rapido intervenes there, offering semantic HTML templates for a variety of typical author needs: like header, sections, side notes, references and so on.<small>The importance of using <a href="https://developer.mozilla.org/en-US/docs/Glossary/semantics#Semantics_in_HTML">semantic HTML</a> is a common theme in web development, it is a good idea to use the relevant HTML element for the job. Semantic HTML improves the usability of the code and ensures maximum <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">accessibility</a>.</small></p>
+          <p>Rapido has been crafted with the idea that using semantic HTML for your writings <em>can be easy</em>. For such a reason Rapido does not make use of CSS classes or Javascript hooks, the author can compose all the different parts of the document with semantic HTML elements, for example adding side notes in paragraphs with the <code>&lt;small&gt;</code> element.</p>
+        </section>
+        <section>
           <h1 id="getting-started">Getting started</h1>
-          <p>As starting point, we need an html document. The following code provides a skeleton: create an html file, called for example <code>document.html</code>, and copy/paste the code in the file.</p>
+          <p>Rapido provides style rules in the <code>rapido.css</code> stylesheet, you can download the CSS file from <a href="https://raw.githubusercontent.com/nextbitlabs/Rapido/master/rapido.css">Github</a> and link to it within the <code>&lt;head&gt;</code> element in your document.</p>
+          <figure>
+            <pre><code>&lt;head&gt;</code>
+<mark><code>  &lt;link href="https://unpkg.com/@nextbitlabs/rapido@latest/rapido.css" rel="stylesheet" type="text/css"&gt;</code></mark>
+<code>&lt;/head&gt;</code></pre>
+          </figure>
+          <p>The style rules defined in <code>rapido.css</code> are name-spaced under the CSS class <code>rapido</code>. Being Rapido thought for web essays, the best place to use the CSS class is the <code>&lt;article&gt;</code> element, as showed in the next snippet.</p>
+          <figure>
+              <pre><code>&lt;main&gt;</code>
+<mark><code>  &lt;article class="rapido"&gt;
+    ...
+  &lt;/article&gt;</code></mark>
+<code>&lt;/main&gt;</code></pre>
+            <figcaption>
+              <h1>Assign CSS class <code>rapido</code> to the <code>&lt;article&gt;</code> element.</h1>
+              <p>Rapido can be used in a web document created from scratch or within an existing document, the CSS class <code>rapido</code> makes Rapido not invasive with respect to existing CSS code.</p>
+            </figcaption>
+          </figure>
+          <h2>Get your hands dirty</h2>
+          <p>If you want to try Rapido then you  need the skeleton of an HTML document. The next code snippet provides a minimal template, copy the snippet in a fresh HTML file.</p>
           <figure>
               <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes"&gt;
-    &lt;link href="rapido.css" rel="stylesheet" type="text/css"&gt;
+    &lt;link href="https://unpkg.com/@nextbitlabs/rapido@latest/rapido.css" rel="stylesheet" type="text/css"&gt;
   &lt;/head&gt;
-  &lt;body class="rapido"&gt;
+  &lt;body&gt;
     &lt;main&gt;
-      &lt;article&gt;
+      &lt;article class="rapido"&gt;
         ...
       &lt;/article&gt;
     &lt;/main&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
             <figcaption>
-              <p>This the first example of an html snippet. Rapido is just that: copy and paste the html snippets and fill the gaps <code>...</code> with your own content.</p>
+              <h1>Minimal skeleton of an HTML document.</h1>
+              <p>Note the presence of the stylesheet <code>rapido.css</code> within the <code>&lt;head&gt;</code> element, it defines the style rules and it is all you need to use Rapido.</p>
             </figcaption>
           </figure>
-          <p>Note that Rapido can be used in a web document created from scratch or within an existing document, the CSS class <code>class="rapido"</code> makes Rapido not invasive with respect existing CSS code. Generally speaking, you will want to assign the class <code>rapido</code> to the HTML container of your document, for example in
-            <figure>
-              <pre><code>&lt;article class="rapido"&gt;
-  ...
-&lt;article&gt;</code></pre>
-            </figure>
-          </p>
-          <p>The css stylesheet <code>rapido.css</code> can be downloaded from <a href="https://raw.githubusercontent.com/nextbitlabs/Rapido/master/rapido.css">github</a>, in alternative you can simply use the following line within element <code>&lt;head&gt;</code>.</p>
-          <figure>
-            <pre><code>&lt;link href="https://unpkg.com/@nextbitlabs/rapido@latest/rapido.css" rel="stylesheet" type="text/css"&gt;</code></pre>
-          </figure>
-          <p>The next sections describe how to replace the ellipsis <code>...</code> with content of interest, like paragraph, figures, tables and so on.</p>
+          <p>The next sections describe how to replace the ellipsis with the content of interest, like paragraphs, figures, tables and so on. Rapido is just that: copy and paste the HTML snippets and fill the gaps with your own content.</p>
         </section>
 
         <section>
           <h1>Sections</h1>
-          <p>The previous section shows a gap within the <code>&lt;article&gt;...&lt;/article&gt;</code> tags, you can fill the gap with <strong>section</strong> snippets. Typically, sections have a heading and one or more paragraphs, but not only, as we will see sections may also contain figures, tables and much more.</p>
+          <p>The previous code snippet shows a gap within the <code>&lt;article&gt;</code> element, you can fill the gap with <strong>sections</strong>. Typically, sections have a heading and one or more paragraphs. Moreover, sections may also contain figures, tables and much more.</p>
           <figure>
             <pre><code>&lt;main&gt;
   &lt;article&gt;</code>
@@ -104,19 +122,21 @@
       &lt;h1&gt;...&lt;/h1&gt;
       &lt;p&gt;...&lt;/p&gt;
       &lt;p&gt;...&lt;/p&gt;
+      &lt;h2&gt;...&lt;/h2&gt;
+      &lt;p&gt;...&lt;/p&gt;
     &lt;/section&gt;</code></mark>
 <code>  &lt;/article&gt;
 &lt;/main&gt;</code></pre>
             <figcaption>
-              <p>A section with a heading and two paragraphs.</p>
+              <h1>Code snippet of a section.</h1>
+              <p>The example shows a section with a heading and two paragraphs, a lower level heading and another paragraph.</p>
             </figcaption>
           </figure>
-          <p>The html snippet above creates a section with some content, at this moment you can successfully open your <code>document.html</code> file with a browser.</p>
         </section>
 
         <section>
           <h1>Title and abstract</h1>
-          <p>Element <code>&lt;header&gt;</code> is used for the title and few introductory paragraphs of your document. Generally, it is placed as first element within the <code>&lt;article&gt;</code> tag.</p>
+          <p>The <code>&lt;header&gt;</code> element is used for the title and few introductory paragraphs of your document. Generally, it is placed as the first element within the <code>&lt;article&gt;</code> element.</p>
           <figure>
             <pre><code>&lt;main&gt;
   &lt;article&gt;</code>
@@ -134,15 +154,16 @@
   &lt;/article&gt;
 &lt;/main&gt;</code></pre>
             <figcaption>
-              <p>Code snippet for the document header. Element <code>&lt;address&gt;</code> is optional, it can be used to indicate the contact information of the authors. Element <code>&lt;img&gt;</code> is also optional, it should be the avatar image.</p>
+              <h1>Code snippet for the document header.</h1>
+              <p>The element <code>&lt;address&gt;</code> can be used to indicate the contact information of the authors. The element <code>&lt;img&gt;</code> is useful for adding the author avatar.</p>
             </figcaption>
           </figure>
-          <p>On the following, code snippets are supposed to be pasted inside element <code>&lt;article&gt;</code>, so that tags <code>&lt;main&gt;</code> and <code>&lt;article&gt;</code> are understood and can be omitted.</p>
+          <p>The header may also contain full-width images, as described in section <strong><a href="#images-and-videos">Images and videos</a></strong>.</p>
         </section>
 
         <section>
           <h1>Side comments</h1>
-          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Side comments are related to the paragraph, therefore they usually appear right or below the text of the paragraph. <img src="./media/ga.jpg"> As indicated in the code snippet, side comments may also contain pictures, added by means of the <code>&lt;img&gt;</code> tag.</small></p>
+          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Side comments are related to the paragraph, therefore they usually appear right or below the text of the paragraph. <img src="./media/ga.jpg">.</small></p>
           <p>A side comment should be inserted within the paragraph of a section, it will appear at the right of the paragraph and vertically aligned with it, or just below the paragraph on smaller screens.</p>
           <figure>
             <pre><code>&lt;section&gt;
@@ -153,12 +174,16 @@
 <code>    ...
   &lt;/p&gt;
 &lt;/section&gt;</code></pre>
+            <figcaption>
+              <h1>Code snippet of a side comment.</h1>
+              <p>Side comments may also contain pictures, added by means of the <code>&lt;img&gt;</code> element.</p>
+            </figcaption>
           </figure>
         </section>
 
         <section>
-          <h1>Images and videos</h1>
-          <p>Both images and videos are displayed within <code>&lt;figure&gt;...&lt;/figure&gt;</code> tags, possibly supplied with a caption. Tag <code>&lt;figure&gt;</code> is supposed to be positioned near the paragraph where the image (or video) is mentioned. Tag <code>&lt;figcaption&gt;</code> can contain a heading and one or more paragraphs.</p>
+          <h1 id="images-and-videos">Images and videos</h1>
+          <p>Both images and videos are displayed within the <code>&lt;figure&gt;</code> element, possibly supplied with a caption. The <code>&lt;figure&gt;</code> element is supposed to be positioned near the paragraph where the image (or video) is mentioned. The <code>&lt;figcaption&gt;</code> element can contain a heading and one or more paragraphs.</p>
           <figure>
             <img src="./media/voronoi.jpg">
             <figcaption>
@@ -179,11 +204,12 @@
 <code>  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>Code snippet of an image, with a descriptive caption. For explanatory purpose, tag <code>&lt;figure&gt;</code> has been presented within a section with a heading and two paragraphs.</p>
-              <p>Images can also be inserted in the article header, in that case, the image will have full width.</p>
+              <h1>Code snippet of an image, with a descriptive caption.</h1>
+              <p>The article header may contain a picture as well, in that case, the image will have full width.</p>
             </figcaption>
           </figure>
-          <p>Exactly the same html snipped is used for displaying videos, with the obvious difference of using tag <code>&lt;video&gt;</code> in place of tag <code>&lt;img&gt;</code>, as shown below.</p>
+          <h2>Videos</h2>
+          <p>Exactly the same HTML code snippet is used for displaying videos, with the obvious difference of using the <code>&lt;video&gt;</code> element in place of the <code>&lt;img&gt;</code> element, as shown below.</p>
           <figure>
             <video controls muted src="./media/smoke.mp4"></video>
             <figcaption>
@@ -204,15 +230,16 @@
 <code>  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>Code snippet of a video with a caption, the latter having a heading and a paragraph. As with images, videos can be inserted in the article header as well.</p>
+              <h1>Code snippet of a video with a caption.</h1>
+              <p>As with images, videos can be inserted in the article header.</p>
             </figcaption>
           </figure>
         </section>
 
         <section>
           <h1>Quotations</h1>
-          <p>This section shows how to add <strong>quotations</strong> into your document. Element <code>&lt;blockquote&gt;</code> can be inserted in a section within other paragraphs and may contains one or more paragraphs as well.</p>
-          <blockquote cite="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">
+          <p>This section shows how to add <strong>quotations</strong> from another source into your document. The <code>&lt;blockquote&gt;</code> element can be inserted in a section within other paragraphs and may contain one or more paragraphs as well.</p>
+          <blockquote cite="https://HTML.spec.whatwg.org/multipage/grouping-content.HTML#the-blockquote-element">
             <p>Content inside a blockquote must be quoted from another source, whose address, if it has one, may be cited in the cite attribute.</p>
           </blockquote>
           <cite>HTML Living Standard</cite>
@@ -220,24 +247,24 @@
             <pre><code>&lt;section&gt;
   &lt;h1&gt;...&lt;/h1&gt;
   &lt;p&gt;...&lt;/p&gt;</code>
-<mark><code>  &lt;blockquote cite="..."&gt;
+<mark><code>  &lt;blockquote cite="https://..."&gt;
     &lt;p&gt;...&lt;/p&gt;
   &lt;/blockquote&gt;
   &lt;cite&gt;...&lt;/cite&gt;</code></mark>
 <code>  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>HTML snippet of a quotation from another source.</p>
+              <h1>Code snippet of a quotation from another source.</h1>
+              <p>If appropriate, use the <code>cite</code> attribute for adding a URL of the quotation source and the <code>&lt;cite&gt;</code> element for the text representation.</p>
             </figcaption>
           </figure>
-          <p>If appropriate, use the <code>cite</code> attribute for adding a URL of the quotation source and the <code>&lt;cite&gt;</code> element for the text representation, both of them are optional.</p>
         </section>
 
         <section>
           <h1>Highlights</h1>
-          <p>The repetition of some content from the same source is used for the purposes of enticing readers or highlighting key topics. You can repeat a passage or an entire paragraph using element <code>&lt;aside&gt;</code> inside a section.</p>
+          <p>The repetition of some content from the same source is used for the purposes of enticing readers or highlighting key topics. You can repeat a passage or an entire paragraph using the <code>&lt;aside&gt;</code> element inside a section.</p>
           <aside>
-            <p><strong>Rapido</strong> is just that: copy and paste the html snippets and fill the gaps.</p>
+            <p><strong>Rapido</strong> is just that: copy and paste the HTML snippets and fill the gaps.</p>
           </aside>
           <figure>
             <pre><code>&lt;section&gt;
@@ -249,15 +276,15 @@
 <code>  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>HTML snippet of an highlight.</p>
+              <h1>Code snippet of an highlight.</h1>
+              <p>Highlights are styled with a font bigger than the surrounding text.</p>
             </figcaption>
           </figure>
-          <p>Such kind of quotations highlight pieces of information and therefore they are styled with a font bigger than the surrounding text.</p>
         </section>
 
         <section>
           <h1>Tables</h1>
-          <p>As well as with images and videos, tables also are displayed within a figure and can be described by a caption. Tables are useful for displaying tabular data and they are disegned to visualise several columns: if the table is bigger than the window width the hidden part is visible through mouse scrolling.</p>
+          <p>As well as with images and videos, tables are displayed within the <code>&lt;figure&gt;</code> element, with an optional caption. Tables are useful for displaying tabular data with few or several columns, if the table is bigger than the window width the hidden part is visible through mouse scrolling.</p>
           <figure>
             <div>
               <table>
@@ -320,20 +347,21 @@
 <code>  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>Code snippet of a table of two columns, with a heading and two rows. Use part <code>&lt;thead&gt;</code> for defining the head of the columns of the table, use instead part <code>&lt;tbody&gt;</code> for the body of the table. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> container wrapping the <code>&lt;table&gt;</code> element.</p>
+              <h1>Code snippet of a table.</h1>
+              <p>The <code>&lt;thead&gt;</code> element defines the head of the table columns, instead, the <code>&lt;tbody&gt;</code> element is used for the table body. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> container wrapping the <code>&lt;table&gt;</code> element.</p>
             </figcaption>
           </figure>
         </section>
 
         <section>
           <h1>Lists</h1>
-          <p>As usual, lists are created with tags <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>, whereas <code>&lt;li&gt;</code> element is used to represent list items.</p>
+          <p>Lists are created with the <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements, whereas <code>&lt;li&gt;</code> element is used to represent list items.</p>
           <ul>
             <li>
-              <p>use tag <code>&lt;ol&gt;</code> for ordered lists</p>
+              <p>use the <code>&lt;ol&gt;</code> element for ordered lists</p>
             </li>
             <li>
-              <p>use tag <code>&lt;ul&gt;</code> for unordered lists</p>
+              <p>use the <code>&lt;ul&gt;</code> element for unordered lists</p>
             </li>
           </ul>
           <figure>
@@ -351,7 +379,8 @@
 <code>  &lt;p&gt;...&lt;/p&gt;
 &lt;/section&gt;</code></pre>
             <figcaption>
-              <p>Use <code>&lt;ol&gt;</code> element when the order is meaningful, ordered list are rendered as a numbered list:</p>
+              <h1>Code snippet of code list.</h1>
+              <p>Use the <code>&lt;ol&gt;</code> element when the order is meaningful, ordered list are rendered as a numbered list:</p>
               <ol>
                 <li><p>first item</p></li>
                 <li><p>second item</p></li>
@@ -362,11 +391,12 @@
 
         <section>
           <h1>Code</h1>
-          <p>Code can be inserted inline or within a <code>&lt;figure&gt;</code> node, in the same way as with images and videos.</p>
+          <p>Listings of code can be inserted inline inside a paragraph or within element <code>&lt;figure&gt;</code> for multiple lines of code.</p>
           <figure>
             <pre><code>&lt;p&gt;...<mark>&lt;code&gt;...&lt;/code&gt;</mark>...&lt;/p&gt;</code></pre>
             <figcaption>
-              <p>Add inline code using tag <code>&lt;code&gt;</code>.</p>
+              <h1>Code snippet of code listings.</h1>
+              <p>Add inline code using the <code>&lt;code&gt;</code> element.</p>
             </figcaption>
           </figure>
           <figure>
@@ -374,7 +404,7 @@
 <mark><code>  &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code></mark>
 <code>&lt;/figure&gt;</code></pre>
             <figcaption>
-              <p>Wrap the <code>&lt;code&gt;</code> element within a <code>&lt;pre&gt;</code> element to add multiple lines of code.</p>
+              <p>Wrap the <code>&lt;code&gt;</code> element within the <code>&lt;pre&gt;</code> element to add multiple lines of code.</p>
             </figcaption>
           </figure>
           <h2>Example 1</h2>
@@ -384,17 +414,17 @@
               <p>Factorial function in Javascript. </p>
             </figcaption>
           </figure>
+          <p>The next code snippet shows how to write the factorial function above.</p>
           <figure>
             <pre><code>&lt;figure&gt;
   &lt;pre&gt;&lt;code&gt;const f = n => n ? n * f(n - 1) : 1;&lt;/code&gt;&lt;/pre&gt;
 &lt;/figure&gt;</code></pre>
             <figcaption>
               <h1>Listing 1</h1>
-              <p>Code snippet used for the factorial function above.</p>
             </figcaption>
           </figure>
           <h2>Example 2</h2>
-          <p>This example shows how to obtain the expected indentation with more lines of code. As rule of thumb, paste the code directly within elements <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>.</p>
+          <p>This example shows how to obtain the expected indentation with more lines of code. As rule of thumb, paste the code directly within the <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code> elements.</p>
           <figure>
             <pre><code>function factorial (n) {
   return n ? n * factorial(n - 1) : 1;
@@ -416,11 +446,21 @@
 &amp;lt;/figure&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/figure&gt;</code></pre>
             <figcaption>
-              <p>Snippet used for writing the HTML code of <a href="#listing1">listing 1</a>.</p>
+              <p>Snippet used for the HTML code of <a href="#listing1">listing 1</a>.</p>
             </figcaption>
           </figure>
-          <h2>Highlighting code</h2>
-          <p>You can highlight code in two different ways: inline or for multiple lines. Highlighting a portion of a line can be done using tag <code>&lt;mark&gt;</code> as in <code>&lt;code&gt;...&lt;mark&gt;...&lt;/mark&gt;...&lt;/code&gt;</code>. Instead, one or more lines of code can be fully highlighted wrapping the full line within tag <code>&lt;mark&gt;</code>, as in <code>&lt;mark&gt;&lt;code&gt;...&lt;/code&gt;&lt;/mark&gt;</code>. The next snippet shows an example.</p>
+          <h2>Highlight code</h2>
+          <p>You can highlight code in two different ways: inline or full lines.</p>
+          <figure>
+            <pre><code>&lt;figure&gt;
+  &lt;pre&gt;&lt;code&gt;...<mark>&lt;mark&gt;...&lt;/mark&gt;</mark>...&lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;</code></pre>
+            <figcaption>
+              <h1>Highlight a portion of a line.</h1>
+              <p>Wrap the relevant code within the <code>&lt;mark&gt;</code> element.</p>
+            </figcaption>
+          </figure>
+          <p>Instead, highlight one or more lines of code wrapping the full line within the <code>&lt;mark&gt;</code> element, the next snippet shows an example.</p>
           <figure>
             <pre><code>&lt;figure&gt;</code>
 <code>  &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;</code>
@@ -428,21 +468,22 @@
 <code>&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>
 <code>&lt;/figure&gt;</code></pre>
             <figcaption>
-              <p>Highlight multiple lines of code. Note that, within <code>&lt;pre&gt;</code> tags, indetation spaces and new lines are displayed on screen, therefore they deserve a special attention in order to represent the right code indentation.</p>
+              <h1>Highlight full lines of code.</h1>
+              <p>Note that, within the <code>&lt;pre&gt;</code> element, indentation spaces and new lines deserve special attention in order to represent the right code formatting.</p>
             </figcaption>
           </figure>
         </section>
 
         <section>
           <h1>Math formulas</h1>
-          <p>Math typesetting is not supported by default. We suggest to use <a href="https://katex.org/">KaTeX</a>, a popular JavaScript library for TeX math rendering on the web. If this is also your way, then copy and paste the next code within the <code>&lt;head&gt;...&lt;/head&gt;</code> elements (see section <a href="#getting-started"><strong>Getting Started</strong></a>) to get KaTeX working.</p>
+          <p>Math typesetting is not supported by default. We suggest using <a href="https://katex.org/">KaTeX</a>, a popular JavaScript library for TeX math rendering on the web. To get KaTex working, copy and paste the next code within the <code>&lt;head&gt;</code> element (see section <a href="#getting-started"><strong>Getting Started</strong></a>).</p>
           <figure>
             <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous"&gt;
 &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"&gt;&lt;/script&gt;</code></pre>
           </figure>
           <h2>Example 1</h2>
-          <p>You can insert mathematics inline a paragraph, like the famous equivalence between energy and inertial mass $E = mc^2$, surrounding the mathematical formula with symbols <code>$...$</code>, as presented below.</p>
+          <p>You can insert mathematics inline on a paragraph, like the famous equivalence between energy and inertial mass $E = mc^2$, surrounding the mathematical formula with symbols <code>$...$</code>, as presented below.</p>
           <figure>
             <pre><code>&lt;p&gt;... $E = mc^2$ ...&lt;/p&gt;</code></pre>
             <figcaption>
@@ -460,7 +501,7 @@
 &lt;/p&gt;</code></pre>
           </figure>
           <h2>Example 3</h2>
-          <p>Multiline math can be obtained with TeX syntax, <a href="https://katex.org/docs/supported.html">KaTeX supports</a> a wide list of TeX functions. For example, for the representation of the following system of equations we make use of the <code>\begin{array}</code> environment.</p>
+          <p>KaTeX <a href="https://katex.org/docs/supported.HTML">supports</a> a wide list of TeX functions. For example, for the representation of the following system of equations, we make use of the <code>\begin{array}</code> environment.</p>
           <figure>
             <p>
               $$\begin{array}{rcl}
@@ -497,7 +538,7 @@
         <section>
           <h1>Navigation menu</h1>
           <p>The present section describes how to add a navigation menu at the top of your document. The menu may have one or more links to external resources, like other web pages, or links to sections of the same document as well.</p>
-          <p>As with all the other features, having a menu is optional and it is up to you if the document provides a navigation or not. For the menu we use the element <code>&lt;nav&gt;</code> inside the document header. Note that the document header is created with element <code>&lt;header&gt;</code>, which is positioned in <code>&lt;main&gt;</code> just before the <code>&lt;article&gt;</code> element.</p>
+          <p>As with all the other features, having a menu is optional and it is up to you if the document provides a navigation menu or not. For the menu, we use the <code>&lt;nav&gt;</code> element inside the document header. Note that the document header is created with the <code>&lt;header&gt;</code> element, which is positioned in the <code>&lt;main&gt;</code> element just before the <code>&lt;article&gt;</code> element.</p>
           <figure>
             <pre><code>&lt;main&gt;</code>
 <mark><code>  &lt;header&gt;
@@ -520,21 +561,21 @@
   &lt;/article&gt;
 &lt;/main&gt;</code></pre>
             <figcaption>
-              <p>Code snippet for a navigation menu. Each link is created with a <code>&lt;a&gt;</code> element inside a <code>&lt;li&gt;</code>. An image, tipically an icon, may be pulled together the link label inside <code>&lt;a&gt;</code>.</p>
+              <p>Code snippet for a navigation menu. Each link is created with the <code>&lt;a&gt;</code> element inside the <code>&lt;li&gt;</code> element. An image, typically an icon, may be pulled together the link label inside the <code>&lt;a&gt;</code> element.</p>
             </figcaption>
           </figure>
           <p>The code above shows the presence of a couple of <code>&lt;button&gt;</code> elements, they are necessary for having a responsive navigation menu on small screens, as shown in the next screenshot.</p>
           <figure>
             <img src="./media/responsive.png">
             <figcaption>
-              <h1>Responsive navigation menu</h1>
+              <h1>Responsive navigation menu.</h1>
               <p>Screenshot of <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox</a> developer tools.</p>
               <p>The <code>&lt;button&gt;</code> elements provide a way to open and close the menu on small screens, supporting menu with one or more links.</p>
         </section>
 
         <section>
           <h1>Copyrights</h1>
-          <p>This section describes how place the copyright notice at the bottom of the document. You can add a copyright notice through a paragraph <code>&lt;p&gt;</code> within a <code>&lt;footer&gt;</code> element. Note that <code>&lt;footer&gt;</code> has to be the last child of element <code>&lt;main&gt;</code>.</p>
+          <p>This section describes how to place the copyright notice at the bottom of the document. You can add a copyright notice through a paragraph within the <code>&lt;footer&gt;</code> element.</p>
           <figure>
             <pre><code>&lt;main&gt;
   ...</code>
@@ -543,7 +584,8 @@
   &lt;/footer&gt;</code></mark>
 <code>&lt;/main&gt;</code></pre>
             <figcaption>
-              <p>Code snippet for stating content attribution or licensing.</p>
+              <h1>Code snippet for stating content attribution or licensing.</h1>
+              <p>Note that the <code>&lt;footer&gt;</code> element has to be the last child of the <code>&lt;main&gt;</code> element.</p>
             </figcaption>
           </figure>
         </section>
