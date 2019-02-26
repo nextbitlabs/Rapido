@@ -1,20 +1,38 @@
+/* all elements */
+
 .rapido * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
+/* end all elements */
+
+/* address */
+
+article.rapido > header > address {
+	display: block;
+	margin-bottom: 20px;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+/* end address */
+
+/* article */
+
 article.rapido {
+	width: 1024px;
+	max-width: 100%;
 	box-sizing: border-box;
+	margin: auto;
+	padding: 0 40px;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 	color: #353839;
-	width: 1024px;
-	max-width: 100%;
-	margin: auto;
-	padding: 0 40px;
 }
 
 @media (max-width: 1023px) {
@@ -24,88 +42,118 @@ article.rapido {
 	}
 }
 
-.rapido a {
-	color: inherit;
-	text-decoration: underline;
+/* end article */
+
+/* aside */
+
+.rapido section > aside {
+	width: 100%;
+	max-width: 600px;
+	border-top: 2px solid #353839;
+	border-bottom: 2px solid #353839;
+	margin: 0 0 20px 0;
+	padding-top: 20px;
 }
+
+/* end aside */
+
+/* header */
+
+article.rapido > header {
+	width: 100%;
+	margin: 50px 0;
+}
+
+@media (max-width: 1023px) {
+	article.rapido > header {
+		margin: 30px 0;
+	}
+}
+
+/* end header */
+
+/* h1 */
+
+.rapido section > h1 {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 0 30px 0;
+	font-size: 30px;
+	line-height: 45px;
+	font-weight: bold;
+}
+
+article.rapido > header > h1 {
+	margin: 0 0 50px 0;
+	font-size: 60px;
+	line-height: 80px;
+	font-weight: bold;
+}
+
+.rapido section figcaption > h1,
+article.rapido > header > figure > figcaption > h1 {
+	display: inline;
+	padding: 0;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+}
+
+@media (max-width: 1023px) {
+	article.rapido > header > h1 {
+		font-size: 40px;
+		line-height: 60px;
+	}
+}
+
+@media (max-width: 499px) {
+	article.rapido > header > h1 {
+		font-size: 30px;
+		line-height: 45px;
+	}
+}
+
+/* end h1 */
+
+/* h2 */
+
+.rapido section > h2 {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 0 20px 0;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+/* end h2 */
+
+/* section */
 
 .rapido section {
 	width: 100%;
 	padding: 10px 0;
 }
 
-.rapido section > h1 {
-	font-size: 30px;
-	line-height: 45px;
+/* end section */
+
+/* blockquote */
+
+.rapido section > blockquote {
 	width: 100%;
 	max-width: 600px;
-	font-weight: bold;
-	margin: 0 0 30px 0;
+	padding: 20px 40px 0 40px;
 }
 
-.rapido section > h2 {
-	font-size: 20px;
-	line-height: 30px;
-	font-weight: bold;
-	width: 100%;
-	max-width: 600px;
-	margin: 0 0 20px 0;
+@media (max-width: 380px) {
+	.rapido section > blockquote {
+		padding: 20px 20px 0 20px;
+	}
 }
 
-.rapido p,
-.rapido section p {
-	font-size: 18px;
-	line-height: 30px;
-	max-width: 600px;
-	margin: 0 0 20px 0;
-	position: relative;
-}
+/* end blockquote */
 
-.rapido span,
-.rapido var {
-	font-size: inherit;
-	line-height: inherit;
-}
-
-.rapido code {
-	font-family: "Consolas", "Courier", monospace;
-	font-size: inherit;
-	line-height: inherit;
-	color: blue;
-}
-
-.rapido pre > code {
-	padding: 0 10px;
-	display: inline-block;
-}
-
-.rapido mark {
-	background: rgba(0, 0, 255, 0.1);
-	color: inherit;
-}
-
-.rapido pre > mark {
-	background: none;
-}
-
-.rapido pre > mark > code {
-	display: inline-block;
-	padding: 0 8px;
-	min-width: 100%;
-	background: rgba(0, 0, 255, 0.05);
-	border-left: 2px solid blue;
-}
-
-.rapido strong {
-	font-style: normal;
-	font-weight: bold;
-}
-
-.rapido q,
-.rapido em {
-	font-style: italic;
-	font-weight: normal;
-}
+/* div */
 
 .rapido div {
 	width: 100%;
@@ -114,57 +162,95 @@ article.rapido {
 	overflow-x: auto;
 }
 
-.rapido p > img {
-	vertical-align: middle;
-}
-
-.rapido pre {
-	font-family: "Consolas", "Courier", monospace;
-	background:
-		repeating-linear-gradient(
-			-45deg,
-			#f5f5f5,
-			#f5f5f5 3px,
-			#f7f7f7 3px,
-			#f7f7f7 6px
-		);
-	font-size: 14px;
-	line-height: 21px;
+.rapido section figure > div {
 	width: 600px;
 	max-width: 100%;
-	padding: 5px 0;
 	overflow-y: hidden;
 	overflow-x: auto;
-	border-radius: 2px;
 }
 
-.rapido section > aside {
-	max-width: 600px;
-	width: 100%;
-	border-top: 2px solid #353839;
-	border-bottom: 2px solid #353839;
-	padding-top: 20px;
-	margin: 0 0 20px 0;
+/* end div */
+
+/* figcaption */
+
+.rapido section figcaption {
+	width: 324px;
+	margin-left: 20px;
 }
 
-.rapido section > aside > p {
-	font-size: 30px;
-	line-height: 45px;
-	max-width: 600px;
-	margin: 0 0 20px 0;
-	position: relative;
-}
-
-.rapido section > blockquote {
-	max-width: 600px;
-	width: 100%;
-	padding: 20px 40px 0 40px;
-}
-
-@media (max-width: 380px) {
-	.rapido section > blockquote {
-		padding: 20px 20px 0 20px;
+@media (max-width: 1023px) {
+	.rapido section figcaption {
+		width: 600px;
+		margin: 5px 0 0 0;
 	}
+}
+
+article.rapido > header > figure > figcaption {
+	width: 100%;
+	margin: 5px 0 0 0;
+}
+
+/* end figcaption */
+
+/* figure */
+
+.rapido figure {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin: 20px 0 20px 0;
+}
+
+/* end figure */
+
+/* li */
+
+.rapido li {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+/* end li */
+
+/* ol, ul */
+
+.rapido ol,
+.rapido ul {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 0 20px 0;
+	list-style-position: inside;
+}
+
+.rapido ul {
+	list-style-type: disc;
+}
+
+.rapido ol {
+	list-style-type: decimal;
+}
+
+/* end ol, ul */
+
+/* p */
+
+.rapido p,
+.rapido section p {
+	position: relative;
+	max-width: 600px;
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.rapido li > p {
+	display: inline;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.rapido section figure > p {
+	width: 600px;
 }
 
 .rapido section > blockquote > p {
@@ -180,44 +266,192 @@ article.rapido {
 	content: '”';
 }
 
+.rapido section figcaption > p {
+	display: inline;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+article.rapido > header > p {
+	max-width: 100%;
+	font-size: 30px;
+	line-height: 45px;
+}
+
+.rapido section > aside > p {
+	position: relative;
+	max-width: 600px;
+	margin: 0 0 20px 0;
+	font-size: 30px;
+	line-height: 45px;
+}
+
+.rapido > header > figure > figcaption > p {
+	display: inline;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+/* end p */
+
+/* pre */
+
+.rapido pre {
+	width: 600px;
+	max-width: 100%;
+	padding: 5px 0;
+	overflow-y: hidden;
+	overflow-x: auto;
+	border-radius: 2px;
+	font-family: "Consolas", "Courier", monospace;
+	background:
+		repeating-linear-gradient(
+			-45deg,
+			#f5f5f5,
+			#f5f5f5 3px,
+			#f7f7f7 3px,
+			#f7f7f7 6px
+		);
+	font-size: 14px;
+	line-height: 21px;
+}
+
+/* end pre */
+
+/* a */
+
+.rapido a {
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	text-decoration: underline;
+}
+
+article.rapido > header > address > a {
+	margin: 5px 15px 5px 0;
+}
+
+/* end a */
+
+/* cite */
+
 .rapido section > cite {
 	display: block;
-	text-align: right;
-	font-size: 16px;
-	line-height: 24px;
 	width: 100%;
 	max-width: 600px;
 	margin: 0 0 20px 0;
+	text-align: right;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 .rapido section > cite::before {
 	content: "– ";
 }
 
-.rapido figure {
-	margin: 20px 0 20px 0;
-	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
+/* end cite */
+
+/* code */
+
+.rapido code {
+	font-family: "Consolas", "Courier", monospace;
+	font-size: inherit;
+	line-height: inherit;
+	color: blue;
 }
 
-.rapido figcaption {
+.rapido pre > code {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.rapido pre > mark > code {
+	display: inline-block;
+	min-width: 100%;
+	padding: 0 8px;
+	border-left: 2px solid blue;
+	background: rgba(0, 0, 255, 0.05);
+}
+
+/* end code */
+
+/* mark */
+
+.rapido mark {
+	background: rgba(0, 0, 255, 0.1);
+	color: inherit;
+}
+
+.rapido pre > mark {
+	background: none;
+}
+
+/* end mark */
+
+/* small */
+
+.rapido small {
+	position: absolute;
 	width: 324px;
-	margin-left: 20px;
+	padding: 3px 0 0 0;
+	top: 0;
+	right: calc(-324px - 20px);
+	float: right;
+	font-size: 14px;
+	line-height: 21px;
 }
 
 @media (max-width: 1023px) {
-	.rapido figcaption {
-		width: 600px;
-		margin: 5px 0 0 0;
+	.rapido small {
+		display: block;
+		position: relative;
+		width: 100%;
+		right: 0;
+		float: none;
+		margin: 20px 0;
+		padding: 0;
 	}
 }
 
-.rapido figure > div {
-	width: 600px;
+@media (min-width: 601px) and (max-width: 1023px) {
+	.rapido small {
+		overflow: auto;
+	}
+}
+
+/* end small */
+
+/* inline elements */
+
+.rapido strong {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.rapido q,
+.rapido em {
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* end inline elements */
+
+/* img, video */
+
+.rapido p > img {
+	vertical-align: middle;
+}
+
+.rapido small > img {
 	max-width: 100%;
-	overflow-y: hidden;
-	overflow-x: auto;
+	padding-top: 5px;
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+	.rapido small > img {
+		max-width: 324px;
+		float: right;
+	}
 }
 
 .rapido section figure > img,
@@ -225,32 +459,49 @@ article.rapido {
 	display: block;
 	flex: 0 0 auto;
 	width: 600px;
+	max-width: 100%;
 	height: auto;
 	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
 	border-radius: 3px;
-	max-width: 100%;
 }
 
-.rapido section figure > p {
-	width: 600px;
+article.rapido > header > img,
+article.rapido > header > video {
+	margin: 20px 0 20px 0;
 }
 
-.rapido section figcaption > p {
-	display: inline;
-	font-size: 14px;
-	line-height: 21px;
+article.rapido > header > img,
+article.rapido > header > video,
+article.rapido > header > figure > img,
+article.rapido > header > figure > video {
+	display: block;
+	width: 100%;
+	border-radius: 3px;
+	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
 }
+
+article.rapido > header > address > img {
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	vertical-align: middle;
+	border-radius: 25px;
+}
+
+/* end img, video */
+
+/* table */
 
 .rapido table {
 	min-width: 600px;
 	padding: 10px;
+	border-collapse: collapse;
+	border-top: 1px solid #ededed;
+	border-left: 1px solid #ededed;
 	text-align: left;
 	font-family: inherit;
 	font-size: 14px;
 	line-height: 21px;
-	border-collapse: collapse;
-	border-top: 1px solid #ededed;
-	border-left: 1px solid #ededed;
 }
 
 .rapido table thead {
@@ -276,167 +527,12 @@ article.rapido {
 	border-right: 1px solid #ededed;
 }
 
-.rapido small {
-	font-size: 14px;
-	line-height: 21px;
-	width: 324px;
-	float: right;
-	padding: 3px 0 0 0;
-	position: absolute;
-	right: calc(-324px - 20px);
-	top: 0;
-}
+/* end table */
 
-@media (max-width: 1023px) {
-	.rapido small {
-		width: 100%;
-		float: none;
-		padding: 0;
-		margin: 20px 0;
-		position: relative;
-		right: 0;
-		display: block;
-	}
-}
-
-.rapido small > p {
-	font-size: 14px;
-	line-height: 21px;
-}
-
-.rapido small > img {
-	padding-top: 5px;
-	max-width: 100%;
-}
-
-.rapido > header {
-	width: 100%;
-	margin: 50px 0;
-}
-
-@media (min-width: 601px) and (max-width: 1023px) {
-	.rapido small {
-		overflow: auto;
-	}
-
-	.rapido small > img {
-		max-width: 324px;
-		float: right;
-	}
-}
-
-@media (max-width: 1023px) {
-	.rapido > header {
-		margin: 30px 0;
-	}
-}
-
-.rapido > header > h1 {
-	font-size: 60px;
-	line-height: 80px;
-	font-weight: bold;
-	margin: 0 0 50px 0;
-}
-
-.rapido section figcaption > h1,
-.rapido > header > figure > figcaption > h1 {
-	display: inline;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 21px;
-	padding: 0;
-}
-
-@media (max-width: 1023px) {
-	.rapido > header > h1 {
-		font-size: 40px;
-		line-height: 60px;
-	}
-}
-
-@media (max-width: 499px) {
-	.rapido > header > h1 {
-		font-size: 30px;
-		line-height: 45px;
-	}
-}
-
-.rapido > header > p {
-	font-size: 30px;
-	line-height: 45px;
-	max-width: 100%;
-}
-
-.rapido > header > address {
-	font-style: normal;
-	font-size: 18px;
-	line-height: 30px;
-	margin-bottom: 20px;
-	display: block;
-	flex-wrap: wrap;
-	align-items: center;
-}
-
-.rapido > header > address > a {
-	margin: 5px 15px 5px 0;
-}
-
-.rapido > header > img,
-.rapido > header > video {
-	margin: 20px 0 20px 0;
-}
-
-.rapido > header > img,
-.rapido > header > video,
-.rapido > header > figure > img,
-.rapido > header > figure > video {
-	width: 100%;
-	display: block;
-	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
-	border-radius: 3px;
-}
-
-.rapido > header > address > img {
-	vertical-align: middle;
-	border-radius: 25px;
-	width: 50px;
-	height: 50px;
-	margin-right: 5px;
-}
-
-.rapido > header > figure > figcaption {
-	width: 100%;
-	margin: 5px 0 0 0;
-}
-
-.rapido ul,
-.rapido ol {
-	max-width: 600px;
-	width: 100%;
-	list-style-position: inside;
-	margin: 0 0 20px 0;
-}
-
-.rapido ul {
-	list-style-type: disc;
-}
-
-.rapido ol {
-	list-style-type: decimal;
-}
-
-.rapido li {
-	font-size: 14px;
-	line-height: 21px;
-}
-
-.rapido li > p,
-.rapido > header > figure > figcaption > p {
-	font-size: 14px;
-	line-height: 21px;
-	display: inline;
-}
+/* KaTex */
 
 .rapido .katex-display {
 	padding: 10px 0 !important;
 }
+
+/* end KaTex */
