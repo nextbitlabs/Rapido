@@ -4,18 +4,7 @@
 	margin: 0;
 }
 
-body.rapido {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-	color: #353839;
-	margin: 0;
-	padding: 0;
-}
-
-article.rapido,
-.rapido article {
+article.rapido {
 	box-sizing: border-box;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -29,8 +18,7 @@ article.rapido,
 }
 
 @media (max-width: 1023px) {
-	article.rapido,
-	.rapido article {
+	article.rapido {
 		width: 600px;
 		padding: 0 20px 0 20px;
 	}
@@ -288,8 +276,7 @@ article.rapido,
 	border-right: 1px solid #ededed;
 }
 
-article.rapido small,
-.rapido article small {
+.rapido small {
 	font-size: 14px;
 	line-height: 21px;
 	width: 324px;
@@ -301,8 +288,7 @@ article.rapido small,
 }
 
 @media (max-width: 1023px) {
-	article.rapido small,
-	.rapido article small {
+	.rapido small {
 		width: 100%;
 		float: none;
 		padding: 0;
@@ -313,46 +299,39 @@ article.rapido small,
 	}
 }
 
-article.rapido small > p,
-.rapido article small > p {
+.rapido small > p {
 	font-size: 14px;
 	line-height: 21px;
 }
 
-article.rapido small > img,
-.rapido article small > img {
+.rapido small > img {
 	padding-top: 5px;
 	max-width: 100%;
 }
 
-article.rapido > header,
-.rapido article > header {
+.rapido > header {
 	width: 100%;
 	margin: 50px 0;
 }
 
 @media (min-width: 601px) and (max-width: 1023px) {
-	article.rapido small,
-	.rapido article small {
+	.rapido small {
 		overflow: auto;
 	}
 
-	article.rapido small > img,
-	.rapido article small > img {
+	.rapido small > img {
 		max-width: 324px;
 		float: right;
 	}
 }
 
 @media (max-width: 1023px) {
-	article.rapido > header,
-	.rapido article > header {
+	.rapido > header {
 		margin: 30px 0;
 	}
 }
 
-article.rapido > header > h1,
-.rapido article > header > h1 {
+.rapido > header > h1 {
 	font-size: 60px;
 	line-height: 80px;
 	font-weight: bold;
@@ -360,8 +339,7 @@ article.rapido > header > h1,
 }
 
 .rapido section figcaption > h1,
-article.rapido > header > figure > figcaption > h1,
-.rapido article > header > figure > figcaption > h1 {
+.rapido > header > figure > figcaption > h1 {
 	display: inline;
 	font-size: 14px;
 	font-weight: bold;
@@ -370,30 +348,26 @@ article.rapido > header > figure > figcaption > h1,
 }
 
 @media (max-width: 1023px) {
-	article.rapido > header > h1,
-	.rapido article > header > h1 {
+	.rapido > header > h1 {
 		font-size: 40px;
 		line-height: 60px;
 	}
 }
 
 @media (max-width: 499px) {
-	article.rapido > header > h1,
-	.rapido article > header > h1 {
+	.rapido > header > h1 {
 		font-size: 30px;
 		line-height: 45px;
 	}
 }
 
-article.rapido > header > p,
-.rapido article > header > p {
+.rapido > header > p {
 	font-size: 30px;
 	line-height: 45px;
 	max-width: 100%;
 }
 
-article.rapido > header > address,
-.rapido article > header > address {
+.rapido > header > address {
 	font-style: normal;
 	font-size: 18px;
 	line-height: 30px;
@@ -403,42 +377,26 @@ article.rapido > header > address,
 	align-items: center;
 }
 
-article.rapido > header > address > a,
-.rapido article > header > address > a {
+.rapido > header > address > a {
 	margin: 5px 15px 5px 0;
 }
 
-.rapido main > header > img {
-	position: absolute;
-	left: 10px;
-	top: 15px;
-	height: 40px;
-	width: auto;
-}
-
-article.rapido > header > img,
-.rapido article > header > img,
-article.rapido > header > video,
-.rapido article > header > video {
+.rapido > header > img,
+.rapido > header > video {
 	margin: 20px 0 20px 0;
 }
 
-article.rapido > header > img,
-.rapido article > header > img,
-article.rapido > header > video,
-.rapido article > header > video,
-article.rapido > header > figure > img,
-.rapido article > header > figure > img,
-article.rapido > header > figure > video,
-.rapido article > header > figure > video {
+.rapido > header > img,
+.rapido > header > video,
+.rapido > header > figure > img,
+.rapido > header > figure > video {
 	width: 100%;
 	display: block;
 	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
 	border-radius: 3px;
 }
 
-article.rapido > header > address > img,
-.rapido article > header > address > img {
+.rapido > header > address > img {
 	vertical-align: middle;
 	border-radius: 25px;
 	width: 50px;
@@ -446,196 +404,37 @@ article.rapido > header > address > img,
 	margin-right: 5px;
 }
 
-article.rapido > header > figure > figcaption,
-.rapido article > header > figure > figcaption {
+.rapido > header > figure > figcaption {
 	width: 100%;
 	margin: 5px 0 0 0;
 }
 
-article.rapido ul,
-.rapido article ul,
-article.rapido ol,
-.rapido article ol {
+.rapido ul,
+.rapido ol {
 	max-width: 600px;
 	width: 100%;
 	list-style-position: inside;
 	margin: 0 0 20px 0;
 }
 
-article.rapido ul,
-.rapido article ul {
+.rapido ul {
 	list-style-type: disc;
 }
 
-article.rapido ol,
-.rapido article ol {
+.rapido ol {
 	list-style-type: decimal;
 }
 
-article.rapido li,
-.rapido article li {
+.rapido li {
 	font-size: 14px;
 	line-height: 21px;
 }
 
-article.rapido li > p,
-.rapido article li > p,
-article.rapido > header > figure > figcaption > p,
-.rapido article > header > figure > figcaption > p {
+.rapido li > p,
+.rapido > header > figure > figcaption > p {
 	font-size: 14px;
 	line-height: 21px;
 	display: inline;
-}
-
-.rapido main > header {
-	width: 100%;
-	min-height: 70px;
-	margin: 0;
-	padding: 0;
-}
-
-.rapido main > header > nav {
-	display: none;
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
-.rapido main > header > nav a {
-	display: flex;
-	position: relative;
-}
-
-.rapido main > header > button {
-	display: none;
-	height: 70px;
-	width: 100%;
-	text-align: right;
-	background: #fff;
-	border: 0;
-	min-height: 70px;
-	border-bottom: 1px solid #ededed;
-}
-
-.rapido main > header > button > a {
-	font-size: 30px;
-	text-decoration: none;
-	color: inherit;
-	padding: 0 25px;
-}
-
-.rapido main > header > nav + button {
-	text-align: center;
-	border-bottom: 2px solid #353839;
-}
-
-.rapido main > header > nav + button > a {
-	font-size: 16px;
-	text-decoration: none;
-	color: inherit;
-	opacity: 0.5;
-}
-
-.rapido main > header > button:first-child {
-	text-align: right;
-}
-
-.rapido main > header > nav > ul {
-	display: block;
-	position: relative;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.rapido main > header > nav > ul > li {
-	border-bottom: 1px solid #ededed;
-	min-height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 0 20px;
-}
-
-.rapido main > header > nav > ul > li > a {
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 16px;
-	color: #353839;
-	height: 100%;
-	width: 100%;
-}
-
-.rapido main > header > nav > ul > li > a > img {
-	width: 30px;
-	margin: 0 0 0 10px;
-	vertical-align: middle;
-}
-
-@media only screen and (min-width: 1024px) {
-	.rapido main > header {
-		min-height: 90px;
-		border-bottom: 1px solid #ededed;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}
-
-	.rapido main > header > img {
-		top: unset;
-		left: 40px;
-	}
-
-	.rapido main > header > nav {
-		display: block;
-		position: relative;
-		overflow: visible;
-	}
-
-	.rapido main > header > nav > ul {
-		min-height: 0;
-	}
-
-	.rapido main > header > nav > ul > li {
-		display: inline-block;
-		border-bottom: 0;
-		min-height: 0;
-		padding: 0 40px 0 0;
-	}
-}
-
-/* hint from https://github.com/codezero-be/responsive-nav */
-@media only screen and (max-width: 1023px) {
-	.rapido main > header > button:first-child {
-		display: block;
-	}
-
-	.rapido main > header > nav:hover + button,
-	.rapido main > header > nav:hover,
-	.rapido main > header > button:first-child:hover + nav,
-	.rapido main > header > button:first-child:hover + nav + button {
-		display: block;
-	}
-}
-
-.rapido main > footer:last-child {
-	width: 100%;
-	height: 50px;
-	border-top: 1px solid #ededed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.rapido main > footer:last-child p,
-.rapido main > footer:last-child small {
-	font-family: "Consolas", "Courier", monospace;
-	margin: 0;
-	font-size: 12px;
-	line-height: 18px;
-	text-align: center;
 }
 
 .rapido .katex-display {

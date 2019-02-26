@@ -36,23 +36,8 @@
     <link href="./normalize.css" rel="stylesheet" type="text/css">
     <link href="./rapido.css" rel="stylesheet" type="text/css">
   </head>
-  <body class="rapido">
+  <body>
     <main>
-      <header>
-        <button><a href="#">☰</a></button>
-        <nav class="nav">
-          <ul>
-            <li>
-              <a href="https://github.com/nextbitlabs/Rapido">
-                View on Github
-                <img src="./media/github.svg">
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button><a href="#">close menu</a></button>
-        <img src="./media/icon.svg"></img>
-      </header>
       <article class="rapido">
         <header>
           <h1>Rapido: semantic HTML elements for your writings.</h1>
@@ -534,65 +519,7 @@
             </figcaption>
           </figure>
         </section>
-
-        <section>
-          <h1>Navigation menu</h1>
-          <p>The present section describes how to add a navigation menu at the top of your document. The menu may have one or more links to external resources, like other web pages, or links to sections of the same document as well.</p>
-          <p>As with all the other features, having a menu is optional and it is up to you if the document provides a navigation menu or not. For the menu, we use the <code>&lt;nav&gt;</code> element inside the document header. Note that the document header is created with the <code>&lt;header&gt;</code> element, which is positioned in the <code>&lt;main&gt;</code> element just before the <code>&lt;article&gt;</code> element.</p>
-          <figure>
-            <pre><code>&lt;main&gt;</code>
-<mark><code>  &lt;header&gt;
-    &lt;button&gt;&lt;a href="#"&gt;☰&lt;/a&gt;&lt;/button&gt;
-    &lt;nav class="nav"&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;a href="..."&gt;
-            ...
-            &lt;img src="..."&gt;
-          &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;...&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-    &lt;button&gt;&lt;a href="#"&gt;close menu&lt;/a&gt;&lt;/button&gt;
-  &lt;/header&gt;</code></mark>
-<code>  &lt;article&gt;
-    ...
-  &lt;/article&gt;
-&lt;/main&gt;</code></pre>
-            <figcaption>
-              <p>Code snippet for a navigation menu. Each link is created with the <code>&lt;a&gt;</code> element inside the <code>&lt;li&gt;</code> element. An image, typically an icon, may be pulled together the link label inside the <code>&lt;a&gt;</code> element.</p>
-            </figcaption>
-          </figure>
-          <p>The code above shows the presence of a couple of <code>&lt;button&gt;</code> elements, they are necessary for having a responsive navigation menu on small screens, as shown in the next screenshot.</p>
-          <figure>
-            <img src="./media/responsive.png">
-            <figcaption>
-              <h1>Responsive navigation menu.</h1>
-              <p>Screenshot of <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox</a> developer tools.</p>
-              <p>The <code>&lt;button&gt;</code> elements provide a way to open and close the menu on small screens, supporting menu with one or more links.</p>
-        </section>
-
-        <section>
-          <h1>Copyrights</h1>
-          <p>This section describes how to place the copyright notice at the bottom of the document. You can add a copyright notice through a paragraph within the <code>&lt;footer&gt;</code> element.</p>
-          <figure>
-            <pre><code>&lt;main&gt;
-  ...</code>
-<mark><code>  &lt;footer&gt;
-    &lt;p&gt;&lt;small&gt;...&lt;/small&gt;&lt;/p&gt;
-  &lt;/footer&gt;</code></mark>
-<code>&lt;/main&gt;</code></pre>
-            <figcaption>
-              <h1>Code snippet for stating content attribution or licensing.</h1>
-              <p>Note that the <code>&lt;footer&gt;</code> element has to be the last child of the <code>&lt;main&gt;</code> element.</p>
-            </figcaption>
-          </figure>
-        </section>
       </article>
-      <footer>
-        <p><small>Created with &lt;3 in <a href="https://open.nextbit.it/">Nextbit</a> | <a href="https://github.com/nextbitlabs/Rapido/blob/master/LICENSE">MIT License</a></small></p>
-      </footer>
     </main>
   </body>
 </html>
