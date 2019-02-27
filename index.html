@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +24,6 @@
     <meta name="twitter:title" content="Rapido">
     <meta name="twitter:description" content="Rapido: semantic HTML elements for your writings.">
     <!-- <meta name="twitter:image" content="https://nextbitlabs.github.io/Rapido/images/intro.png"> -->
-
-    <meta itemprop="name" content="Rapido">
-    <meta itemprop="description" content="Rapido: semantic HTML elements for your writings.">
-    <!-- <meta itemprop="image" content="https://nextbitlabs.github.io/Rapido/images/intro.png"> -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
@@ -131,7 +127,7 @@
       &lt;address&gt;
         &lt;img src="..."&gt;
         ...
-        &lt;a href="..."&gt...&lt;/a&gt;
+        &lt;a href="..."&gt;...&lt;/a&gt;
       &lt;/address&gt;
     &lt;/header&gt;</code></mark>
 <code>    ...
@@ -147,7 +143,7 @@
 
         <section>
           <h1>Side comments</h1>
-          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Side comments are related to the paragraph, therefore they usually appear right or below the text of the paragraph. <img src="./media/ga.jpg">.</small></p>
+          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Side comments are related to the paragraph, therefore they usually appear right or below the text of the paragraph. <img src="./media/ga.jpg" alt="Example of an image in a side comment.">.</small></p>
           <p>A side comment should be inserted within the paragraph of a section, it will appear at the right of the paragraph and vertically aligned with it, or just below the paragraph on smaller screens.</p>
           <figure>
             <pre><code>&lt;section&gt;
@@ -422,7 +418,7 @@
 &lt;/figure&gt;</code></pre>
           </figure>
           <h2>Example 3</h2>
-          <p>A special treatment is necessary for HTML code because it needs to be <em>escaped</em>: use string <code>&amp;lt;</code> for <code><</code> and string <code>&amp;gt;</code> for <code>></code>.</p>
+          <p>A special treatment is necessary for HTML code because it needs to be <em>escaped</em>: use string <code>&amp;lt;</code> for <code>&lt;</code> and string <code>&amp;gt;</code> for <code>&gt;</code>.</p>
           <figure>
             <pre><code>&lt;figure&gt;
   &lt;pre&gt;&lt;code&gt;&amp;lt;figure&amp;gt;
@@ -476,7 +472,7 @@
           </figure>
           <h2>Example 2</h2>
           <p>Having your formula in a new line is easy as well, just use <code>$$...$$</code> instead of <code>$...$</code>.</p>
-          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations, expressed for the first time 8 years later the <q cite="Albert Einstein">the happiest thought of my life</q>.</small></p>
+          <p>$$G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$<small>Einstein field equations, expressed for the first time 8 years later the <q cite="https://isbnsearch.org/isbn/0192806726">the happiest thought of my life</q>.</small></p>
           <figure>
             <pre><code>&lt;p&gt;
   ...

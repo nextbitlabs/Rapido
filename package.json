@@ -24,5 +24,6 @@
     "rules": {
       "indentation": "tab"
     }
-  }
+  },
+  "dependencies": {}
 }
