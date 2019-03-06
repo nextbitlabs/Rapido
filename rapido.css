@@ -621,6 +621,8 @@ article.rapido > footer pre > mark > code {
 	}
 }
 
+.rapido section > img,
+.rapido section > video,
 .rapido section figure > img,
 .rapido section figure > video {
 	display: block;
