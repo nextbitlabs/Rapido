@@ -47,8 +47,8 @@ article.rapido {
 /* aside */
 
 .rapido section > aside {
-	width: 100%;
-	max-width: 600px;
+	width: 600px;
+	max-width: 100%;
 	border-top: 2px solid #353839;
 	border-bottom: 2px solid #353839;
 	margin: 0 0 20px 0;
@@ -85,8 +85,8 @@ article.rapido > footer {
 /* h1 */
 
 .rapido section > h1 {
-	width: 100%;
-	max-width: 600px;
+	width: 600px;
+	max-width: 100%;
 	margin: 0 0 30px 0;
 	font-size: 30px;
 	line-height: 45px;
@@ -162,8 +162,8 @@ article.rapido > footer figure > figcaption > h1 {
 /* h2 */
 
 .rapido section > h2 {
-	width: 100%;
-	max-width: 600px;
+	width: 600px;
+	max-width: 100%;
 	margin: 0 0 20px 0;
 	font-size: 20px;
 	line-height: 30px;
@@ -172,7 +172,7 @@ article.rapido > footer figure > figcaption > h1 {
 
 article.rapido > footer > h2,
 article.rapido > footer > section > h2 {
-	max-width: unset;
+	width: 100%;
 	margin: 0 0 10px 0;
 	font-size: 12px;
 	line-height: 18px;
@@ -209,8 +209,8 @@ article.rapido > footer > section {
 /* blockquote */
 
 .rapido section > blockquote {
-	width: 100%;
-	max-width: 600px;
+	width: 600px;
+	max-width: 100%;
 	padding: 20px 40px 0 40px;
 }
 
@@ -225,39 +225,51 @@ article.rapido > footer > section {
 /* div */
 
 .rapido div {
-	width: 100%;
-	max-width: 600px;
+	display: block;
+	flex: 0 0 auto;
+	max-width: 100%;
+	margin: 0 20px 0 0;
 	overflow-y: hidden;
 	overflow-x: auto;
 }
 
-.rapido section figure > div {
+.rapido > section div {
 	width: 600px;
-	max-width: 100%;
-	overflow-y: hidden;
-	overflow-x: auto;
+}
+
+.rapido > section > div {
+	margin: 0 0 20px 0;
+}
+
+.rapido > footer div,
+article.rapido > header div {
+	width: 100%;
+}
+
+article.rapido > header > div {
+	margin: 0 0 20px 0;
+}
+
+.rapido > footer > section > div {
+	margin: 0 0 10px 0;
+}
+
+@media (min-width: 1024px) {
+	.rapido > footer > section > div {
+		width: calc(100% - 200px);
+		margin: 0 0 10px 200px;
+	}
 }
 
 /* end div */
 
 /* figcaption */
 
-.rapido section figcaption {
-	width: 324px;
-	margin-left: 20px;
-}
-
-@media (max-width: 1023px) {
-	.rapido section figcaption {
-		width: 600px;
-		margin: 5px 0 0 0;
-	}
-}
-
-article.rapido > header > figure > figcaption,
-article.rapido > footer > section > figure > figcaption {
-	width: 100%;
-	margin: 5px 0 0 0;
+.rapido figcaption {
+	flex: 1 1;
+	min-width: 140px;
+	max-width: 100%;
+	margin-top: 3px;
 }
 
 /* end figcaption */
@@ -268,7 +280,7 @@ article.rapido > footer > section > figure > figcaption {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	margin: 20px 0 20px 0;
+	margin: 20px 0;
 }
 
 article.rapido > footer figure {
@@ -303,8 +315,8 @@ article.rapido > footer li {
 
 .rapido ol,
 .rapido ul {
-	width: 100%;
-	max-width: 600px;
+	width: 600px;
+	max-width: 100%;
 	margin: 0 0 20px 0;
 	list-style-position: inside;
 }
@@ -322,17 +334,11 @@ article.rapido > footer ol {
 	margin: 0;
 }
 
-article.rapido > footer > ul,
-article.rapido > footer > ol {
-	max-width: unset;
-}
-
 @media (min-width: 1024px) {
 	article.rapido > footer > section > ol,
 	article.rapido > footer > section > ul {
 		margin: 0 0 10px 200px;
 		width: calc(100% - 200px);
-		max-width: unset;
 	}
 }
 
@@ -343,7 +349,8 @@ article.rapido > footer > ol {
 .rapido p,
 .rapido section p {
 	position: relative;
-	max-width: 600px;
+	width: 600px;
+	max-width: 100%;
 	margin: 0 0 20px 0;
 	font-size: 18px;
 	line-height: 30px;
@@ -356,7 +363,10 @@ article.rapido > footer > ol {
 }
 
 .rapido section figure > p {
-	width: 600px;
+	display: block;
+	flex: 0 0 auto;
+	height: auto;
+	margin: 0 20px 0 0;
 }
 
 .rapido section > blockquote > p {
@@ -379,38 +389,35 @@ article.rapido > footer > ol {
 }
 
 article.rapido > header > p {
-	max-width: 100%;
+	width: 100%;
 	font-size: 30px;
 	line-height: 45px;
 }
 
 .rapido section > aside > p {
+	width: 100%;
 	position: relative;
-	max-width: 600px;
 	margin: 0 0 20px 0;
 	font-size: 30px;
 	line-height: 45px;
 }
 
 article.rapido > footer p {
+	width: 100%;
+	margin: 0 0 10px 0;
 	font-size: 12px;
 	line-height: 18px;
-	max-width: unset;
-	margin: 0 0 10px 0;
 }
 
 @media (min-width: 1024px) {
 	article.rapido > footer > section > p {
+		width: calc(100% - 200px);
 		margin: 0 0 10px 200px;
 	}
 }
 
 article.rapido > footer figcaption > p {
 	padding: 0;
-}
-
-article.rapido > footer li > p {
-	display: inline;
 }
 
 @media (max-width: 499px) {
@@ -420,14 +427,22 @@ article.rapido > footer li > p {
 	}
 }
 
+article.rapido > header > figure > figcaption > p {
+	display: inline;
+	font-size: 14px;
+	line-height: 21px;
+}
+
 /* end p */
 
 /* pre */
 
 .rapido pre {
-	width: 600px;
+	display: block;
+	flex: 0 0 auto;
 	max-width: 100%;
 	padding: 5px 0;
+	margin: 0 20px 0 0;
 	overflow-y: hidden;
 	overflow-x: auto;
 	border-radius: 2px;
@@ -444,25 +459,36 @@ article.rapido > footer li > p {
 	line-height: 21px;
 }
 
-article.rapido > footer pre {
-	margin: 10px 0;
+.rapido > section pre {
+	width: 600px;
 }
 
-article.rapido > footer pre,
-article.rapido > footer figure > pre {
-	width: 100%;
+.rapido > section > pre {
+	margin: 0 0 20px 0;
+}
+
+.rapido > footer pre {
 	font-size: 12px;
 	line-height: 18px;
 }
 
-article.rapido > footer figure > pre {
-	margin: 0;
+.rapido > footer pre,
+article.rapido > header pre {
+	width: 100%;
+}
+
+article.rapido > header > pre {
+	margin: 0 0 20px 0;
+}
+
+.rapido > footer > section > pre {
+	margin: 0 0 10px 0;
 }
 
 @media (min-width: 1024px) {
-	article.rapido > footer > section > pre {
-		margin: 10px 0 10px 200px;
+	.rapido > footer > section > pre {
 		width: calc(100% - 200px);
+		margin: 0 0 10px 200px;
 	}
 }
 
@@ -605,6 +631,16 @@ article.rapido > footer pre > mark > code {
 
 /* img, video */
 
+.rapido img,
+.rapido video {
+	display: block;
+	flex: 0 0 auto;
+	max-width: 100%;
+	height: auto;
+	margin: 0 20px 0 0;
+	border-radius: 2px;
+}
+
 .rapido p > img {
 	vertical-align: middle;
 }
@@ -621,32 +657,39 @@ article.rapido > footer pre > mark > code {
 	}
 }
 
-.rapido section > img,
-.rapido section > video,
-.rapido section figure > img,
-.rapido section figure > video {
-	display: block;
-	flex: 0 0 auto;
+.rapido > section img,
+.rapido > section video {
 	width: 600px;
-	max-width: 100%;
-	height: auto;
-	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
-	border-radius: 3px;
+}
+
+.rapido > section > img,
+.rapido > section > video {
+	margin: 0 0 20px 0;
+}
+
+.rapido > footer img,
+.rapido > footer video,
+article.rapido > header img,
+article.rapido > header video {
+	width: 100%;
 }
 
 article.rapido > header > img,
 article.rapido > header > video {
-	margin: 20px 0 20px 0;
+	margin: 0 0 20px 0;
 }
 
-article.rapido > header > img,
-article.rapido > header > video,
-article.rapido > header > figure > img,
-article.rapido > header > figure > video {
-	display: block;
-	width: 100%;
-	border-radius: 3px;
-	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.23);
+.rapido > footer > section > img,
+.rapido > footer > section > video {
+	margin: 0 0 10px 0;
+}
+
+@media (min-width: 1024px) {
+	.rapido > footer > section > img,
+	.rapido > footer > section > video {
+		width: calc(100% - 200px);
+		margin: 0 0 10px 200px;
+	}
 }
 
 article.rapido > header > address > img {
