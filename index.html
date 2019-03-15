@@ -143,7 +143,7 @@
 
         <section>
           <h1>Side comments</h1>
-          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Side comments are related to the paragraph, therefore they usually appear right or below the text of the paragraph. <img src="./media/ga.jpg" alt="Example of an image in a side comment.">.</small></p>
+          <p>This section describes how to add a <strong>side comment</strong>. Side comments typically show parenthetical content considered part of the main flow, like qualifying remarks directly related to the section.<small>Side comments are related to the paragraph, therefore they usually appear right or below the text of the paragraph.</small></p>
           <p>A side comment should be inserted within the paragraph of a section, it will appear at the right of the paragraph and vertically aligned with it, or just below the paragraph on smaller screens.</p>
           <figure>
             <pre><code>&lt;section&gt;
@@ -163,11 +163,11 @@
 
         <section>
           <h1 id="images-and-videos">Images and videos</h1>
-          <p>Both images and videos are displayed within the <code>&lt;figure&gt;</code> element, possibly supplied with a caption. The <code>&lt;figure&gt;</code> element is supposed to be positioned near the paragraph where the image (or video) is mentioned. The <code>&lt;figcaption&gt;</code> element can contain a heading and one or more paragraphs.</p>
+          <p>Images and videos are displayed using the <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code> elements. If a caption is needed, wrap images and videos within the <code>&lt;figure&gt;</code> element. The <code>&lt;figcaption&gt;</code> element can contain a heading and one or more paragraphs.</p>
           <figure>
-            <img src="./media/voronoi.jpg">
+            <img style="width: 100%" src="./media/image.png">
             <figcaption>
-              <p>Voronoi based artwork, written in GLSL.</p>
+              <p>Artwork based on Perlin noise, written in GLSL.</p>
             </figcaption>
           </figure>
           <figure>
@@ -185,17 +185,11 @@
 &lt;/section&gt;</code></pre>
             <figcaption>
               <h1>Code snippet of an image, with a descriptive caption.</h1>
-              <p>The <code>&lt;figure&gt;</code> element may be avoided if there is no need for a caption, in such a case the <code>&lt;img&gt;</code> element is a child of the <code>&lt;section&gt;</code> element. The article header may contain a picture as well, which will be full width.</p>
+              <p>The <code>&lt;figure&gt;</code> element may be avoided if there is no need for a caption, in such a case the <code>&lt;img&gt;</code> element is a child of the <code>&lt;section&gt;</code> element. The default width is 600px, authors can use inline style declarations to customise the width, as described in section <strong><a href="#customisations">Customisations</a></strong>.</p>
             </figcaption>
           </figure>
           <h2>Videos</h2>
           <p>Exactly the same HTML code snippet is used for displaying videos, with the obvious difference of using the <code>&lt;video&gt;</code> element in place of the <code>&lt;img&gt;</code> element, as shown below.</p>
-          <figure>
-            <video controls muted src="./media/smoke.mp4"></video>
-            <figcaption>
-              <p>Basic smoke effect emerging from a Perlin noise, written in GLSL.</p>
-            </figcaption>
-          </figure>
           <figure>
             <pre><code>&lt;section&gt;
   &lt;h1&gt;...&lt;/h1&gt;
@@ -211,7 +205,7 @@
 &lt;/section&gt;</code></pre>
             <figcaption>
               <h1>Code snippet of a video with a caption.</h1>
-              <p>As with images, videos can be inserted in the article header.</p>
+              <p>As with images, videos can be inserted in the article header and have a default width of 600px.</p>
             </figcaption>
           </figure>
         </section>
@@ -328,7 +322,7 @@
 &lt;/section&gt;</code></pre>
             <figcaption>
               <h1>Code snippet of a table.</h1>
-              <p>The <code>&lt;thead&gt;</code> element defines the head of the table columns, instead, the <code>&lt;tbody&gt;</code> element is used for the table body. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> container wrapping the <code>&lt;table&gt;</code> element.</p>
+              <p>The <code>&lt;thead&gt;</code> element defines the head of the table columns, instead, the <code>&lt;tbody&gt;</code> element is used for the table body. Note that, differently from images and videos, there is an extra <code>&lt;div&gt;</code> container wrapping the <code>&lt;table&gt;</code> element. The default width is 600px, authors can use inline style declarations to customise the table width, as described in section <strong><a href="#customisations">Customisations</a></strong>.</p>
             </figcaption>
           </figure>
         </section>
@@ -387,6 +381,7 @@
               <p>Wrap the <code>&lt;code&gt;</code> element within the <code>&lt;pre&gt;</code> element to add multiple lines of code.</p>
             </figcaption>
           </figure>
+          <p>As with images, videos and tables, the default width is 600px. You can use inline declarations to customise the width, for example setting 100% width with <code>&lt;pre style="width: 100%"&gt;</code>. See section <strong><a href="#customisations">Customisations</a></strong> for more details.</p>
           <h2>Example 1</h2>
           <figure id="listing1">
             <pre><code>const f = n => n ? n * f(n - 1) : 1;</code></pre>
@@ -495,7 +490,7 @@
               <h1>Maxwell's equations in vacuum.</h1>
               <p>The equations can be reduced to the standard wave equation $$
                 \frac{1}{c^2} \frac{\partial^2 \mathbf{F}}{\partial^2 t} - \nabla^2 \mathbf{F} = 0
-              $$ providing the theoretical background for the electromagnetic waves <cite><a href="#ref-3">[3]</a></cite>.</p>
+              $$ providing the theoretical background for the electromagnetic waves <cite><a href="#ref-3">[3]</a></cite>. </p>
             </figcaption>
           </figure>
           <figure>
@@ -510,10 +505,79 @@
   &lt;/p&gt;
 &lt;/figure&gt;</code></pre>
             <figcaption>
-              <p>Use TeX functions for more sophisticated math typesetting.</p>
+              <p>Use TeX functions for more sophisticated math typesetting. Use the <code>&lt;figure&gt;</code> element if a caption is needed. The default width of the <code>&lt;p&gt;</code> element whitin the <code>&lt;figure&gt;</code> element is 600px. Authors can use inline style declarations to customise the width for larger formulas, as described in section <strong><a href="#customisations">Customisations</a></strong>.</p>
             </figcaption>
           </figure>
         </section>
+
+        <section>
+          <h1 id="customisations">Customisations</h1>
+          <p>Rapido focuses on semantic HTML, providing a default style for a variety of HTML elements. Being CSS classes out of scope, authors looking for a different style must opt for a customisation.</p>
+          <p>You may change the default CSS rules or write new rules that have precedence over the default ones. As usual, this is possible both with <strong>inline declarations</strong> and <strong>stylesheets</strong>. The following examples show some common customisations.
+          </p>
+          <figure>
+            <pre><code>&lt;head&gt;
+  ...</code>
+<mark><code>  &lt;style&gt;
+    article.rapido {
+      font-family: "Helvetica Neue";
+    }
+    .rapido code {
+      font-family: "Iosevka";
+    }
+  &lt;/style&gt;</code></mark>
+<code>&lt;/head&gt;</code></pre>
+            <figcaption>
+              <h1>Font families.</h1>
+              <p>You can easily change the default font families, both for code and normal text.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <pre><code>&lt;head&gt;
+  ...</code>
+<mark><code>  &lt;style&gt;
+    .rapido code {
+      color: rgba(0, 0, 255, 1);
+    }
+    .rapido pre > mark > code {
+      border-left: 2px solid rgba(0, 0, 255, 1);
+      background: rgba(0, 0, 255, 0.05);
+    }
+    .rapido mark {
+      background: rgba(0, 0, 255, 0.1);
+    }
+  &lt;/style&gt;</code></mark>
+<code>&lt;/head&gt;</code></pre>
+            <figcaption>
+              <h1>Font colour on code snippets.</h1>
+              <p>The default colour is blue, authors are encouraged to choose the colour that better adapts to the pre-existing style if any.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <pre><code>&lt;figure&gt;
+  &lt;img src="..." <mark>style="width: 100%"</mark>&gt;
+  ...
+&lt;/figure&gt;</code></pre>
+            <figcaption>
+              <h1>Full-width images, videos, tables and code snippets.</h1>
+              <p>The default width is 600 pixels, you can assign to an image a bigger or smaller width than the default one. Full width equals to 944 pixels.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <pre><code>&lt;head&gt;
+  ...</code>
+<mark><code>  &lt;style&gt;
+    .rapido .full-width {
+      width: 100%;
+    }
+  &lt;/style&gt;</code></mark>
+<code>&lt;/head&gt;</code></pre>
+            <figcaption>
+              <p>Full-width images can be obtained also defining an apposite CSS class, which can be used with <code>&lt;img src="..." class="full-width"&gt;</code>. On the same way it can be used with videos (<code>&lt;video&gt;</code>), code snippets (<code>&lt;pre&gt;</code>) and tables (<code>&lt;div&gt;</code>).</p>
+            </figcaption>
+          </figure>
+        </section>
+
         <footer>
           <section>
             <h1>Footnotes</h1>
