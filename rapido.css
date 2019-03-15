@@ -187,6 +187,19 @@ article.rapido > footer > section > h2 {
 
 /* end h2 */
 
+/* h3 */
+
+.rapido section > h3 {
+	width: 600px;
+	max-width: 100%;
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+/* end h3 */
+
 /* section */
 
 .rapido section {
