@@ -60,11 +60,14 @@
         </section>
         <section>
           <h1 id="getting-started">Getting started</h1>
-          <p>Rapido provides style rules in the <code>rapido.css</code> stylesheet, you can download the CSS file from <a href="https://raw.githubusercontent.com/nextbitlabs/Rapido/master/rapido.css">Github</a> and link to it within the <code>&lt;head&gt;</code> element in your document.</p>
+          <p>Rapido provides style rules in the <code>rapido.css</code> stylesheet, you can see the latest version of the CSS file in <a href="https://raw.githubusercontent.com/nextbitlabs/Rapido/master/rapido.css">Github</a>. Use <code>rapido.css</code> linking to it within the <code>&lt;head&gt;</code> element in your document.</p>
           <figure>
             <pre><code>&lt;head&gt;</code>
-<mark><code>  &lt;link href="https://unpkg.com/@nextbitlabs/rapido@latest/rapido.css" rel="stylesheet" type="text/css"&gt;</code></mark>
+<mark><code>  &lt;link href="https://unpkg.com/@nextbitlabs/rapido@^3/rapido.css" rel="stylesheet" type="text/css"&gt;</code></mark>
 <code>&lt;/head&gt;</code></pre>
+            <figcaption>
+              <p>Link to <code>rapido.css</code> in <a href="https://unpkg.com/">unpkg</a>. Rapido uses <a href="https://semver.org/"></a> semantic versioning, the example fetches the major release 3.x.</p>
+            </figcaption>
           </figure>
           <p>The style rules defined in <code>rapido.css</code> are name-spaced under the CSS class <code>rapido</code>. Being Rapido thought for web essays, the place to use the CSS class is the <code>&lt;article&gt;</code> element, as showed in the next snippet.</p>
           <figure>
@@ -86,7 +89,7 @@
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes"&gt;
-    &lt;link href="https://unpkg.com/@nextbitlabs/rapido@latest/rapido.css" rel="stylesheet" type="text/css"&gt;
+    &lt;link href="https://unpkg.com/@nextbitlabs/rapido@^3/rapido.css" rel="stylesheet" type="text/css"&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;main&gt;
