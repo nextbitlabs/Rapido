@@ -66,7 +66,7 @@
 <mark><code>  &lt;link href="https://unpkg.com/@nextbitlabs/rapido@latest/rapido.css" rel="stylesheet" type="text/css"&gt;</code></mark>
 <code>&lt;/head&gt;</code></pre>
           </figure>
-          <p>The style rules defined in <code>rapido.css</code> are name-spaced under the CSS class <code>rapido</code>. Being Rapido thought for web essays, the best place to use the CSS class is the <code>&lt;article&gt;</code> element, as showed in the next snippet.</p>
+          <p>The style rules defined in <code>rapido.css</code> are name-spaced under the CSS class <code>rapido</code>. Being Rapido thought for web essays, the place to use the CSS class is the <code>&lt;article&gt;</code> element, as showed in the next snippet.</p>
           <figure>
               <pre><code>&lt;main&gt;</code>
 <mark><code>  &lt;article class="rapido"&gt;
@@ -557,7 +557,7 @@
     article.rapido {
       font-family: "Helvetica Neue";
     }
-    .rapido code {
+    article.rapido code {
       font-family: "Iosevka";
     }
   &lt;/style&gt;</code></mark>
@@ -571,14 +571,14 @@
             <pre><code>&lt;head&gt;
   ...</code>
 <mark><code>  &lt;style&gt;
-    .rapido code {
+    article.rapido code {
       color: rgba(0, 0, 255, 1);
     }
-    .rapido pre > mark > code {
+    article.rapido pre > mark > code {
       border-left: 2px solid rgba(0, 0, 255, 1);
       background: rgba(0, 0, 255, 0.05);
     }
-    .rapido mark {
+    article.rapido mark {
       background: rgba(0, 0, 255, 0.1);
     }
   &lt;/style&gt;</code></mark>

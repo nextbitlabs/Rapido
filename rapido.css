@@ -1,6 +1,6 @@
 /* all elements */
 
-.rapido * {
+article.rapido * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -46,7 +46,7 @@ article.rapido {
 
 /* aside */
 
-.rapido section > aside {
+article.rapido section > aside {
 	width: 600px;
 	max-width: 100%;
 	border-top: 2px solid #353839;
@@ -84,7 +84,7 @@ article.rapido > footer {
 
 /* h1 */
 
-.rapido section > h1 {
+article.rapido section > h1 {
 	width: 600px;
 	max-width: 100%;
 	margin: 0 0 30px 0;
@@ -100,15 +100,16 @@ article.rapido > header > h1 {
 	font-weight: bold;
 }
 
-article.rapido > footer h1 {
+article.rapido > footer > h1 {
+	margin: 20px 0 10px 0;
+}
+
+article.rapido > footer > h1,
+article.rapido > footer > section > h1 {
 	font-size: 12px;
 	line-height: 18px;
 	text-transform: uppercase;
 	margin: 0 0 10px 0;
-}
-
-article.rapido > footer > h1 {
-	margin: 20px 0 10px 0;
 }
 
 @media (min-width: 1024px) {
@@ -120,7 +121,7 @@ article.rapido > footer > h1 {
 	}
 }
 
-.rapido section figcaption > h1,
+article.rapido section figcaption > h1,
 article.rapido > header > figure > figcaption > h1 {
 	display: inline;
 	padding: 0;
@@ -146,7 +147,7 @@ article.rapido > footer figure > figcaption > h1 {
 }
 
 @media (max-width: 499px) {
-	.rapido section > h1 {
+	article.rapido section > h1 {
 		font-size: 24px;
 		line-height: 36px;
 	}
@@ -161,7 +162,7 @@ article.rapido > footer figure > figcaption > h1 {
 
 /* h2 */
 
-.rapido section > h2 {
+article.rapido section > h2 {
 	width: 600px;
 	max-width: 100%;
 	margin: 0 0 20px 0;
@@ -189,7 +190,7 @@ article.rapido > footer > section > h2 {
 
 /* h3 */
 
-.rapido section > h3 {
+article.rapido section > h3 {
 	width: 600px;
 	max-width: 100%;
 	margin: 0 0 20px 0;
@@ -202,7 +203,7 @@ article.rapido > footer > section > h2 {
 
 /* section */
 
-.rapido section {
+article.rapido section {
 	width: 100%;
 	padding: 10px 0;
 }
@@ -221,14 +222,14 @@ article.rapido > footer > section {
 
 /* blockquote */
 
-.rapido section > blockquote {
+article.rapido section > blockquote {
 	width: 600px;
 	max-width: 100%;
 	padding: 20px 40px 0 40px;
 }
 
 @media (max-width: 380px) {
-	.rapido section > blockquote {
+	article.rapido section > blockquote {
 		padding: 20px 20px 0 20px;
 	}
 }
@@ -237,7 +238,7 @@ article.rapido > footer > section {
 
 /* div */
 
-.rapido div {
+article.rapido div {
 	display: block;
 	flex: 0 0 auto;
 	max-width: 100%;
@@ -246,15 +247,15 @@ article.rapido > footer > section {
 	overflow-x: auto;
 }
 
-.rapido > section div {
+article.rapido > section div {
 	width: 600px;
 }
 
-.rapido > section > div {
+article.rapido > section > div {
 	margin: 0 0 20px 0;
 }
 
-.rapido > footer div,
+article.rapido > footer div,
 article.rapido > header div {
 	width: 100%;
 }
@@ -263,12 +264,12 @@ article.rapido > header > div {
 	margin: 0 0 20px 0;
 }
 
-.rapido > footer > section > div {
+article.rapido > footer > section > div {
 	margin: 0 0 10px 0;
 }
 
 @media (min-width: 1024px) {
-	.rapido > footer > section > div {
+	article.rapido > footer > section > div {
 		width: calc(100% - 200px);
 		margin: 0 0 10px 200px;
 	}
@@ -278,7 +279,7 @@ article.rapido > header > div {
 
 /* figcaption */
 
-.rapido figcaption {
+article.rapido figcaption {
 	flex: 1 1;
 	min-width: 140px;
 	max-width: 100%;
@@ -289,7 +290,7 @@ article.rapido > header > div {
 
 /* figure */
 
-.rapido figure {
+article.rapido figure {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
@@ -310,7 +311,7 @@ article.rapido > footer figure {
 
 /* li */
 
-.rapido li {
+article.rapido li {
 	font-size: 14px;
 	line-height: 21px;
 }
@@ -326,19 +327,19 @@ article.rapido > footer li {
 
 /* ol, ul */
 
-.rapido ol,
-.rapido ul {
+article.rapido ol,
+article.rapido ul {
 	width: 600px;
 	max-width: 100%;
 	margin: 0 0 20px 0;
 	list-style-position: inside;
 }
 
-.rapido ul {
+article.rapido ul {
 	list-style-type: disc;
 }
 
-.rapido ol {
+article.rapido ol {
 	list-style-type: decimal;
 }
 
@@ -359,8 +360,8 @@ article.rapido > footer ol {
 
 /* p */
 
-.rapido p,
-.rapido section p {
+article.rapido p,
+article.rapido section p {
 	position: relative;
 	width: 600px;
 	max-width: 100%;
@@ -369,50 +370,17 @@ article.rapido > footer ol {
 	line-height: 30px;
 }
 
-.rapido li > p {
-	display: inline;
-	font-size: 14px;
-	line-height: 21px;
-}
-
-.rapido section figure > p {
-	display: block;
-	flex: 0 0 auto;
-	height: auto;
-	margin: 0 20px 0 0;
-}
-
-.rapido section > blockquote > p {
-	font-size: 18px;
-	line-height: 27px;
-}
-
-.rapido section > blockquote > p::before {
-	content: '“';
-}
-
-.rapido section > blockquote > p::after {
-	content: '”';
-}
-
-.rapido section figcaption > p {
-	display: inline;
-	font-size: 14px;
-	line-height: 21px;
-}
-
 article.rapido > header > p {
 	width: 100%;
 	font-size: 30px;
 	line-height: 45px;
 }
 
-.rapido section > aside > p {
-	width: 100%;
-	position: relative;
-	margin: 0 0 20px 0;
-	font-size: 30px;
-	line-height: 45px;
+@media (max-width: 499px) {
+	article.rapido > header > p {
+		font-size: 24px;
+		line-height: 36px;
+	}
 }
 
 article.rapido > footer p {
@@ -420,6 +388,46 @@ article.rapido > footer p {
 	margin: 0 0 10px 0;
 	font-size: 12px;
 	line-height: 18px;
+}
+
+article.rapido li > p {
+	display: inline;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+article.rapido section figure > p {
+	display: block;
+	flex: 0 0 auto;
+	height: auto;
+	margin: 0 20px 0 0;
+}
+
+article.rapido section > blockquote > p {
+	font-size: 18px;
+	line-height: 27px;
+}
+
+article.rapido section > blockquote > p::before {
+	content: '“';
+}
+
+article.rapido section > blockquote > p::after {
+	content: '”';
+}
+
+article.rapido section figcaption > p {
+	display: inline;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+article.rapido section > aside > p {
+	width: 100%;
+	position: relative;
+	margin: 0 0 20px 0;
+	font-size: 30px;
+	line-height: 45px;
 }
 
 @media (min-width: 1024px) {
@@ -433,13 +441,6 @@ article.rapido > footer figcaption > p {
 	padding: 0;
 }
 
-@media (max-width: 499px) {
-	article.rapido > header > p {
-		font-size: 24px;
-		line-height: 36px;
-	}
-}
-
 article.rapido > header > figure > figcaption > p {
 	display: inline;
 	font-size: 14px;
@@ -450,7 +451,7 @@ article.rapido > header > figure > figcaption > p {
 
 /* pre */
 
-.rapido pre {
+article.rapido pre {
 	display: block;
 	flex: 0 0 auto;
 	max-width: 100%;
@@ -472,15 +473,15 @@ article.rapido > header > figure > figcaption > p {
 	line-height: 21px;
 }
 
-.rapido > section pre {
+article.rapido > section pre {
 	width: 600px;
 }
 
-.rapido > section > pre {
+article.rapido > section > pre {
 	margin: 0 0 20px 0;
 }
 
-.rapido > footer pre {
+article.rapido > footer pre {
 	width: 100%;
 	font-size: 12px;
 	line-height: 18px;
@@ -494,12 +495,12 @@ article.rapido > header > pre {
 	margin: 0 0 20px 0;
 }
 
-.rapido > footer > section > pre {
+article.rapido > footer > section > pre {
 	margin: 0 0 10px 0;
 }
 
 @media (min-width: 1024px) {
-	.rapido > footer > section > pre {
+	article.rapido > footer > section > pre {
 		width: calc(100% - 200px);
 		margin: 0 0 10px 200px;
 	}
@@ -509,14 +510,14 @@ article.rapido > header > pre {
 
 /* a */
 
-.rapido a {
+article.rapido a {
 	font-size: inherit;
 	line-height: inherit;
 	color: inherit;
 	text-decoration: underline;
 }
 
-.rapido cite > a {
+article.rapido cite > a {
 	text-decoration: none;
 }
 
@@ -528,11 +529,11 @@ article.rapido > header > address > a {
 
 /* cite */
 
-.rapido cite {
+article.rapido cite {
 	font-style: normal;
 }
 
-.rapido section > cite {
+article.rapido section > cite {
 	display: block;
 	width: 100%;
 	max-width: 600px;
@@ -542,7 +543,7 @@ article.rapido > header > address > a {
 	line-height: 24px;
 }
 
-.rapido section > cite::before {
+article.rapido section > cite::before {
 	content: "– ";
 }
 
@@ -550,14 +551,14 @@ article.rapido > header > address > a {
 
 /* code */
 
-.rapido code {
+article.rapido code {
 	font-family: "Consolas", "Courier", monospace;
 	font-size: inherit;
 	line-height: inherit;
 	color: blue;
 }
 
-.rapido pre > code {
+article.rapido pre > code {
 	display: inline-block;
 	padding: 0 10px;
 }
@@ -566,7 +567,7 @@ article.rapido > footer code {
 	color: #353830;
 }
 
-.rapido pre > mark > code {
+article.rapido pre > mark > code {
 	display: inline-block;
 	min-width: 100%;
 	padding: 0 8px;
@@ -583,12 +584,12 @@ article.rapido > footer pre > mark > code {
 
 /* mark */
 
-.rapido mark {
+article.rapido mark {
 	background: rgba(0, 0, 255, 0.1);
 	color: inherit;
 }
 
-.rapido pre > mark {
+article.rapido pre > mark {
 	background: none;
 }
 
@@ -596,7 +597,7 @@ article.rapido > footer pre > mark > code {
 
 /* small */
 
-.rapido small {
+article.rapido small {
 	position: absolute;
 	width: 324px;
 	padding: 3px 0 0 0;
@@ -608,7 +609,7 @@ article.rapido > footer pre > mark > code {
 }
 
 @media (max-width: 1023px) {
-	.rapido small {
+	article.rapido small {
 		display: block;
 		position: relative;
 		width: 100%;
@@ -620,7 +621,7 @@ article.rapido > footer pre > mark > code {
 }
 
 @media (min-width: 601px) and (max-width: 1023px) {
-	.rapido small {
+	article.rapido small {
 		overflow: auto;
 	}
 }
@@ -629,13 +630,13 @@ article.rapido > footer pre > mark > code {
 
 /* inline elements */
 
-.rapido strong {
+article.rapido strong {
 	font-style: normal;
 	font-weight: bold;
 }
 
-.rapido q,
-.rapido em {
+article.rapido q,
+article.rapido em {
 	font-style: italic;
 	font-weight: normal;
 }
@@ -644,8 +645,8 @@ article.rapido > footer pre > mark > code {
 
 /* img, video */
 
-.rapido img,
-.rapido video {
+article.rapido img,
+article.rapido video {
 	display: block;
 	flex: 0 0 auto;
 	max-width: 100%;
@@ -654,34 +655,34 @@ article.rapido > footer pre > mark > code {
 	border-radius: 2px;
 }
 
-.rapido p > img {
+article.rapido p > img {
 	vertical-align: middle;
 }
 
-.rapido small > img {
+article.rapido small > img {
 	max-width: 100%;
 	padding-top: 5px;
 }
 
 @media (min-width: 601px) and (max-width: 1023px) {
-	.rapido small > img {
+	article.rapido small > img {
 		max-width: 324px;
 		float: right;
 	}
 }
 
-.rapido > section img,
-.rapido > section video {
+article.rapido > section img,
+article.rapido > section video {
 	width: 600px;
 }
 
-.rapido > section > img,
-.rapido > section > video {
+article.rapido > section > img,
+article.rapido > section > video {
 	margin: 0 0 20px 0;
 }
 
-.rapido > footer img,
-.rapido > footer video,
+article.rapido > footer img,
+article.rapido > footer video,
 article.rapido > header img,
 article.rapido > header video {
 	width: 100%;
@@ -692,14 +693,14 @@ article.rapido > header > video {
 	margin: 0 0 20px 0;
 }
 
-.rapido > footer > section > img,
-.rapido > footer > section > video {
+article.rapido > footer > section > img,
+article.rapido > footer > section > video {
 	margin: 0 0 10px 0;
 }
 
 @media (min-width: 1024px) {
-	.rapido > footer > section > img,
-	.rapido > footer > section > video {
+	article.rapido > footer > section > img,
+	article.rapido > footer > section > video {
 		width: calc(100% - 200px);
 		margin: 0 0 10px 200px;
 	}
@@ -718,7 +719,7 @@ article.rapido > header > address > img {
 
 /* table */
 
-.rapido table {
+article.rapido table {
 	min-width: 600px;
 	padding: 10px;
 	border-collapse: collapse;
@@ -730,26 +731,26 @@ article.rapido > header > address > img {
 	line-height: 21px;
 }
 
-.rapido table thead {
+article.rapido table thead {
 	background-color: #f4f4f4;
 }
 
-.rapido table td,
-.rapido table th {
+article.rapido table td,
+article.rapido table th {
 	padding: 5px 10px;
 	vertical-align: top;
 }
 
-.rapido table tr {
+article.rapido table tr {
 	border-bottom: 1px solid #ededed;
 }
 
-.rapido table th {
+article.rapido table th {
 	border-right: 1px solid #e0e0e0;
 }
 
-.rapido table td,
-.rapido table th:last-child {
+article.rapido table td,
+article.rapido table th:last-child {
 	border-right: 1px solid #ededed;
 }
 
@@ -757,7 +758,7 @@ article.rapido > header > address > img {
 
 /* KaTex */
 
-.rapido .katex-display {
+article.rapido .katex-display {
 	padding: 10px 0 !important;
 }
 
