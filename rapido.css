@@ -481,13 +481,13 @@ article.rapido > header > figure > figcaption > p {
 }
 
 .rapido > footer pre {
+	width: 100%;
 	font-size: 12px;
 	line-height: 18px;
 }
 
-.rapido > footer pre,
 article.rapido > header pre {
-	width: 100%;
+	width: 600px;
 }
 
 article.rapido > header > pre {

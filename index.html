@@ -36,9 +36,21 @@
     <main>
       <article class="rapido">
         <header>
-          <h1>Rapido: semantic HTML elements for your writings.</h1>
-          <p>Rapido provides a default style for a set of <strong>semantic HTML</strong> elements that you can use to compose your essays. No CSS or JS is required.</p>
+          <h1>Rapido.css: semantic HTML for your writings.</h1>
+          <p>Rapido provides a default style for a set of <strong>semantic HTML</strong> elements that you can use to compose your essays. Just write with semantic HTML, without the need to remember any CSS class or JS command.</p>
           <p>The present document has been created using Rapido, you can easily get documents or blog posts with the same layout and style. See how to use Rapido in the next sections.</p>
+          <figure>
+            <pre><code>&lt;article <mark>class="rapido"</mark>&gt;
+  &lt;section&gt;
+    &lt;h1&gt;...&lt;/h1&gt;
+    &lt;p&gt;...&lt;small&gt;...&lt;/small&gt;&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/article&gt;</code></pre>
+            <figcaption>
+              <p>Assign the CSS class <code>rapido</code> to the <code>&lt;article&gt;</code> element and you are done.</p>
+              <p>Rapido is just that: copy the HTML snippets and fill the gaps.</p>
+            </figcaption>
+          </figure>
           <p>Rapido is open source, view it on <a href="https://github.com/nextbitlabs/Rapido">Github</a>.</p>
         </header>
         <section>
@@ -89,7 +101,7 @@
               <p>Note the presence of the stylesheet <code>rapido.css</code> within the <code>&lt;head&gt;</code> element, it defines the style rules and it is all you need to use Rapido.</p>
             </figcaption>
           </figure>
-          <p>The next sections describe how to replace the ellipsis with the content of interest, like paragraphs, figures, tables and so on. Rapido is just that: copy and paste the HTML snippets and fill the gaps with your own content.</p>
+          <p>The next sections describe how to replace the ellipsis with the content of interest, like paragraphs, figures, tables and so on.</p>
         </section>
 
         <section>
@@ -260,8 +272,8 @@
         <section>
           <h1>Highlights</h1>
           <p>The repetition of some content from the same source is used for the purposes of enticing readers or highlighting key topics. You can repeat a passage or an entire paragraph using the <code>&lt;aside&gt;</code> element inside a section.</p>
-          <aside>
-            <p><strong>Rapido</strong> is just that: copy and paste the HTML snippets and fill the gaps.</p>
+          <aside style="width: 100%">
+            <p>Rapido has been crafted with the idea that using semantic HTML for your writings <em>can be easy</em>.</p>
           </aside>
           <figure>
             <pre><code>&lt;section&gt;
