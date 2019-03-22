@@ -1,7 +1,7 @@
 {
   "name": "@nextbitlabs/rapido",
   "version": "3.2.0",
-  "description": "Write web documents with just HTML snippets",
+  "description": "Rapido.css: semantic HTML for your writings.",
   "main": "rapido.css",
   "style": "rapido.css",
   "files": [
