@@ -17,7 +17,7 @@ Rapido provides a default style for a set of **semantic HTML** elements that you
 
 Rapido has been crafted with the idea that using semantic HTML for your writings *can be easy*. For such a reason Rapido does not make use of CSS classes, with the exception of class `rapido`, of course. Authors can compose all the different parts of the document with semantic HTML elements, for example adding side notes in paragraphs with the `<small>` element.
 
-```
+```html
 <article class="rapido">
   <section>
     <h1>...</h1>
